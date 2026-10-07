@@ -432,8 +432,8 @@ function WorkWithUsPageContent() {
                       </div>
                       <div className="flex gap-3">
                         <Button variant="primary" size="sm">
-                          <Icon name="arrow-right" size="sm" className="mr-2" />
                           Apply Now
+                          <Icon name="arrow-right" size="sm" />
                         </Button>
                         <Button variant="secondary" size="sm">
                           <Icon name="info" size="sm" className="mr-2" />

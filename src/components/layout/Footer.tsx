@@ -175,7 +175,7 @@ export default function Footer() {
                     autoComplete="email"
                     required
                     placeholder="Your email address"
-                    className="h-11 min-w-0 flex-1 rounded-lg border border-gray-700 bg-gray-900 px-4 text-sm text-white placeholder:text-gray-500 focus:border-hakiardhi-red focus:outline-none"
+                    className="h-11 w-full min-w-0 rounded-lg border border-gray-700 bg-gray-900 sm:flex-1 px-4 text-sm text-white placeholder:text-gray-500 focus:border-hakiardhi-red focus:outline-none"
                     aria-label="Email address"
                   />
                   <button

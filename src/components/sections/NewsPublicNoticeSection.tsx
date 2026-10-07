@@ -190,8 +190,8 @@ export default function NewsPublicNoticeSection({ className = '' }: NewsPublicNo
 
                         {/* Read More Button */}
                         <Button variant="secondary" size="sm" fullWidth>
-                          <Icon name="arrow-right" size="sm" className="mr-2" />
                           {item.type === 'Event' ? 'View Details' : 'Read More'}
+                          <Icon name="arrow-right" size="sm" />
                         </Button>
                       </div>
                     </Card.Body>

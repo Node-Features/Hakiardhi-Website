@@ -75,7 +75,7 @@ export default function Button({
   const content = (
     <>
       {iconPosition === 'left' && iconEl}
-      <span>{children}</span>
+      <span className="inline-flex items-center gap-2">{children}</span>
       {iconPosition === 'right' && iconEl}
     </>
   );
