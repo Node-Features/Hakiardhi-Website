@@ -76,7 +76,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative h-[88svh] min-h-[520px] max-h-[860px] w-full overflow-hidden bg-gray-900"
+      className="relative h-[70svh] min-h-[560px] max-h-[720px] w-full lg:h-[78vh] overflow-hidden bg-gray-900"
       aria-roledescription="carousel"
       aria-label="Hero images showcasing HakiArdhi's work"
     >
@@ -112,7 +112,7 @@ export default function HeroSection() {
       {/* Single neutral scrim so text stays readable on any photo */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/45 to-black/30" aria-hidden="true" />
 
-      <div className="relative z-10 mx-auto flex h-full max-w-7xl items-end px-4 pb-20 pt-28 sm:px-6 lg:items-center lg:px-8 lg:pb-0">
+      <div className="relative z-10 mx-auto flex h-full max-w-7xl items-end px-4 pb-14 pt-28 sm:px-6 lg:items-center lg:px-8 lg:pb-0">
         <div
           className={`max-w-2xl text-white transition-all duration-700 ${
             isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
