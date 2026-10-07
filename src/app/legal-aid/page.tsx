@@ -6,6 +6,7 @@ import { Header, Footer } from '@/components';
 import Section from '@/components/ui/Section';
 import Button from '@/components/ui/Button';
 import Icon from '@/components/ui/Icon';
+import WhatsAppPhoneMockup from '@/components/ui/WhatsAppPhoneMockup';
 import Card from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
 import LegalHelpModal from '@/components/modals/LegalHelpModal';
@@ -183,66 +184,12 @@ export default function LegalAidPage() {
 
             {/* Main Feature Card */}
             <div className="grid lg:grid-cols-2 gap-8 mb-12">
-              {/* Left - WhatsApp Interface Mockup */}
-              <div className="relative">
-                <div className="bg-white rounded-xl p-8 border-4 border-gray-200">
-                  {/* WhatsApp Header */}
-                  <div className="flex items-center gap-3 pb-4 border-b border-gray-200 mb-6">
-                    <div className="bg-hakiardhi-red w-12 h-12 rounded-full flex items-center justify-center">
-                      <Icon name="phone" size="md" className="text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-gray-900">HakiArdhi Legal Bot</h3>
-                      <p className="text-xs text-hakiardhi-red flex items-center gap-1">
-                        <span className="w-2 h-2 rounded-full bg-hakiardhi-red "></span>
-                        Online - AI Assistant
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Chat Messages */}
-                  <div className="space-y-4 mb-6">
-                    {/* Bot Message */}
-                    <div className="flex gap-2">
-                      <div className="bg-gray-100 rounded-xl rounded-tl-none px-4 py-3 max-w-[80%]">
-                        <p className="text-sm text-gray-800">
-                          Habari! I'm HakiArdhi's Legal AI. How can I help you with land rights today?
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* User Message */}
-                    <div className="flex gap-2 justify-end">
-                      <div className="bg-hakiardhi-red rounded-xl rounded-tr-none px-4 py-3 max-w-[80%]">
-                        <p className="text-sm text-white">
-                          I have a land boundary dispute with my neighbor
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Bot Response */}
-                    <div className="flex gap-2">
-                      <div className="bg-gray-100 rounded-xl rounded-tl-none px-4 py-3 max-w-[80%]">
-                        <p className="text-sm text-gray-800">
-                          I can help you with that. Let me ask a few questions to understand your case better...
-                        </p>
-                        <div className="mt-3 grid grid-cols-2 gap-2">
-                          <button className="px-3 py-1.5 bg-white rounded-lg text-xs font-medium text-gray-700 hover:bg-brand-50 transition-colors border border-gray-200">
-                            Report Issue
-                          </button>
-                          <button className="px-3 py-1.5 bg-white rounded-lg text-xs font-medium text-gray-700 hover:bg-brand-50 transition-colors border border-gray-200">
-                            Talk to Lawyer
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
+              {/* Left - realistic WhatsApp conversation and contact options */}
+              <div className="flex flex-col items-center gap-8">
+                <WhatsAppPhoneMockup />
+                <div className="w-full">
                   {/* WhatsApp CTA */}
                   <div className="bg-hakiardhi-red rounded-xl p-6 text-center relative overflow-hidden">
-                    {/* Decorative pattern */}
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                    <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
                     <p className="text-white font-bold text-lg mb-4 relative z-10">Start Your Free Legal Consultation</p>
 
@@ -293,11 +240,6 @@ export default function LegalAidPage() {
                       <p className="text-white/80 text-xs font-medium">100% Free & Confidential</p>
                     </div>
                   </div>
-                </div>
-
-                {/* Floating Badge */}
-                <div className="absolute -top-4 -right-4 bg-white rounded-full px-4 py-2 border-2 border-gray-200">
-                  <p className="text-sm font-bold text-gray-900">AI-Powered</p>
                 </div>
               </div>
 
