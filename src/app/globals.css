@@ -201,9 +201,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth scrolling for anchor links */
+/* Smooth scrolling for anchor links; never scroll sideways on phones
+   (reveal animations start slightly off-screen) */
 html {
   scroll-behavior: smooth;
+}
+html,
+body {
+  overflow-x: clip;
 }
 
 /* Remove default link styles */

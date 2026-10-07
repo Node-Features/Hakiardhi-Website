@@ -167,40 +167,24 @@ export default function Footer() {
                   Email address for newsletter
                 </label>
 
-                {/* Unified input-button container */}
-                <div className="relative group">
-                  {/* Outer glow effect */}
-
-                  {/* Main container */}
-                  <div className="bg-gray-800 relative flex items-center rounded-full border border-gray-700 group-hover:border-hakiardhi-red/50 group-focus-within:border-hakiardhi-red transition-all duration-300 group-focus-within:shadow-hakiardhi-red/20">
-                    {/* Email icon */}
-                    <div className="pl-4 pr-2">
-                      <Icon name="mail" size="sm" className="text-gray-400 group-focus-within:text-hakiardhi-red transition-colors duration-300" />
-                    </div>
-
-                    {/* Input field */}
-                    <input
-                      id="newsletter-email"
-                      name="email"
-                      type="email"
-                      autoComplete="email"
-                      required
-                      placeholder="Enter your email address"
-                      className="flex-1 py-3 px-2 bg-transparent text-white text-sm placeholder:text-gray-500 outline-none focus:placeholder:text-gray-600 border-none"
-                      aria-label="Email address"
-                      style={{ boxShadow: 'none' }}
-                    />
-
-                    {/* Submit button - rounded only on right */}
-                    <button
-                      type="submit"
-                      className="bg-hakiardhi-red group/button relative flex items-center gap-2 text-white px-6 py-3 rounded-r-full text-sm font-bold transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-hakiardhi-red focus:ring-offset-2 focus:ring-offset-black"
-                      aria-label="Subscribe to newsletter"
-                    >
-                      <span>Subscribe</span>
-                      <Icon name="arrow-right" size="sm" className="transform transition-transform duration-300" />
-                    </button>
-                  </div>
+                <div className="flex flex-col gap-2 sm:flex-row">
+                  <input
+                    id="newsletter-email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    placeholder="Your email address"
+                    className="h-11 min-w-0 flex-1 rounded-lg border border-gray-700 bg-gray-900 px-4 text-sm text-white placeholder:text-gray-500 focus:border-hakiardhi-red focus:outline-none"
+                    aria-label="Email address"
+                  />
+                  <button
+                    type="submit"
+                    className="h-11 flex-shrink-0 rounded-lg bg-hakiardhi-red px-5 text-sm font-semibold text-white transition-colors hover:bg-hakiardhi-red-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-hakiardhi-red focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                    aria-label="Subscribe to newsletter"
+                  >
+                    Subscribe
+                  </button>
                 </div>
 
                 {/* Helper text */}
