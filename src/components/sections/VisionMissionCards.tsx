@@ -38,7 +38,7 @@ export default function VisionMissionCards({ className = '' }: VisionMissionCard
             <div className="relative h-full group">
               {/* Outer glow */}
 
-              <Card variant="elevated" className="relative h-full bg-white/90 border border-gray-100 shadow-sm group-hover:border-brand-500/30 transition-all duration-500">
+              <Card variant="elevated" className="relative h-full bg-white/90 border border-gray-200 group-hover:border-brand-500/30 transition-all duration-500">
                 <Card.Body className="p-8 lg:p-10">
                   {/* Icon badge */}
                   <div className="flex items-center gap-4 mb-6">
@@ -90,7 +90,7 @@ export default function VisionMissionCards({ className = '' }: VisionMissionCard
             <div className="relative h-full group">
               {/* Outer glow */}
 
-              <Card variant="elevated" className="relative h-full bg-white/90 border border-gray-100 shadow-sm group-hover:border-hakiardhi-red/30 transition-all duration-500">
+              <Card variant="elevated" className="relative h-full bg-white/90 border border-gray-200 group-hover:border-hakiardhi-red/30 transition-all duration-500">
                 <Card.Body className="p-8 lg:p-10">
                   {/* Icon badge */}
                   <div className="flex items-center gap-4 mb-6">

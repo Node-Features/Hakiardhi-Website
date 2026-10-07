@@ -73,7 +73,7 @@ export default function TestimonialsSection({
         >
           <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">Success Stories</p>
 
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             Voices from the Communities We Serve
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -87,7 +87,7 @@ export default function TestimonialsSection({
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-xl overflow-hidden shadow-sm shadow-sm transition-all duration-500 border border-gray-100"
+                className="bg-white rounded-xl overflow-hidden border border-gray-200"
               >
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden">
@@ -97,24 +97,15 @@ export default function TestimonialsSection({
                     fill
                     className="object-cover transition-transform duration-500"
                   />
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
                   {/* Program badge */}
                   {testimonial.program && (
                     <div className="absolute top-4 left-4">
-                      <div className="px-3 py-1.5 bg-hakiardhi-red rounded-full text-xs font-bold text-white">
+                      <div className="px-2.5 py-1 bg-white rounded-md text-xs font-semibold text-gray-900">
                         {testimonial.program}
                       </div>
                     </div>
                   )}
-
-                  {/* Quote icon */}
-                  <div className="absolute bottom-4 right-4">
-                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-                      <Icon name="quote" size="md" className="text-white" />
-                    </div>
-                  </div>
                 </div>
 
                 {/* Content */}
@@ -126,9 +117,6 @@ export default function TestimonialsSection({
 
                   {/* Author */}
                   <div className="flex items-center gap-4">
-                    <div className="bg-hakiardhi-red/20 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Icon name="user" size="md" className="text-hakiardhi-red" />
-                    </div>
                     <div>
                       <div className="font-bold text-gray-900">{testimonial.name}</div>
                       <div className="text-sm text-gray-600">{testimonial.role}</div>

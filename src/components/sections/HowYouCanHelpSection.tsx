@@ -120,7 +120,7 @@ export default function HowYouCanHelpSection({
           <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">Get Involved</p>
 
           {/* Heading */}
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold !text-gray-900 mb-6 leading-tight">
+          <h2 className="text-3xl lg:text-4xl font-bold !text-gray-900 mb-6 leading-tight">
             How You Can Help
           </h2>
 

@@ -24,7 +24,7 @@ export default function SectionHeader({
         <div className="bg-brand-500 h-1 w-16 rounded-full"></div>
       </div>
 
-      <h2 className="text-display-sm font-bold text-gray-900 mb-5 leading-tight tracking-tight">
+      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-5 leading-tight tracking-tight">
         <span className="text-gray-900 ">
           {title}
         </span>

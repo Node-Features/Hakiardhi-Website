@@ -24,7 +24,7 @@ export default function AccessibilityPage() {
         <div className="prose prose-lg max-w-none">
           {/* Commitment */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Our Commitment to Accessibility</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">1. Our Commitment to Accessibility</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               HakiArdhi (Land Rights Research & Resources Institute) is committed to ensuring digital accessibility for all people, including those with disabilities. We continuously work to improve the user experience for everyone and apply relevant accessibility standards.
             </p>
@@ -35,7 +35,7 @@ export default function AccessibilityPage() {
 
           {/* Standards */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Accessibility Standards</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">2. Accessibility Standards</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards, developed by the World Wide Web Consortium (W3C). These guidelines explain how to make web content more accessible to people with disabilities and user-friendly for everyone.
             </p>
@@ -46,7 +46,7 @@ export default function AccessibilityPage() {
 
           {/* Features */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Accessibility Features</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">3. Accessibility Features</h2>
             <p className="text-gray-700 leading-relaxed mb-3">
               Our website includes the following accessibility features:
             </p>
@@ -93,7 +93,7 @@ export default function AccessibilityPage() {
 
           {/* Assistive Technologies */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Compatible Assistive Technologies</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">4. Compatible Assistive Technologies</h2>
             <p className="text-gray-700 leading-relaxed mb-3">
               Our website is designed to be compatible with the following assistive technologies:
             </p>
@@ -108,7 +108,7 @@ export default function AccessibilityPage() {
 
           {/* Browser Support */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Supported Browsers and Devices</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">5. Supported Browsers and Devices</h2>
             <p className="text-gray-700 leading-relaxed mb-3">
               Our website is optimized for use with the following browsers and platforms:
             </p>
@@ -124,7 +124,7 @@ export default function AccessibilityPage() {
 
           {/* Keyboard Navigation */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Keyboard Navigation</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">6. Keyboard Navigation</h2>
             <p className="text-gray-700 leading-relaxed mb-3">
               Our website is fully navigable using only a keyboard. Here are some helpful keyboard shortcuts:
             </p>
@@ -158,7 +158,7 @@ export default function AccessibilityPage() {
 
           {/* Known Limitations */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Known Limitations</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">7. Known Limitations</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               While we strive for full accessibility, we acknowledge that some areas of our website may not yet meet all accessibility standards. We are actively working to address these issues:
             </p>
@@ -174,7 +174,7 @@ export default function AccessibilityPage() {
 
           {/* Third-Party Content */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Third-Party Content</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">8. Third-Party Content</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               Our website may contain links to external websites and embedded content from third parties. We cannot guarantee the accessibility of external content, as it is beyond our control. However, we strive to link only to accessible resources whenever possible.
             </p>
@@ -185,7 +185,7 @@ export default function AccessibilityPage() {
 
           {/* Accessibility Tools */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Helpful Accessibility Tools</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">9. Helpful Accessibility Tools</h2>
             <p className="text-gray-700 leading-relaxed mb-3">
               In addition to our built-in accessibility features, you may find these tools helpful:
             </p>
@@ -199,7 +199,7 @@ export default function AccessibilityPage() {
 
           {/* Ongoing Efforts */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Ongoing Accessibility Efforts</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">10. Ongoing Accessibility Efforts</h2>
             <p className="text-gray-700 leading-relaxed mb-3">
               We are committed to continually improving accessibility. Our ongoing efforts include:
             </p>
@@ -215,7 +215,7 @@ export default function AccessibilityPage() {
 
           {/* Feedback */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Feedback and Contact</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">11. Feedback and Contact</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               We welcome your feedback on the accessibility of our website. If you encounter accessibility barriers or have suggestions for improvement, please let us know:
             </p>
@@ -242,7 +242,7 @@ export default function AccessibilityPage() {
 
           {/* Alternative Access */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">12. Alternative Access to Information</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">12. Alternative Access to Information</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               If you have difficulty accessing any content or using any features on our website, we are happy to provide information in an alternative format. We can provide:
             </p>
@@ -259,7 +259,7 @@ export default function AccessibilityPage() {
 
           {/* Legal Framework */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">13. Legal and Regulatory Compliance</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">13. Legal and Regulatory Compliance</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               We are committed to complying with applicable accessibility laws and regulations, including:
             </p>
@@ -275,7 +275,7 @@ export default function AccessibilityPage() {
 
           {/* Updates */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">14. Updates to This Statement</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">14. Updates to This Statement</h2>
             <p className="text-gray-700 leading-relaxed">
               We review and update this Accessibility Statement regularly to reflect improvements to our website and changes to accessibility standards. The "Last Updated" date at the top of this page indicates when this statement was most recently revised.
             </p>

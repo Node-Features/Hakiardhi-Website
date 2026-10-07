@@ -53,7 +53,7 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
               </div>
 
               {/* Heading */}
-              <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
                 Get Instant Legal Help via <span className="block mt-2">WhatsApp!</span>
               </h2>
 
@@ -126,12 +126,12 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
               {/* Phone Mockup */}
               <div className="relative max-w-sm mx-auto">
                 {/* Floating Badge */}
-                <div className="absolute -top-6 -left-6 bg-white rounded-full px-4 py-2 shadow-sm border-2 border-white/20 z-20 ">
+                <div className="absolute -top-6 -left-6 bg-white rounded-full px-4 py-2 border-2 border-white/20 z-20 ">
                   <p className="text-sm font-bold text-hakiardhi-red">AI-Powered</p>
                 </div>
 
                 {/* Phone Frame */}
-                <div className="bg-white rounded-xl shadow-sm p-4 relative transform transition-transform duration-300">
+                <div className="bg-white rounded-xl p-4 relative transform transition-transform duration-300">
                   {/* Screen */}
                   <div className="bg-brand-50 rounded-xl overflow-hidden border-8 border-gray-900">
                     {/* WhatsApp Header */}
@@ -153,7 +153,7 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
                     }}>
                       {/* Bot Message */}
                       <div className="flex gap-2">
-                        <div className="bg-white rounded-xl rounded-tl-none px-4 py-2.5 shadow-sm max-w-[75%]">
+                        <div className="bg-white rounded-xl rounded-tl-none px-4 py-2.5 max-w-[75%]">
                           <p className="text-xs text-gray-800">
                             👋 Habari! I'm here to help with land rights issues. How can I assist you?
                           </p>
@@ -162,7 +162,7 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
 
                       {/* User Message */}
                       <div className="flex gap-2 justify-end">
-                        <div className="bg-hakiardhi-red rounded-xl rounded-tr-none px-4 py-2.5 shadow-sm max-w-[75%]">
+                        <div className="bg-hakiardhi-red rounded-xl rounded-tr-none px-4 py-2.5 max-w-[75%]">
                           <p className="text-xs text-white">
                             I need help with a land dispute
                           </p>
@@ -171,7 +171,7 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
 
                       {/* Bot Response with Options */}
                       <div className="flex gap-2">
-                        <div className="bg-white rounded-xl rounded-tl-none px-4 py-2.5 shadow-sm max-w-[85%]">
+                        <div className="bg-white rounded-xl rounded-tl-none px-4 py-2.5 max-w-[85%]">
                           <p className="text-xs text-gray-800 mb-2">
                             I can help! Choose an option:
                           </p>
@@ -191,7 +191,7 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
 
                       {/* Typing Indicator */}
                       <div className="flex gap-2">
-                        <div className="bg-white rounded-xl rounded-tl-none px-4 py-2.5 shadow-sm">
+                        <div className="bg-white rounded-xl rounded-tl-none px-4 py-2.5">
                           <div className="flex gap-1">
                             <div className="w-2 h-2 bg-gray-400 rounded-full "></div>
                             <div className="w-2 h-2 bg-gray-400 rounded-full " style={{ animationDelay: '0.1s' }}></div>
@@ -204,7 +204,7 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
                 </div>
 
                 {/* Floating Stats */}
-                <div className="absolute -bottom-6 -right-6 bg-white rounded-xl px-6 py-4 shadow-sm border-2 border-white/20 z-20">
+                <div className="absolute -bottom-6 -right-6 bg-white rounded-xl px-6 py-4 border-2 border-white/20 z-20">
                   <p className="text-3xl font-bold text-hakiardhi-red mb-1">&lt;2min</p>
                   <p className="text-xs text-gray-600 font-semibold">Response Time</p>
                 </div>

@@ -94,7 +94,7 @@ export default function NewsPublicNoticeSection({ className = '' }: NewsPublicNo
                 onClick={() => setSelectedType(type)}
                 className={`group px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
                   selectedType === type
-                    ? 'bg-hakiardhi-red text-white shadow-sm'
+                    ? 'bg-hakiardhi-red text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-300 hover:border-hakiardhi-red '
                 }`}
               >
@@ -114,7 +114,7 @@ export default function NewsPublicNoticeSection({ className = '' }: NewsPublicNo
         </div>
 
         {/* News Grid - Professional Cards */}
-        <div className="bg-gray-50 rounded-xl p-8 lg:p-12 shadow-sm border border-gray-200/50 mb-12">
+        <div className="bg-gray-50 rounded-xl p-8 lg:p-12 border border-gray-200/50 mb-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr">
             {filteredNews.map((item, index) => (
               <div
@@ -162,7 +162,7 @@ export default function NewsPublicNoticeSection({ className = '' }: NewsPublicNo
                       </p>
 
                       {/* Meta Info */}
-                      <div className="mt-auto pt-3 border-t border-gray-100">
+                      <div className="mt-auto pt-3 border-t border-gray-200">
                         <div className="space-y-2 mb-3">
                           <div className="flex items-center gap-2">
                             <Icon name="clock" size="sm" className="text-hakiardhi-red flex-shrink-0" />

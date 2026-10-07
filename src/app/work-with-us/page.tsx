@@ -184,7 +184,7 @@ function WorkWithUsPageContent() {
       </Section>
 
       {/* Opportunities Section */}
-      <section className="py-16 lg:py-20">
+      <section className="py-16 lg:py-24 ">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -192,7 +192,7 @@ function WorkWithUsPageContent() {
               onClick={() => setActiveTab('volunteer')}
               className={`px-6 py-4 rounded-full font-semibold text-base transition-all duration-300 ${
                 activeTab === 'volunteer'
-                  ? 'bg-hakiardhi-red text-white shadow-sm'
+                  ? 'bg-hakiardhi-red text-white'
                   : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red '
               }`}
             >
@@ -205,7 +205,7 @@ function WorkWithUsPageContent() {
               onClick={() => setActiveTab('partner')}
               className={`px-6 py-4 rounded-full font-semibold text-base transition-all duration-300 ${
                 activeTab === 'partner'
-                  ? 'bg-hakiardhi-red text-white shadow-sm'
+                  ? 'bg-hakiardhi-red text-white'
                   : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red '
               }`}
             >
@@ -218,7 +218,7 @@ function WorkWithUsPageContent() {
               onClick={() => setActiveTab('careers')}
               className={`px-6 py-4 rounded-full font-semibold text-base transition-all duration-300 ${
                 activeTab === 'careers'
-                  ? 'bg-hakiardhi-red text-white shadow-sm'
+                  ? 'bg-hakiardhi-red text-white'
                   : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red '
               }`}
             >
@@ -231,7 +231,7 @@ function WorkWithUsPageContent() {
               onClick={() => setActiveTab('internships')}
               className={`px-6 py-4 rounded-full font-semibold text-base transition-all duration-300 ${
                 activeTab === 'internships'
-                  ? 'bg-hakiardhi-red text-white shadow-sm'
+                  ? 'bg-hakiardhi-red text-white'
                   : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red '
               }`}
             >
@@ -246,7 +246,7 @@ function WorkWithUsPageContent() {
           {activeTab === 'volunteer' && (
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10">
-                <h2 className="text-3xl font-bold text-gray-900 mb-3">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
                   Volunteer Opportunities
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
@@ -256,7 +256,7 @@ function WorkWithUsPageContent() {
 
               <div className="space-y-6">
                 {volunteerOpportunities.map((opportunity) => (
-                  <Card key={opportunity.id} variant="elevated" className="shadow-sm transition-shadow duration-300">
+                  <Card key={opportunity.id} variant="elevated" className=" transition-shadow duration-300">
                     <Card.Body className="p-6">
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0">
@@ -310,7 +310,7 @@ function WorkWithUsPageContent() {
           {activeTab === 'partner' && (
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-10">
-                <h2 className="text-3xl font-bold text-gray-900 mb-3">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
                   Partnership Opportunities
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
@@ -329,7 +329,7 @@ function WorkWithUsPageContent() {
                   const colors = colorClasses[opportunity.color as keyof typeof colorClasses];
 
                   return (
-                    <Card key={opportunity.id} variant="elevated" className="shadow-sm transition-all duration-300 group">
+                    <Card key={opportunity.id} variant="elevated" className=" transition-all duration-300 group">
                       <Card.Body className="p-6">
                         <div className={`w-16 h-16 rounded-xl ${colors.bg} flex items-center justify-center mb-4 transition-transform duration-300`}>
                           <Icon name={opportunity.icon as any} size="xl" className={colors.icon} />
@@ -383,7 +383,7 @@ function WorkWithUsPageContent() {
           {activeTab === 'careers' && (
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10">
-                <h2 className="text-3xl font-bold text-gray-900 mb-3">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
                   Current Vacancies
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
@@ -393,7 +393,7 @@ function WorkWithUsPageContent() {
 
               <div className="space-y-6">
                 {careerOpportunities.map((opportunity) => (
-                  <Card key={opportunity.id} variant="elevated" className="shadow-sm transition-shadow duration-300">
+                  <Card key={opportunity.id} variant="elevated" className=" transition-shadow duration-300">
                     <Card.Body className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div>
@@ -447,7 +447,7 @@ function WorkWithUsPageContent() {
 
               {/* No Openings State */}
               {careerOpportunities.length === 0 && (
-                <div className="text-center py-12 bg-white rounded-xl shadow-sm border border-gray-200">
+                <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
                   <Icon name="briefcase" size="xl" className="text-gray-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-gray-900 mb-2">No Current Openings</h3>
                   <p className="text-gray-600 mb-6">
@@ -465,7 +465,7 @@ function WorkWithUsPageContent() {
           {activeTab === 'internships' && (
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10">
-                <h2 className="text-3xl font-bold text-gray-900 mb-3">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
                   Internship Programs
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
@@ -475,7 +475,7 @@ function WorkWithUsPageContent() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 {internshipOpportunities.map((opportunity) => (
-                  <Card key={opportunity.id} variant="elevated" className="shadow-sm transition-all duration-300 h-full">
+                  <Card key={opportunity.id} variant="elevated" className=" transition-all duration-300 h-full">
                     <Card.Body className="p-6 flex flex-col">
                       <div className="bg-hakiardhi-red/10 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                         <Icon name="user" size="md" className="text-hakiardhi-red" />
@@ -537,10 +537,10 @@ function WorkWithUsPageContent() {
       </section>
 
       {/* Why Work With Us Section */}
-      <section className="bg-gray-50 py-16 ">
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Why Work With HakiArdhi?
             </h2>
             <p className="text-gray-600">
@@ -549,28 +549,28 @@ function WorkWithUsPageContent() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div className="bg-white rounded-xl p-6 text-center">
               <div className="bg-hakiardhi-red/10 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="heart" size="lg" className="text-hakiardhi-red" />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Meaningful Impact</h3>
               <p className="text-sm text-gray-600">Work directly with communities creating real change</p>
             </div>
-            <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div className="bg-white rounded-xl p-6 text-center">
               <div className="bg-brand-50 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="users" size="lg" className="text-hakiardhi-red" />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Collaborative Culture</h3>
               <p className="text-sm text-gray-600">Work with passionate, skilled professionals</p>
             </div>
-            <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div className="bg-white rounded-xl p-6 text-center">
               <div className="bg-brand-50 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="book" size="lg" className="text-hakiardhi-red" />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Learning Opportunities</h3>
               <p className="text-sm text-gray-600">Continuous professional development and growth</p>
             </div>
-            <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+            <div className="bg-white rounded-xl p-6 text-center">
               <div className="bg-brand-50 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="globe" size="lg" className="text-hakiardhi-red" />
               </div>

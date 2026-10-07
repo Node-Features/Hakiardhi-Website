@@ -165,7 +165,7 @@ export default function LegalAidPage() {
       </section>
 
       {/* AI WhatsApp Chatbot Feature - Premium Section */}
-      <section className="bg-brand-50 relative py-20 overflow-hidden">
+      <section className="py-16 lg:py-24 bg-brand-50 relative overflow-hidden">
         {/* Animated Background Elements */}
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -173,7 +173,7 @@ export default function LegalAidPage() {
             {/* Section Header */}
             <div className="text-center mb-12">
               <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">AI-Powered Innovation</p>
-              <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                 24/7 Legal Aid via WhatsApp
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -185,7 +185,7 @@ export default function LegalAidPage() {
             <div className="grid lg:grid-cols-2 gap-8 mb-12">
               {/* Left - WhatsApp Interface Mockup */}
               <div className="relative">
-                <div className="bg-white rounded-xl shadow-sm p-8 border-4 border-gray-200">
+                <div className="bg-white rounded-xl p-8 border-4 border-gray-200">
                   {/* WhatsApp Header */}
                   <div className="flex items-center gap-3 pb-4 border-b border-gray-200 mb-6">
                     <div className="bg-hakiardhi-red w-12 h-12 rounded-full flex items-center justify-center">
@@ -251,7 +251,7 @@ export default function LegalAidPage() {
                       href="https://wa.me/+255784646752"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="relative z-10 flex items-center justify-center gap-3 w-full bg-white rounded-xl px-6 py-4 mb-3 group hover:bg-gray-50 transition-all duration-300 shadow-sm shadow-sm "
+                      className="relative z-10 flex items-center justify-center gap-3 w-full bg-white rounded-xl px-6 py-4 mb-3 group hover:bg-gray-50 transition-all duration-300 "
                     >
                       <div className="w-10 h-10 rounded-full bg-hakiardhi-red flex items-center justify-center transition-transform">
                         <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -296,7 +296,7 @@ export default function LegalAidPage() {
                 </div>
 
                 {/* Floating Badge */}
-                <div className="absolute -top-4 -right-4 bg-white rounded-full px-4 py-2 shadow-sm border-2 border-gray-200">
+                <div className="absolute -top-4 -right-4 bg-white rounded-full px-4 py-2 border-2 border-gray-200">
                   <p className="text-sm font-bold text-gray-900">AI-Powered</p>
                 </div>
               </div>
@@ -307,7 +307,7 @@ export default function LegalAidPage() {
                   {chatbotFeatures.map((feature, idx) => (
                     <div
                       key={idx}
-                      className="group bg-white rounded-xl p-6 shadow-sm shadow-sm transition-all duration-300 border border-gray-100 hover:border-gray-200"
+                      className="group bg-white rounded-xl p-6 transition-all duration-300 border border-gray-200 hover:border-gray-200"
                     >
                       <div className="flex items-start gap-4">
                         <div className="bg-brand-50 flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300">
@@ -324,15 +324,15 @@ export default function LegalAidPage() {
 
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-4 mt-6">
-                  <div className="bg-white rounded-xl p-4 text-center shadow-sm">
+                  <div className="bg-white rounded-xl p-4 text-center">
                     <p className="text-2xl font-bold text-hakiardhi-red">24/7</p>
                     <p className="text-xs text-gray-600">Available</p>
                   </div>
-                  <div className="bg-white rounded-xl p-4 text-center shadow-sm">
+                  <div className="bg-white rounded-xl p-4 text-center">
                     <p className="text-2xl font-bold text-hakiardhi-red">&lt;2min</p>
                     <p className="text-xs text-gray-600">Response</p>
                   </div>
-                  <div className="bg-white rounded-xl p-4 text-center shadow-sm">
+                  <div className="bg-white rounded-xl p-4 text-center">
                     <p className="text-2xl font-bold text-hakiardhi-red">FREE</p>
                     <p className="text-xs text-gray-600">Service</p>
                   </div>
@@ -344,7 +344,7 @@ export default function LegalAidPage() {
       </section>
 
       {/* Impact Stats Section - Toll-Free & Push SMS */}
-      <section className="bg-gray-900 py-16 relative overflow-hidden">
+      <section className="py-16 lg:py-24 bg-gray-900 relative overflow-hidden">
         {/* Background Pattern */}
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -513,11 +513,11 @@ export default function LegalAidPage() {
       </section>
 
       {/* Legal Services Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">Our Services</p>
-            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Comprehensive Legal Aid
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -540,7 +540,7 @@ export default function LegalAidPage() {
                 <Card
                   key={service.id}
                   variant="elevated"
-                  className={`group shadow-sm transition-all duration-300 border-2 ${colors.border} ${colors.hover}`}
+                  className={`group transition-all duration-300 border-2 ${colors.border} ${colors.hover}`}
                 >
                   <Card.Body className="p-6 text-center">
                     <div className={`w-16 h-16 rounded-xl ${colors.bg} flex items-center justify-center mx-auto mb-4 transition-transform duration-300`}>
@@ -560,13 +560,13 @@ export default function LegalAidPage() {
       </section>
 
       {/* How It Works Section with Image */}
-      <section className="bg-gray-50 py-20 relative overflow-hidden">
+      <section className="py-16 lg:py-24 bg-gray-50 relative overflow-hidden">
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Left - Image */}
             <div className="relative">
-              <div className="relative h-[500px] rounded-xl overflow-hidden shadow-sm">
+              <div className="relative h-[500px] rounded-xl overflow-hidden">
                 <Image
                   src="/images/legal_aid_2.JPG"
                   alt="Legal Aid Process"
@@ -581,7 +581,7 @@ export default function LegalAidPage() {
               </div>
 
               {/* Floating Stats */}
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-6 border border-gray-200">
                 <p className="text-4xl font-bold text-hakiardhi-red mb-1">2,000+</p>
                 <p className="text-sm text-gray-600 font-semibold">Cases Won</p>
               </div>
@@ -598,7 +598,7 @@ export default function LegalAidPage() {
                   <div key={idx} className="flex gap-6 group">
                     {/* Step Number */}
                     <div className="flex-shrink-0">
-                      <div className="bg-hakiardhi-red w-16 h-16 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-sm transition-transform duration-300">
+                      <div className="bg-hakiardhi-red w-16 h-16 rounded-xl flex items-center justify-center text-white font-bold text-xl transition-transform duration-300">
                         {step.step}
                       </div>
                     </div>
@@ -625,7 +625,7 @@ export default function LegalAidPage() {
       </section>
 
       {/* Success Story Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="bg-brand-50 rounded-xl p-8 lg:p-12 ">
@@ -659,12 +659,12 @@ export default function LegalAidPage() {
       </section>
 
       {/* Emergency CTA Section */}
-      <section className="bg-gray-50 py-16 relative overflow-hidden">
+      <section className="py-16 lg:py-24 bg-gray-50 relative overflow-hidden">
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Icon */}
-            <div className="bg-hakiardhi-red/10 inline-flex items-center justify-center w-20 h-20 rounded-xl mx-auto mb-6 shadow-sm border border-hakiardhi-red/20">
+            <div className="bg-hakiardhi-red/10 inline-flex items-center justify-center w-20 h-20 rounded-xl mx-auto mb-6 border border-hakiardhi-red/20">
               <Icon name="alert-circle" size="xl" className="text-hakiardhi-red" />
             </div>
 
@@ -684,7 +684,7 @@ export default function LegalAidPage() {
                 href="https://wa.me/+255784646752"
                 variant="primary"
                 size="lg"
-                className="bg-hakiardhi-red hover:!bg-black !text-white shadow-sm shadow-sm !font-black !px-8"
+                className="bg-hakiardhi-red hover:!bg-black !text-white !font-black !px-8"
               >
                 <Icon name="phone" size="sm" className="mr-2" />
                 WhatsApp Legal Bot
@@ -693,7 +693,7 @@ export default function LegalAidPage() {
                 href="tel:0800711555"
                 variant="secondary"
                 size="lg"
-                className="bg-white !text-hakiardhi-red hover:!bg-black !border-2 !border-hakiardhi-red shadow-sm shadow-sm !font-black !px-8"
+                className="bg-white !text-hakiardhi-red hover:!bg-black !border-2 !border-hakiardhi-red !font-black !px-8"
               >
                 <Icon name="phone" size="sm" className="mr-2" />
                 Toll-Free: 0800 711 555

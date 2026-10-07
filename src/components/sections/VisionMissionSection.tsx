@@ -40,7 +40,7 @@ export default function VisionMissionSection({ className = '' }: VisionMissionSe
             <div className="flex justify-center mb-6">
             </div>
 
-            <h2 className="text-hakiardhi-red text-3xl lg:text-5xl xl:text-6xl font-bold mb-4">
+            <h2 className="text-3xl lg:text-4xl text-hakiardhi-red font-bold mb-4">
               Our History
             </h2>
 
@@ -51,7 +51,7 @@ export default function VisionMissionSection({ className = '' }: VisionMissionSe
 
             <div className="relative">
               {/* Background card for history text */}
-              <Card variant="elevated" className="relative bg-white/80 border border-gray-100">
+              <Card variant="elevated" className="relative bg-white/80 border border-gray-200">
                 <Card.Body className="p-8 lg:p-10">
                   <p className="text-lg lg:text-xl text-gray-800 leading-relaxed">
                     The Land Rights Research & Resources Institute (LARRRI/HAKIARDHI) was founded in{' '}
@@ -79,7 +79,7 @@ export default function VisionMissionSection({ className = '' }: VisionMissionSe
             <div className="relative h-full group">
               {/* Outer glow */}
 
-              <Card variant="elevated" className="relative h-full bg-white/90 border border-gray-100 shadow-sm group-hover:border-brand-500/30 transition-all duration-500">
+              <Card variant="elevated" className="relative h-full bg-white/90 border border-gray-200 group-hover:border-brand-500/30 transition-all duration-500">
                 <Card.Body className="p-8 lg:p-10">
                   {/* Icon badge */}
                   <div className="flex items-center gap-4 mb-6">
@@ -110,7 +110,7 @@ export default function VisionMissionSection({ className = '' }: VisionMissionSe
                     ].map((point, idx) => (
                       <div key={idx} className="flex items-start gap-3 group/item">
                         <div className="flex-shrink-0 mt-0.5">
-                          <div className="bg-brand-500 w-7 h-7 rounded-full flex items-center justify-center transition-transform duration-300 shadow-sm">
+                          <div className="bg-brand-500 w-7 h-7 rounded-full flex items-center justify-center transition-transform duration-300">
                             <Icon name="check" size="sm" className="text-white" />
                           </div>
                         </div>
@@ -132,7 +132,7 @@ export default function VisionMissionSection({ className = '' }: VisionMissionSe
             <div className="relative h-full group">
               {/* Outer glow */}
 
-              <Card variant="elevated" className="relative h-full bg-white/90 border border-gray-100 shadow-sm group-hover:border-hakiardhi-red/30 transition-all duration-500">
+              <Card variant="elevated" className="relative h-full bg-white/90 border border-gray-200 group-hover:border-hakiardhi-red/30 transition-all duration-500">
                 <Card.Body className="p-8 lg:p-10">
                   {/* Icon badge */}
                   <div className="flex items-center gap-4 mb-6">
@@ -163,10 +163,10 @@ export default function VisionMissionSection({ className = '' }: VisionMissionSe
                       { title: 'Advocacy', desc: 'Promoting policy reforms for equitable land access', icon: 'megaphone' },
                       { title: 'Promotion', desc: 'Raising awareness about land rights among small producers', icon: 'users' }
                     ].map((pillar, idx) => (
-                      <div key={idx} className="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-hakiardhi-red/20 shadow-sm transition-all duration-300 group/pillar">
+                      <div key={idx} className="bg-gray-50 rounded-xl p-4 border border-gray-200 hover:border-hakiardhi-red/20 transition-all duration-300 group/pillar">
                         <div className="flex items-start gap-3">
                           <div className="flex-shrink-0">
-                            <div className="bg-hakiardhi-red w-10 h-10 rounded-lg flex items-center justify-center transition-transform duration-300 shadow-sm">
+                            <div className="bg-hakiardhi-red w-10 h-10 rounded-lg flex items-center justify-center transition-transform duration-300">
                               <Icon name={pillar.icon as any} size="sm" className="text-white" />
                             </div>
                           </div>
@@ -232,7 +232,7 @@ export default function VisionMissionSection({ className = '' }: VisionMissionSe
               >
                 {/* Outer glow effect */}
 
-                <Card variant="elevated" className="relative overflow-hidden border-2 border-gray-100 group-hover:border-hakiardhi-red/30 transition-all duration-500 shadow-sm h-full">
+                <Card variant="elevated" className="relative overflow-hidden border-2 border-gray-200 group-hover:border-hakiardhi-red/30 transition-all duration-500 h-full">
                   {/* Image container */}
                   <div className="relative h-56 w-full bg-gray-200 overflow-hidden">
                     <Image
@@ -257,7 +257,7 @@ export default function VisionMissionSection({ className = '' }: VisionMissionSe
                         <h4 className="text-white text-lg font-bold tracking-wide group-hover:text-xl transition-all duration-300">
                           {beneficiary.name}
                         </h4>
-                        <div className="bg-hakiardhi-red w-8 h-8 rounded-full flex items-center justify-center shadow-sm transition-transform duration-300">
+                        <div className="bg-hakiardhi-red w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300">
                           <span className="text-white text-xs font-bold">{index + 1}</span>
                         </div>
                       </div>

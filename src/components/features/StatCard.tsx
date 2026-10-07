@@ -42,7 +42,7 @@ export default function StatCard({
       <div className={SPACING.component.default}>
         {icon && (
           <div
-            className={`relative inline-flex items-center justify-center p-5 rounded-xl ${colorClasses[color]} transition-all duration-500 shadow-sm shadow-sm`}
+            className={`relative inline-flex items-center justify-center p-5 rounded-xl ${colorClasses[color]} transition-all duration-500`}
           >
             {icon}
           </div>

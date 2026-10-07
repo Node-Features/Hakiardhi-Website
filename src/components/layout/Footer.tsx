@@ -172,7 +172,7 @@ export default function Footer() {
                   {/* Outer glow effect */}
 
                   {/* Main container */}
-                  <div className="bg-gray-800 relative flex items-center rounded-full border border-gray-700 group-hover:border-hakiardhi-red/50 group-focus-within:border-hakiardhi-red transition-all duration-300 shadow-sm shadow-sm group-focus-within:shadow-hakiardhi-red/20">
+                  <div className="bg-gray-800 relative flex items-center rounded-full border border-gray-700 group-hover:border-hakiardhi-red/50 group-focus-within:border-hakiardhi-red transition-all duration-300 group-focus-within:shadow-hakiardhi-red/20">
                     {/* Email icon */}
                     <div className="pl-4 pr-2">
                       <Icon name="mail" size="sm" className="text-gray-400 group-focus-within:text-hakiardhi-red transition-colors duration-300" />
@@ -194,7 +194,7 @@ export default function Footer() {
                     {/* Submit button - rounded only on right */}
                     <button
                       type="submit"
-                      className="bg-hakiardhi-red group/button relative flex items-center gap-2 text-white px-6 py-3 rounded-r-full text-sm font-bold transition-all duration-300 transform shadow-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-hakiardhi-red focus:ring-offset-2 focus:ring-offset-black"
+                      className="bg-hakiardhi-red group/button relative flex items-center gap-2 text-white px-6 py-3 rounded-r-full text-sm font-bold transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-hakiardhi-red focus:ring-offset-2 focus:ring-offset-black"
                       aria-label="Subscribe to newsletter"
                     >
                       <span>Subscribe</span>

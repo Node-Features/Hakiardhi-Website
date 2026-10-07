@@ -33,7 +33,7 @@ export default function CoreValuesSection({ className = '' }: CoreValuesSectionP
             <div className="flex justify-center mb-6">
             </div>
 
-            <h2 className="text-3xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Our Core Values
             </h2>
 
@@ -74,7 +74,7 @@ export default function CoreValuesSection({ className = '' }: CoreValuesSectionP
                         : 'translate-x-10 scale-95'
                     } flex flex-col justify-center`}
                   >
-                    <Card variant="elevated" className="bg-white/90 border border-gray-100 shadow-sm hover:border-hakiardhi-red/20 transition-all duration-500 h-full">
+                    <Card variant="elevated" className="bg-white/90 border border-gray-200 hover:border-hakiardhi-red/20 transition-all duration-500 h-full">
                       <Card.Body className="p-8 lg:p-10">
                         <div className={SPACING.component.loose}>
                           {/* Icon and Title */}
@@ -100,7 +100,7 @@ export default function CoreValuesSection({ className = '' }: CoreValuesSectionP
                           </p>
 
                           {/* In Practice Section - Enhanced */}
-                          <div className="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                             <div className="flex items-center gap-2 mb-4">
                               <div className="bg-hakiardhi-red w-8 h-8 rounded-lg flex items-center justify-center">
                                 <Icon name="star" size="sm" className="text-white" />
@@ -140,7 +140,7 @@ export default function CoreValuesSection({ className = '' }: CoreValuesSectionP
                     <div className="relative w-full max-w-md group">
                       {/* Outer glow effect */}
 
-                      <div className="bg-white relative aspect-square w-full rounded-xl overflow-hidden border-2 border-gray-200 group-hover:border-hakiardhi-red/40 shadow-sm shadow-sm transition-all duration-500">
+                      <div className="bg-white relative aspect-square w-full rounded-xl overflow-hidden border-2 border-gray-200 group-hover:border-hakiardhi-red/40 transition-all duration-500">
                         {/* Background gradient patterns */}
                         <div className="bg-brand-50/50 absolute inset-0 "></div>
 
@@ -155,7 +155,7 @@ export default function CoreValuesSection({ className = '' }: CoreValuesSectionP
                         <div className="absolute top-6 right-6 z-10">
                           <div className="relative">
                             {/* Badge glow */}
-                            <div className="bg-hakiardhi-red relative w-20 h-20 rounded-full flex items-center justify-center shadow-sm ring-2 ring-white/50 transition-transform duration-300">
+                            <div className="bg-hakiardhi-red relative w-20 h-20 rounded-full flex items-center justify-center ring-2 ring-white/50 transition-transform duration-300">
                               <span className="bg-hakiardhi-red text-3xl font-bold text-white">
                                 {String(index + 1).padStart(2, '0')}
                               </span>
@@ -199,7 +199,7 @@ export default function CoreValuesSection({ className = '' }: CoreValuesSectionP
             <div className="bg-hakiardhi-red/5 absolute inset-0 rounded-xl"></div>
 
             {/* Decorative border */}
-            <div className="absolute inset-0 rounded-xl border-2 border-gray-100"></div>
+            <div className="absolute inset-0 rounded-xl border-2 border-gray-200"></div>
 
             {/* Content */}
             <div className="relative px-6 py-12 lg:px-16 lg:py-20">
@@ -208,7 +208,7 @@ export default function CoreValuesSection({ className = '' }: CoreValuesSectionP
                 <div className="flex justify-center">
                   <div className="relative">
                     {/* Badge glow effect */}
-                    <div className="bg-hakiardhi-red relative w-24 h-24 rounded-full flex items-center justify-center shadow-sm ring-2 ring-white/50 ">
+                    <div className="bg-hakiardhi-red relative w-24 h-24 rounded-full flex items-center justify-center ring-2 ring-white/50 ">
                       <Icon name="heart" size="xl" className="text-white" />
                     </div>
                   </div>
@@ -220,7 +220,7 @@ export default function CoreValuesSection({ className = '' }: CoreValuesSectionP
                     Values in <span className="text-hakiardhi-red ">Action</span>
                   </h3>
                   <div className="flex justify-center">
-                    <div className="bg-hakiardhi-red h-1.5 w-32 rounded-full shadow-sm"></div>
+                    <div className="bg-hakiardhi-red h-1.5 w-32 rounded-full"></div>
                   </div>
                 </div>
 
@@ -252,10 +252,10 @@ export default function CoreValuesSection({ className = '' }: CoreValuesSectionP
                       <div className="relative">
                         {/* Stat card glow */}
 
-                        <div className="relative bg-white/80 rounded-xl p-6 border-2 border-gray-100 group-hover:border-hakiardhi-red/30 shadow-sm shadow-sm transform transition-all duration-500">
+                        <div className="relative bg-white/80 rounded-xl p-6 border-2 border-gray-200 group-hover:border-hakiardhi-red/30 transform transition-all duration-500">
                           {/* Icon badge */}
                           <div className="flex justify-center mb-4">
-                            <div className="bg-hakiardhi-red w-12 h-12 rounded-xl flex items-center justify-center shadow-sm transition-transform duration-300">
+                            <div className="bg-hakiardhi-red w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300">
                               <Icon name={stat.icon as any} size="md" className="text-white" />
                             </div>
                           </div>

@@ -48,7 +48,7 @@ export default function AboutIntroSection({ className = '' }: AboutIntroSectionP
           <div className="relative">
             {/* Background glow */}
 
-            <Card variant="elevated" className="relative bg-white/80 border border-gray-100">
+            <Card variant="elevated" className="relative bg-white/80 border border-gray-200">
               <Card.Body className="p-8 lg:p-12">
                 <p className={`${TYPOGRAPHY.body.lg.size} ${TYPOGRAPHY.body.lg.lineHeight} text-gray-800 ${SPACING.margin.element.lg}`}>
                   The Land Rights Research & Resources Institute (LARRRI/HAKIARDHI) was founded in{' '}

@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
         <div className="prose prose-lg max-w-none">
           {/* Introduction */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">1. Introduction</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               HakiArdhi (Land Rights Research & Resources Institute) ("we," "us," or "our") is committed to protecting your privacy and personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
             </p>
@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
 
           {/* Information We Collect */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Information We Collect</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">2. Information We Collect</h2>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">2.1 Personal Information</h3>
             <p className="text-gray-700 leading-relaxed mb-3">
@@ -65,7 +65,7 @@ export default function PrivacyPolicyPage() {
 
           {/* How We Use Your Information */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">3. How We Use Your Information</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">3. How We Use Your Information</h2>
             <p className="text-gray-700 leading-relaxed mb-3">
               We use the information we collect to:
             </p>
@@ -82,7 +82,7 @@ export default function PrivacyPolicyPage() {
 
           {/* Information Sharing */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Information Sharing and Disclosure</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">4. Information Sharing and Disclosure</h2>
             <p className="text-gray-700 leading-relaxed mb-3">
               We do not sell, trade, or rent your personal information. We may share your information only in the following circumstances:
             </p>
@@ -97,7 +97,7 @@ export default function PrivacyPolicyPage() {
 
           {/* Data Security */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Data Security</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">5. Data Security</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:
             </p>
@@ -114,7 +114,7 @@ export default function PrivacyPolicyPage() {
 
           {/* Your Rights */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Your Rights</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">6. Your Rights</h2>
             <p className="text-gray-700 leading-relaxed mb-3">
               You have the following rights regarding your personal information:
             </p>
@@ -133,7 +133,7 @@ export default function PrivacyPolicyPage() {
 
           {/* Children's Privacy */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Children's Privacy</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">7. Children's Privacy</h2>
             <p className="text-gray-700 leading-relaxed">
               Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us immediately.
             </p>
@@ -141,7 +141,7 @@ export default function PrivacyPolicyPage() {
 
           {/* International Transfers */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">8. International Data Transfers</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">8. International Data Transfers</h2>
             <p className="text-gray-700 leading-relaxed">
               HakiArdhi is based in Tanzania. If you are accessing our services from outside Tanzania, your information may be transferred to, stored, and processed in Tanzania or other countries. We ensure appropriate safeguards are in place for such transfers.
             </p>
@@ -149,7 +149,7 @@ export default function PrivacyPolicyPage() {
 
           {/* Cookies */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Cookies and Tracking Technologies</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">9. Cookies and Tracking Technologies</h2>
             <p className="text-gray-700 leading-relaxed mb-3">
               We use cookies and similar tracking technologies to enhance your experience. You can control cookies through your browser settings. For more information, please see our <a href="/cookie-policy" className="text-hakiardhi-red hover:underline">Cookie Policy</a>.
             </p>
@@ -157,7 +157,7 @@ export default function PrivacyPolicyPage() {
 
           {/* Changes to Policy */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Changes to This Policy</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">10. Changes to This Policy</h2>
             <p className="text-gray-700 leading-relaxed">
               We may update this Privacy Policy from time to time. We will notify you of significant changes by posting the new policy on our website with an updated "Last Updated" date. Your continued use of our services after such changes constitutes acceptance of the updated policy.
             </p>
@@ -165,7 +165,7 @@ export default function PrivacyPolicyPage() {
 
           {/* Contact */}
           <section className="mb-10">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Contact Us</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">11. Contact Us</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               If you have questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us:
             </p>

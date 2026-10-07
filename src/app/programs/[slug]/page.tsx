@@ -165,14 +165,14 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
           <div className="lg:col-span-2 space-y-12">
             {/* Overview Section */}
             <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Program Overview</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Program Overview</h2>
               <p className="text-lg text-gray-700 leading-relaxed">{program.fullDescription}</p>
             </section>
 
             {/* Objectives Section */}
             {program.objectives && program.objectives.length > 0 && (
               <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Objectives</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Objectives</h2>
                 <div className="space-y-4">
                   {program.objectives.map((objective, index) => (
                     <div key={index} className="flex gap-4">
@@ -189,7 +189,7 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
             {/* Impact Metrics Section */}
             {program.impact && program.impact.length > 0 && (
               <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Impact & Reach</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Impact & Reach</h2>
                 <div className="grid grid-cols-2 gap-4 sm:gap-6">
                   {program.impact.map((metric, index) => (
                     <div
@@ -207,7 +207,7 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
             {/* Outcomes Section */}
             {program.outcomes && program.outcomes.length > 0 && (
               <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Outcomes</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Key Outcomes</h2>
                 <div className="space-y-3">
                   {program.outcomes.map((outcome, index) => (
                     <div key={index} className="flex gap-3">
@@ -232,7 +232,7 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
             {/* Photo Gallery Section */}
             {program.gallery && program.gallery.length > 0 && (
               <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Photo Gallery</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Photo Gallery</h2>
                 <div className="grid grid-cols-2 gap-4">
                   {program.gallery.map((image, index) => (
                     <div
@@ -300,10 +300,10 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
 
       {/* Related Programs Section */}
       {relatedPrograms.length > 0 && (
-        <section className="bg-gray-50 py-16 lg:py-24">
+        <section className="py-16 lg:py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                 Related Programs
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -316,7 +316,7 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
                 <Link
                   key={relatedProgram.id}
                   href={`/programs/${relatedProgram.slug}`}
-                  className="group bg-white rounded-xl overflow-hidden shadow-sm shadow-sm transition-all duration-300"
+                  className="group bg-white rounded-xl overflow-hidden transition-all duration-300"
                 >
                   <div className="relative h-48">
                     <Image

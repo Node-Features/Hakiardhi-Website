@@ -68,7 +68,7 @@ export default function LRMNetworkPage() {
       </section>
 
       {/* Interactive Map Section */}
-      <section className="relative py-16 lg:py-24 bg-gray-50 overflow-hidden">
+      <section className="py-16 lg:py-24 relative bg-gray-50 overflow-hidden">
         {/* Background decoration */}
 
         <Section.Content className="relative z-10">
@@ -124,7 +124,7 @@ export default function LRMNetworkPage() {
 
                         {/* Tooltip on hover */}
                         {hoveredRegion === region.name && (
-                          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 p-2 bg-black text-white text-xs rounded-lg whitespace-nowrap z-50 shadow-sm">
+                          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 p-2 bg-black text-white text-xs rounded-lg whitespace-nowrap z-50">
                             {region.lrmCount} LRMs in {region.name}
                             <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-x-4 border-t-4 border-transparent border-t-black"></div>
                           </div>
@@ -163,22 +163,22 @@ export default function LRMNetworkPage() {
                     </div>
 
                     <div className="space-y-4">
-                      <div className="bg-white rounded-xl p-4 shadow-sm">
+                      <div className="bg-white rounded-xl p-4">
                         <div className="text-sm text-gray-600 mb-1">Active LRMs</div>
                         <div className="text-3xl font-bold text-hakiardhi-red">{regionData.lrmCount}</div>
                       </div>
 
-                      <div className="bg-white rounded-xl p-4 shadow-sm">
+                      <div className="bg-white rounded-xl p-4">
                         <div className="text-sm text-gray-600 mb-1">Districts Covered</div>
                         <div className="text-2xl font-bold text-gray-900">{regionData.districts}</div>
                       </div>
 
-                      <div className="bg-white rounded-xl p-4 shadow-sm">
+                      <div className="bg-white rounded-xl p-4">
                         <div className="text-sm text-gray-600 mb-1">Villages Reached</div>
                         <div className="text-2xl font-bold text-gray-900">{regionData.villages}</div>
                       </div>
 
-                      <div className="bg-white rounded-xl p-4 shadow-sm">
+                      <div className="bg-white rounded-xl p-4">
                         <div className="text-sm text-gray-600 mb-2">Key Achievements</div>
                         <ul className="space-y-2">
                           {regionData.achievements.map((achievement, idx) => (
@@ -242,7 +242,7 @@ export default function LRMNetworkPage() {
       </Section>
 
       {/* Impact Statistics */}
-      <section className="bg-gray-900 relative py-16 lg:py-24 overflow-hidden">
+      <section className="py-16 lg:py-24 bg-gray-900 relative overflow-hidden">
         {/* Animated background */}
 
         <Section.Content className="relative z-10">
@@ -383,7 +383,7 @@ export default function LRMNetworkPage() {
       </Section>
 
       {/* CTA Section */}
-      <section className="bg-gray-50 relative py-16 lg:py-24 overflow-hidden">
+      <section className="py-16 lg:py-24 bg-gray-50 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('/patterns/dots.svg')] bg-repeat"></div>
         </div>

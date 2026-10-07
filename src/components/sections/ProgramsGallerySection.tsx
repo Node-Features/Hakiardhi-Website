@@ -55,7 +55,7 @@ export default function ProgramsGallerySection({ className = '' }: ProgramsGalle
             {/* Tag */}
             <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">Our Programs</p>
 
-            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Transforming Lives Through Action
             </h2>
             <p className={`text-base lg:text-lg text-gray-600 ${CONTENT_WIDTHS.text.wide} mx-auto leading-relaxed`}>
@@ -78,7 +78,7 @@ export default function ProgramsGallerySection({ className = '' }: ProgramsGalle
                 onClick={() => setSelectedCategory(category)}
                 className={`group px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-hakiardhi-red text-white shadow-sm'
+                    ? 'bg-hakiardhi-red text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-300 hover:border-hakiardhi-red '
                 }`}
               >
@@ -99,7 +99,7 @@ export default function ProgramsGallerySection({ className = '' }: ProgramsGalle
 
         {/* Programs Grid - With Gradient Background Container */}
         {displayPrograms.length > 0 ? (
-          <div className="bg-gray-50 rounded-xl p-8 lg:p-12 shadow-sm border border-gray-200/50">
+          <div className="bg-gray-50 rounded-xl p-8 lg:p-12 border border-gray-200/50">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
               {displayPrograms.map((program, index) => (
                 <div
@@ -144,7 +144,7 @@ export default function ProgramsGallerySection({ className = '' }: ProgramsGalle
                         </p>
 
                         {/* Program Meta - Professional spacing and alignment */}
-                        <div className="mt-auto pt-3 border-t border-gray-100">
+                        <div className="mt-auto pt-3 border-t border-gray-200">
                           <div className="space-y-2 mb-3">
                             <div className="flex items-center gap-2">
                               <Icon name="clock" size="sm" className="text-hakiardhi-red flex-shrink-0" />
@@ -191,7 +191,7 @@ export default function ProgramsGallerySection({ className = '' }: ProgramsGalle
             </div>
           </div>
         ) : (
-          <div className="text-center py-20 bg-white rounded-xl shadow-sm">
+          <div className="text-center py-20 bg-white rounded-xl">
             <div className="w-20 h-20 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
               <Icon name="calendar" size="xl" className="text-gray-400" />
             </div>

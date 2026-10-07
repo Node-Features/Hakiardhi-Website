@@ -113,7 +113,7 @@ export default function PortfolioPage() {
                   animationFillMode: 'forwards',
                 }}
               >
-                <div className={`bg-hakiardhi-red  text-white ${SPACING.padding.lg} rounded-xl shadow-sm text-center transition-transform`}>
+                <div className={`bg-hakiardhi-red  text-white ${SPACING.padding.lg} rounded-xl text-center transition-transform`}>
                   <div className={`${TYPOGRAPHY.display.md.size} ${TYPOGRAPHY.display.md.weight} ${SPACING.margin.element.xs}`}>
                     {stat.value}
                   </div>
@@ -240,7 +240,7 @@ export default function PortfolioPage() {
                   onClick={() => handleFilterChange(() => setSelectedCategory(category))}
                   className={`group px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
                     selectedCategory === category
-                      ? 'bg-hakiardhi-red text-white shadow-sm'
+                      ? 'bg-hakiardhi-red text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-300 hover:border-hakiardhi-red '
                   }`}
                 >
@@ -266,7 +266,7 @@ export default function PortfolioPage() {
               <div className="flex items-center justify-between mb-4">
                 <button
                   onClick={() => setShowFilters(!showFilters)}
-                  className="group flex items-center gap-2 px-6 py-3 bg-white rounded-xl border-2 border-gray-200 hover:border-hakiardhi-red transition-all duration-300 shadow-sm shadow-sm"
+                  className="group flex items-center gap-2 px-6 py-3 bg-white rounded-xl border-2 border-gray-200 hover:border-hakiardhi-red transition-all duration-300"
                 >
                   <Icon name="funnel" size="sm" className="text-hakiardhi-red" />
                   <span className="font-semibold text-gray-900">
@@ -301,7 +301,7 @@ export default function PortfolioPage() {
                   showFilters ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="bg-white rounded-xl border-2 border-gray-200 p-6 shadow-sm">
+                <div className="bg-white rounded-xl border-2 border-gray-200 p-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {/* Type Filter */}
                     <div className="space-y-2">
@@ -355,7 +355,7 @@ export default function PortfolioPage() {
 
           {/* Portfolio Grid */}
           {filteredItems.length > 0 ? (
-            <div className="bg-gray-50 rounded-xl p-8 lg:p-12 shadow-sm border border-gray-200/50">
+            <div className="bg-gray-50 rounded-xl p-8 lg:p-12 border border-gray-200/50">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
                 {visibleItems.map((item, index) => (
                   <div
@@ -404,7 +404,7 @@ export default function PortfolioPage() {
                           </p>
 
                           {/* Meta Info */}
-                          <div className="mt-auto pt-3 border-t border-gray-100">
+                          <div className="mt-auto pt-3 border-t border-gray-200">
                             <div className="space-y-2 mb-3">
                               <div className="flex items-center justify-between text-xs text-gray-600">
                                 <div className="flex items-center gap-2">
@@ -443,7 +443,7 @@ export default function PortfolioPage() {
                   <div className="inline-block relative">
                     <button
                       onClick={() => setItemsToShow(prev => prev + 9)}
-                      className="relative group px-8 py-4 bg-hakiardhi-red text-white font-bold rounded-full shadow-sm hover:bg-black shadow-sm transition-all duration-300 "
+                      className="relative group px-8 py-4 bg-hakiardhi-red text-white font-bold rounded-full hover:bg-black transition-all duration-300 "
                     >
                       <span className="flex items-center gap-3">
                         Load More Projects
@@ -466,7 +466,7 @@ export default function PortfolioPage() {
               )}
             </div>
           ) : (
-            <div className="text-center py-20 bg-white rounded-xl shadow-sm">
+            <div className="text-center py-20 bg-white rounded-xl">
               <div className="w-20 h-20 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
                 <Icon name="briefcase" size="xl" className="text-gray-400" />
               </div>

@@ -67,7 +67,7 @@ export default function DonorsSection({
                 animationFillMode: 'forwards',
               }}
             >
-              <Card variant="elevated" className="shadow-sm transition-all duration-300 h-full">
+              <Card variant="elevated" className=" transition-all duration-300 h-full">
                 <Card.Body className="p-6 flex items-center justify-center">
                   <div className="relative w-full h-20">
                     <Image

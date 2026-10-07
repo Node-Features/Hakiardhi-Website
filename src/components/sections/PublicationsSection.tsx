@@ -139,7 +139,7 @@ export default function PublicationsSection({ className = '' }: PublicationsSect
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 lg:mb-6">
             Our Publications
           </h2>
           <p className="text-base lg:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -160,7 +160,7 @@ export default function PublicationsSection({ className = '' }: PublicationsSect
               onClick={() => setSelectedType(type)}
               className={`px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 ${
                 selectedType === type
-                  ? 'bg-brand-500 text-white shadow-sm'
+                  ? 'bg-brand-500 text-white'
                   : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 '
               }`}
             >

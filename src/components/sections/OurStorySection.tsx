@@ -29,7 +29,7 @@ export default function OurStorySection({ className = '' }: OurStorySectionProps
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
             }`}
           >
-            <div className="relative h-[400px] lg:h-[600px] rounded-xl overflow-hidden shadow-sm">
+            <div className="relative h-[400px] lg:h-[600px] rounded-xl overflow-hidden">
               <Image
                 src="/images/capacity_building_3.jpg"
                 alt="HakiArdhi community empowerment"
@@ -37,7 +37,7 @@ export default function OurStorySection({ className = '' }: OurStorySectionProps
                 className="object-cover"
               />
               {/* Overlay badge */}
-              <div className="absolute bottom-6 left-6 bg-white/95 rounded-xl p-4 shadow-sm">
+              <div className="absolute bottom-6 left-6 bg-white/95 rounded-xl p-4">
                 <div className="flex items-center gap-3">
                   <div className="bg-hakiardhi-red w-12 h-12 rounded-full flex items-center justify-center">
                     <Icon name="users" size="lg" className="text-white" />
@@ -62,7 +62,7 @@ export default function OurStorySection({ className = '' }: OurStorySectionProps
             <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">Our Story</p>
 
             {/* Headline */}
-            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
               Securing Land Rights for Tanzania's Communities
             </h2>
 

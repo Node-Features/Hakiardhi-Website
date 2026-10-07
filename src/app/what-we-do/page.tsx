@@ -36,7 +36,7 @@ export default function WhatWeDoPage() {
               className={index % 2 === 1 ? 'flex-row-reverse' : ''}
             >
               {/* Image */}
-              <div className="relative h-96 lg:h-[500px] rounded-xl overflow-hidden shadow-sm">
+              <div className="relative h-96 lg:h-[500px] rounded-xl overflow-hidden">
                 <Image
                   src={service.image}
                   alt={service.title}

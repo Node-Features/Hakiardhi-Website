@@ -23,9 +23,9 @@ export default function ServiceCard({
   const hoverBorderColor = getHoverBorderColor(color as ThemeColor);
 
   return (
-    <div className={`card-hakiardhi group shadow-sm transition-all duration-500 border border-gray-100 ${hoverBorderColor} ${className}`}>
+    <div className={`card-hakiardhi group transition-all duration-500 border border-gray-200 ${hoverBorderColor} ${className}`}>
       <div
-        className={`inline-flex p-4 rounded-xl ${iconColorClasses} mb-5 transition-all duration-500 shadow-sm shadow-sm`}
+        className={`inline-flex p-4 rounded-xl ${iconColorClasses} mb-5 transition-all duration-500`}
       >
         {icon}
       </div>

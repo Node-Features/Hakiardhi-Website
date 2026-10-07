@@ -148,7 +148,7 @@ export default async function NewsEventDetailPage({ params }: NewsEventDetailPag
           <div className="lg:col-span-2 space-y-12">
             {/* Summary Section */}
             <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Overview</h2>
               <p className="text-lg text-gray-700 leading-relaxed font-medium bg-gray-50 p-6 rounded-xl ">
                 {newsEvent.excerpt}
               </p>
@@ -156,7 +156,7 @@ export default async function NewsEventDetailPage({ params }: NewsEventDetailPag
 
             {/* Full Content Section */}
             <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Full Story</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Full Story</h2>
               <div className="prose prose-lg max-w-none">
                 {newsEvent.fullDescription.split('\n\n').map((paragraph, index) => (
                   <p key={index} className="text-gray-700 leading-relaxed mb-4">
@@ -169,7 +169,7 @@ export default async function NewsEventDetailPage({ params }: NewsEventDetailPag
             {/* Photo Gallery Section */}
             {newsEvent.gallery && newsEvent.gallery.length > 0 && (
               <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Photo Gallery</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Photo Gallery</h2>
                 <div className="grid grid-cols-2 gap-4">
                   {newsEvent.gallery.map((image, index) => (
                     <div
@@ -192,7 +192,7 @@ export default async function NewsEventDetailPage({ params }: NewsEventDetailPag
             {/* Related Links Section */}
             {newsEvent.relatedLinks && newsEvent.relatedLinks.length > 0 && (
               <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Related Resources</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Related Resources</h2>
                 <div className="space-y-3">
                   {newsEvent.relatedLinks.map((link, index) => (
                     <a
@@ -301,10 +301,10 @@ export default async function NewsEventDetailPage({ params }: NewsEventDetailPag
 
       {/* Related Items Section */}
       {relatedItems.length > 0 && (
-        <section className="bg-gray-50 py-16 lg:py-24">
+        <section className="py-16 lg:py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                 Related {newsEvent.type === 'News' ? 'News' : newsEvent.type === 'Event' ? 'Events' : 'Updates'}
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -317,7 +317,7 @@ export default async function NewsEventDetailPage({ params }: NewsEventDetailPag
                 <Link
                   key={relatedItem.id}
                   href={`/news-events/${relatedItem.slug}`}
-                  className="group bg-white rounded-xl overflow-hidden shadow-sm shadow-sm transition-all duration-300"
+                  className="group bg-white rounded-xl overflow-hidden transition-all duration-300"
                 >
                   <div className="relative h-48">
                     <Image

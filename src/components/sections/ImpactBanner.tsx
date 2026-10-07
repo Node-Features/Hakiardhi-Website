@@ -52,7 +52,7 @@ export default function ImpactBanner({ stats = defaultStats, className = '' }: I
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-2">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
             Our Impact at a Glance
           </h2>
           <p className="text-base lg:text-lg text-gray-600">
@@ -66,7 +66,7 @@ export default function ImpactBanner({ stats = defaultStats, className = '' }: I
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-xl p-6 text-center shadow-sm shadow-sm transition-all duration-300 border border-gray-100 hover:border-hakiardhi-red/30"
+                className="group bg-white rounded-xl p-6 text-center transition-all duration-300 border border-gray-200 hover:border-hakiardhi-red/30"
               >
                 {/* Icon */}
                 <div className="mb-4 flex justify-center">

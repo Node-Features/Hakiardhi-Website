@@ -42,7 +42,7 @@ export default function AboutPage() {
       <CoreValuesSection />
 
       {/* Our Approach - LIGHT THEME WITH GRADIENT ORBS */}
-      <section className="relative overflow-hidden bg-gray-50 py-12 sm:py-16 lg:py-24 xl:py-32">
+      <section className="py-16 lg:py-24 relative overflow-hidden bg-gray-50">
         {/* Elegant decorative gradient orbs */}
 
         <Section.Content className="relative z-10">
@@ -84,7 +84,7 @@ export default function AboutPage() {
               </div>
 
               {/* Community Image */}
-              <div className="relative h-96 lg:h-full min-h-[500px] rounded-xl overflow-hidden shadow-sm">
+              <div className="relative h-96 lg:h-full min-h-[500px] rounded-xl overflow-hidden">
                 <Image
                   src="/images/capacity_building_3.jpg"
                   alt="Community engagement"
@@ -211,7 +211,7 @@ export default function AboutPage() {
       <DonorSection partners={partners} />
 
       {/* Legal Aid Hotline - LIGHT THEME WITH GRADIENT ORBS */}
-      <section className="relative overflow-hidden bg-gray-50 py-12 sm:py-16 lg:py-24">
+      <section className="py-16 lg:py-24 relative overflow-hidden bg-gray-50">
         {/* Elegant decorative gradient orbs */}
 
         <Section.Content className="relative z-10">

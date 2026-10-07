@@ -155,7 +155,7 @@ export default function ResourceCenterSection({ className = '' }: ResourceCenter
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 lg:mb-6">
             Resource Center
           </h2>
           <p className="text-base lg:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed mb-6 lg:mb-8">
@@ -170,7 +170,7 @@ export default function ResourceCenterSection({ className = '' }: ResourceCenter
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full font-semibold text-sm transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-brand-500 text-white shadow-sm '
+                    ? 'bg-brand-500 text-white '
                     : 'bg-gray-800/50 text-gray-300 border border-brand-500/20 hover:border-brand-500/40 hover:bg-gray-800'
                 }`}
               >

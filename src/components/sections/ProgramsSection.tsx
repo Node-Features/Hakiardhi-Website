@@ -68,7 +68,7 @@ export default function ProgramsSection({
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-10 lg:mb-12">
-          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 lg:mb-6">
             {title.split(' ').map((word, index) =>
               word === 'Programs' ? (
                 <span key={index} className="text-brand-500">Programs</span>

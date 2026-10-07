@@ -169,7 +169,7 @@ export default function LegalAdviceSection({ className = '' }: LegalAdviceSectio
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 lg:mb-6">
             Legal Advice & Counselling
           </h2>
           <p className="text-base lg:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">

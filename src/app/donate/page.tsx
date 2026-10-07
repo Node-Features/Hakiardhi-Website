@@ -93,21 +93,21 @@ function DonatePageContent() {
 
             {/* Impact Stats - Quick Visual */}
             <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mt-10">
-              <div className="bg-white/80 rounded-xl p-6 shadow-sm border border-gray-200/50">
+              <div className="bg-white/80 rounded-xl p-6 border border-gray-200/50">
                 <div className="bg-hakiardhi-red/10 flex items-center justify-center w-12 h-12 rounded-full mx-auto mb-3">
                   <Icon name="shield-check" size="md" className="text-hakiardhi-red" />
                 </div>
                 <p className="text-2xl font-bold text-gray-900 mb-1">30+</p>
                 <p className="text-xs font-semibold text-gray-600">Years Experience</p>
               </div>
-              <div className="bg-white/80 rounded-xl p-6 shadow-sm border border-gray-200/50">
+              <div className="bg-white/80 rounded-xl p-6 border border-gray-200/50">
                 <div className="bg-brand-50 flex items-center justify-center w-12 h-12 rounded-full mx-auto mb-3">
                   <Icon name="users" size="md" className="text-hakiardhi-red" />
                 </div>
                 <p className="text-2xl font-bold text-gray-900 mb-1">5M+</p>
                 <p className="text-xs font-semibold text-gray-600">Lives Touched</p>
               </div>
-              <div className="bg-white/80 rounded-xl p-6 shadow-sm border border-gray-200/50">
+              <div className="bg-white/80 rounded-xl p-6 border border-gray-200/50">
                 <div className="bg-brand-50 flex items-center justify-center w-12 h-12 rounded-full mx-auto mb-3">
                   <Icon name="check-circle" size="md" className="text-hakiardhi-red" />
                 </div>
@@ -121,7 +121,7 @@ function DonatePageContent() {
       </Section>
 
       {/* Main Donation Form Section */}
-      <section className="py-12 lg:py-16 relative">
+      <section className="py-16 lg:py-24 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -139,7 +139,7 @@ function DonatePageContent() {
                           onClick={() => setDonationType('one-time')}
                           className={`px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 ${
                             donationType === 'one-time'
-                              ? 'bg-hakiardhi-red text-white shadow-sm'
+                              ? 'bg-hakiardhi-red text-white'
                               : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red'
                           }`}
                         >
@@ -152,7 +152,7 @@ function DonatePageContent() {
                           onClick={() => setDonationType('monthly')}
                           className={`px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 ${
                             donationType === 'monthly'
-                              ? 'bg-hakiardhi-red text-white shadow-sm'
+                              ? 'bg-hakiardhi-red text-white'
                               : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red'
                           }`}
                         >
@@ -174,7 +174,7 @@ function DonatePageContent() {
                           onClick={() => handleDonorLocationChange('tanzania')}
                           className={`px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 ${
                             donorLocation === 'tanzania'
-                              ? 'bg-hakiardhi-red text-white shadow-sm'
+                              ? 'bg-hakiardhi-red text-white'
                               : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red'
                           }`}
                         >
@@ -187,7 +187,7 @@ function DonatePageContent() {
                           onClick={() => handleDonorLocationChange('international')}
                           className={`px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 ${
                             donorLocation === 'international'
-                              ? 'bg-hakiardhi-red text-white shadow-sm'
+                              ? 'bg-hakiardhi-red text-white'
                               : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red'
                           }`}
                         >
@@ -211,7 +211,7 @@ function DonatePageContent() {
                             onClick={() => handleAmountSelect(amount)}
                             className={`px-4 py-4 rounded-xl font-bold text-lg transition-all duration-300 ${
                               selectedAmount === amount
-                                ? 'bg-hakiardhi-red text-white shadow-sm'
+                                ? 'bg-hakiardhi-red text-white'
                                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border-2 border-gray-200 hover:border-hakiardhi-red'
                             }`}
                           >
@@ -253,7 +253,7 @@ function DonatePageContent() {
                             onClick={() => setPaymentMethod('mobile-money')}
                             className={`px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-300 ${
                               paymentMethod === 'mobile-money'
-                                ? 'bg-hakiardhi-red text-white shadow-sm'
+                                ? 'bg-hakiardhi-red text-white'
                                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border-2 border-gray-200'
                             }`}
                           >
@@ -267,7 +267,7 @@ function DonatePageContent() {
                           onClick={() => setPaymentMethod('card')}
                           className={`px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-300 ${
                             paymentMethod === 'card'
-                              ? 'bg-hakiardhi-red text-white shadow-sm'
+                              ? 'bg-hakiardhi-red text-white'
                               : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border-2 border-gray-200'
                           }`}
                         >
@@ -281,7 +281,7 @@ function DonatePageContent() {
                             onClick={() => setPaymentMethod('paypal')}
                             className={`px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-300 ${
                               paymentMethod === 'paypal'
-                                ? 'bg-hakiardhi-red text-white shadow-sm'
+                                ? 'bg-hakiardhi-red text-white'
                                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border-2 border-gray-200'
                             }`}
                           >

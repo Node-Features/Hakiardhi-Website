@@ -133,7 +133,7 @@ export default function LearnMorePage() {
       </section>
 
       {/* Our Services Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">What We Offer</p>
@@ -161,7 +161,7 @@ export default function LearnMorePage() {
                 <Card
                   key={idx}
                   variant="elevated"
-                  className={`group shadow-sm transition-all duration-300 border border-gray-100 ${colors.border} `}
+                  className={`group transition-all duration-300 border border-gray-200 ${colors.border} `}
                 >
                   <Card.Body className="p-6">
                     <div className={`w-14 h-14 rounded-xl ${colors.bg} flex items-center justify-center mb-4 transition-transform duration-300`}>
@@ -181,7 +181,7 @@ export default function LearnMorePage() {
       </section>
 
       {/* Who Can Access Section */}
-      <section className="bg-gray-50 py-20 ">
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
@@ -205,7 +205,7 @@ export default function LearnMorePage() {
             </div>
 
             <div className="relative">
-              <div className="relative h-[400px] rounded-xl overflow-hidden shadow-sm">
+              <div className="relative h-[400px] rounded-xl overflow-hidden">
                 <Image
                   src="/images/capacity_building_3.jpg"
                   alt="Community legal support"
@@ -213,7 +213,7 @@ export default function LearnMorePage() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-6 shadow-sm">
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-6">
                 <p className="text-4xl font-bold text-hakiardhi-red mb-1">30+</p>
                 <p className="text-sm text-gray-600 font-semibold">Years of Service</p>
               </div>
@@ -223,7 +223,7 @@ export default function LearnMorePage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">Simple Process</p>
@@ -252,10 +252,10 @@ export default function LearnMorePage() {
                 return (
                   <div key={idx} className="text-center group">
                     <div className="relative mb-6">
-                      <div className={`w-16 h-16 rounded-xl ${colorClasses[item.color as keyof typeof colorClasses]} flex items-center justify-center mx-auto shadow-sm transition-transform duration-300`}>
+                      <div className={`w-16 h-16 rounded-xl ${colorClasses[item.color as keyof typeof colorClasses]} flex items-center justify-center mx-auto transition-transform duration-300`}>
                         <Icon name={item.icon as any} size="lg" className="text-white" />
                       </div>
-                      <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-white shadow-sm flex items-center justify-center">
+                      <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-white flex items-center justify-center">
                         <span className="text-sm font-bold text-gray-900">{item.step}</span>
                       </div>
                     </div>
@@ -270,7 +270,7 @@ export default function LearnMorePage() {
       </section>
 
       {/* FAQs Section */}
-      <section className="bg-gray-50 py-20 ">
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -295,7 +295,7 @@ export default function LearnMorePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-black mb-4">

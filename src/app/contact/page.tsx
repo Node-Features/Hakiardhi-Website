@@ -145,7 +145,7 @@ export default function ContactPage() {
         <div className="hakiardhi-container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Form */}
-            <div className="bg-white rounded-xl p-8 shadow-sm">
+            <div className="bg-white rounded-xl p-8">
               <h2 className={`${TYPOGRAPHY.heading.h2.size} ${TYPOGRAPHY.heading.h2.weight} text-gray-900 mb-3`}>
                 Send Us a Message
               </h2>
@@ -157,7 +157,7 @@ export default function ContactPage() {
 
             {/* Map & Info */}
             <div>
-              <div className="bg-white rounded-xl p-8 shadow-sm mb-6">
+              <div className="bg-white rounded-xl p-8 mb-6">
                 <h2 className={`${TYPOGRAPHY.heading.h2.size} ${TYPOGRAPHY.heading.h2.weight} text-gray-900 mb-6`}>
                   Find Us
                 </h2>
@@ -246,7 +246,7 @@ export default function ContactPage() {
                     animationFillMode: 'forwards',
                   }}
                 >
-                  <Card variant="elevated" className="shadow-sm transition-shadow duration-300">
+                  <Card variant="elevated" className=" transition-shadow duration-300">
                     <Card.Body className="p-6">
                       <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-start gap-3">
                         <Icon name="alert-circle" size="sm" className="text-hakiardhi-red flex-shrink-0 mt-1" />
@@ -263,7 +263,7 @@ export default function ContactPage() {
       </Section>
 
       {/* Emergency Contact Banner */}
-      <section className="relative py-16 lg:py-20 overflow-hidden">
+      <section className="py-16 lg:py-24 relative overflow-hidden">
         <div className="bg-hakiardhi-red absolute inset-0 "></div>
         <div className="absolute inset-0 bg-[url('/images/hero_1.JPG')] opacity-10 bg-cover bg-center"></div>
 
@@ -280,7 +280,7 @@ export default function ContactPage() {
             </p>
             <a
               href="tel:0800711555"
-              className="inline-flex items-center gap-3 px-8 py-4 min-h-[56px] bg-white !text-hakiardhi-red rounded-full text-xl md:text-2xl font-bold hover:bg-black hover:!text-white transition-all duration-300 shadow-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-hakiardhi-red"
+              className="inline-flex items-center gap-3 px-8 py-4 min-h-[56px] bg-white !text-hakiardhi-red rounded-full text-xl md:text-2xl font-bold hover:bg-black hover:!text-white transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-hakiardhi-red"
             >
               <Icon name="phone" size="lg" className="!text-hakiardhi-red" />
               0 800 711 555

@@ -82,7 +82,7 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
 
       {/* Key Impact Metrics Banner */}
       {portfolio.impactMetrics && portfolio.impactMetrics.length > 0 && (
-        <section className="bg-hakiardhi-red text-white py-8">
+        <section className="py-16 lg:py-24 bg-hakiardhi-red text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {portfolio.impactMetrics.map((metric, index) => (
@@ -108,7 +108,7 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
             {/* Overview */}
             <section>
               <div className="bg-gray-50 p-8 rounded-xl ">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
                   <Icon name="target" size="md" className="text-hakiardhi-red" />
                   Executive Summary
                 </h2>
@@ -121,7 +121,7 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
             {/* The Challenge */}
             {portfolio.challenge && (
               <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                   <div className="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center">
                     <Icon name="alert-circle" size="lg" className="text-hakiardhi-red" />
                   </div>
@@ -138,7 +138,7 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
             {/* Our Approach */}
             {portfolio.approach && (
               <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                   <div className="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center">
                     <Icon name="shield-check" size="lg" className="text-hakiardhi-red" />
                   </div>
@@ -155,7 +155,7 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
             {/* Timeline / Journey */}
             {portfolio.timeline && portfolio.timeline.length > 0 && (
               <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8 flex items-center gap-3">
                   <div className="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center">
                     <Icon name="clock" size="lg" className="text-hakiardhi-red" />
                   </div>
@@ -169,9 +169,9 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
                     {portfolio.timeline.map((milestone, index) => (
                       <div key={index} className="relative pl-16">
                         {/* Timeline dot */}
-                        <div className="absolute left-3 top-1 w-6 h-6 bg-hakiardhi-red rounded-full border-4 border-white shadow-sm"></div>
+                        <div className="absolute left-3 top-1 w-6 h-6 bg-hakiardhi-red rounded-full border-4 border-white"></div>
 
-                        <div className="bg-white p-6 rounded-xl shadow-sm border-2 border-gray-100 hover:border-hakiardhi-red transition-all duration-300">
+                        <div className="bg-white p-6 rounded-xl border-2 border-gray-200 hover:border-hakiardhi-red transition-all duration-300">
                           <div className="text-sm font-bold text-hakiardhi-red mb-2">
                             {milestone.date}
                           </div>
@@ -192,7 +192,7 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
             {/* Testimonials */}
             {portfolio.testimonials && portfolio.testimonials.length > 0 && (
               <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8 flex items-center gap-3">
                   <div className="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center">
                     <Icon name="quote" size="lg" className="text-hakiardhi-red" />
                   </div>
@@ -202,7 +202,7 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
                   {portfolio.testimonials.map((testimonial, index) => (
                     <div
                       key={index}
-                      className="bg-gray-50 p-8 rounded-xl shadow-sm "
+                      className="bg-gray-50 p-8 rounded-xl "
                     >
                       <div className="flex items-start gap-4 mb-4">
                         <Icon name="quote" size="xl" className="text-hakiardhi-red/20 flex-shrink-0" />
@@ -225,7 +225,7 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
             {/* Impact Metrics Detail */}
             {portfolio.impactMetrics && portfolio.impactMetrics.length > 0 && (
               <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8 flex items-center gap-3">
                   <div className="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center">
                     <Icon name="target" size="lg" className="text-hakiardhi-red" />
                   </div>
@@ -235,7 +235,7 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
                   {portfolio.impactMetrics.map((metric, index) => (
                     <div
                       key={index}
-                      className="bg-white p-6 rounded-xl shadow-sm border-2 border-gray-100 hover:border-hakiardhi-red transition-all duration-300"
+                      className="bg-white p-6 rounded-xl border-2 border-gray-200 hover:border-hakiardhi-red transition-all duration-300"
                     >
                       <div className="flex items-start gap-4">
                         <div className="w-14 h-14 bg-hakiardhi-red/10 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -262,12 +262,12 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
             {/* Photo Gallery */}
             {portfolio.gallery && portfolio.gallery.length > 0 && (
               <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">Visual Story</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Visual Story</h2>
                 <div className="grid grid-cols-2 gap-4">
                   {portfolio.gallery.map((image, index) => (
                     <div
                       key={index}
-                      className="relative h-64 rounded-xl overflow-hidden group cursor-pointer shadow-sm"
+                      className="relative h-64 rounded-xl overflow-hidden group cursor-pointer"
                     >
                       <Image
                         src={image}
@@ -285,7 +285,7 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
             {/* Funding Transparency */}
             {portfolio.fundingBreakdown && portfolio.fundingBreakdown.length > 0 && (
               <section className="bg-brand-50 p-8 rounded-xl">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 flex items-center gap-3">
                   <Icon name="briefcase" size="lg" className="text-hakiardhi-red" />
                   Financial Transparency
                 </h2>
@@ -294,7 +294,7 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
                 </p>
                 <div className="space-y-4">
                   {portfolio.fundingBreakdown.map((item, index) => (
-                    <div key={index} className="bg-white p-4 rounded-xl shadow-sm">
+                    <div key={index} className="bg-white p-4 rounded-xl">
                       <div className="flex items-center justify-between mb-2">
                         <span className="font-bold text-gray-900">{item.category}</span>
                         <span className="text-lg font-bold text-hakiardhi-red">{item.amount}</span>
@@ -332,7 +332,7 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
                         return (
                           <div
                             key={index}
-                            className="bg-white rounded-lg px-4 py-3 shadow-sm shadow-sm transition-all duration-300 flex items-center justify-center"
+                            className="bg-white rounded-lg px-4 py-3 transition-all duration-300 flex items-center justify-center"
                           >
                             <div className="relative w-24 h-10">
                               <Image
@@ -441,10 +441,10 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
 
       {/* Related Projects */}
       {relatedItems.length > 0 && (
-        <section className="bg-gray-50 py-16 lg:py-24">
+        <section className="py-16 lg:py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                 Related Projects
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -457,7 +457,7 @@ export default async function PortfolioCaseStudyPage({ params }: PortfolioCaseSt
                 <Link
                   key={item.id}
                   href={`/portfolio/${item.slug}`}
-                  className="group bg-white rounded-xl overflow-hidden shadow-sm shadow-sm transition-all duration-300"
+                  className="group bg-white rounded-xl overflow-hidden transition-all duration-300"
                 >
                   <div className="relative h-48">
                     <Image

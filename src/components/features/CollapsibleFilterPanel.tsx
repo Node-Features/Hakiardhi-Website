@@ -46,7 +46,7 @@ export default function CollapsibleFilterPanel({
         <div className="flex items-center justify-between mb-4">
           <button
             onClick={() => setShowFilters(!showFilters)}
-            className="group flex items-center gap-2 px-6 py-3 bg-white rounded-xl border-2 border-gray-200 hover:border-hakiardhi-red transition-all duration-300 shadow-sm shadow-sm"
+            className="group flex items-center gap-2 px-6 py-3 bg-white rounded-xl border-2 border-gray-200 hover:border-hakiardhi-red transition-all duration-300"
           >
             <Icon name="funnel" size="sm" className="text-hakiardhi-red" />
             <span className="font-semibold text-gray-900">
@@ -81,7 +81,7 @@ export default function CollapsibleFilterPanel({
             showFilters ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="bg-white rounded-xl border-2 border-gray-200 p-6 shadow-sm">
+          <div className="bg-white rounded-xl border-2 border-gray-200 p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {filters.map((filter) => {
                 // Skip conditional filters if condition is false
@@ -118,7 +118,7 @@ export default function CollapsibleFilterPanel({
                             onClick={() => filter.onChange(option.value)}
                             className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                               filter.value === option.value
-                                ? 'bg-hakiardhi-red text-white shadow-sm'
+                                ? 'bg-hakiardhi-red text-white'
                                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200 '
                             }`}
                           >
