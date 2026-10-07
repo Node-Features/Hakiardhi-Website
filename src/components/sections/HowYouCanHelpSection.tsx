@@ -66,40 +66,40 @@ export default function HowYouCanHelpSection({
 
   const colorClasses = {
     red: {
-      iconBg: 'from-red-50 to-red-100',
-      iconColor: 'text-red-600',
+      iconBg: 'bg-brand-50',
+      iconColor: 'text-hakiardhi-red',
       hoverBg: 'group-hover:from-red-100 group-hover:to-red-200',
-      accentBorder: 'border-red-100',
-      hoverBorder: 'group-hover:border-red-300',
-      hoverShadow: 'group-hover:shadow-red-100/50',
-      ctaColor: 'text-red-600 hover:text-red-700'
+      accentBorder: 'border-gray-200',
+      hoverBorder: 'group-hover:border-gray-200',
+      hoverShadow: '',
+      ctaColor: 'text-hakiardhi-red hover:text-hakiardhi-red-dark'
     },
     blue: {
-      iconBg: 'from-blue-50 to-blue-100',
-      iconColor: 'text-blue-600',
+      iconBg: 'bg-brand-50',
+      iconColor: 'text-hakiardhi-red',
       hoverBg: 'group-hover:from-blue-100 group-hover:to-blue-200',
-      accentBorder: 'border-blue-100',
-      hoverBorder: 'group-hover:border-blue-300',
-      hoverShadow: 'group-hover:shadow-blue-100/50',
-      ctaColor: 'text-blue-600 hover:text-blue-700'
+      accentBorder: 'border-gray-200',
+      hoverBorder: 'group-hover:border-gray-200',
+      hoverShadow: '',
+      ctaColor: 'text-hakiardhi-red hover:text-hakiardhi-red'
     },
     green: {
-      iconBg: 'from-green-50 to-green-100',
-      iconColor: 'text-green-600',
+      iconBg: 'bg-brand-50',
+      iconColor: 'text-hakiardhi-red',
       hoverBg: 'group-hover:from-green-100 group-hover:to-green-200',
-      accentBorder: 'border-green-100',
-      hoverBorder: 'group-hover:border-green-300',
-      hoverShadow: 'group-hover:shadow-green-100/50',
-      ctaColor: 'text-green-600 hover:text-green-700'
+      accentBorder: 'border-gray-200',
+      hoverBorder: 'group-hover:border-gray-200',
+      hoverShadow: '',
+      ctaColor: 'text-hakiardhi-red hover:text-hakiardhi-red'
     },
     orange: {
-      iconBg: 'from-orange-50 to-orange-100',
-      iconColor: 'text-orange-600',
+      iconBg: 'bg-brand-50',
+      iconColor: 'text-hakiardhi-red',
       hoverBg: 'group-hover:from-orange-100 group-hover:to-orange-200',
-      accentBorder: 'border-orange-100',
-      hoverBorder: 'group-hover:border-orange-300',
-      hoverShadow: 'group-hover:shadow-orange-100/50',
-      ctaColor: 'text-orange-600 hover:text-orange-700'
+      accentBorder: 'border-gray-200',
+      hoverBorder: 'group-hover:border-gray-200',
+      hoverShadow: '',
+      ctaColor: 'text-hakiardhi-red hover:text-hakiardhi-red'
     }
   };
 
@@ -108,10 +108,6 @@ export default function HowYouCanHelpSection({
       ref={sectionRef}
       className={`relative py-20 lg:py-28 xl:py-32 bg-white overflow-hidden ${className}`}
     >
-      {/* Subtle background decorations */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-gradient-to-br from-hakiardhi-red/5 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-gradient-to-br from-brand-500/5 to-transparent rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
         {/* Header */}
@@ -121,16 +117,11 @@ export default function HowYouCanHelpSection({
           }`}
         >
           {/* Tag */}
-          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-gradient-to-r from-hakiardhi-red/10 to-brand-500/10 rounded-full mb-8 shadow-sm">
-            <Icon name="hand-heart" size="sm" className="!text-hakiardhi-red" />
-            <span className="text-sm font-bold !text-hakiardhi-red uppercase tracking-wider">
-              Get Involved
-            </span>
-          </div>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">Get Involved</p>
 
           {/* Heading */}
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black !text-gray-900 mb-6 leading-tight">
-            How <span className="!text-hakiardhi-red">You</span> Can Help
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold !text-gray-900 mb-6 leading-tight">
+            How You Can Help
           </h2>
 
           {/* Subheading */}
@@ -138,12 +129,6 @@ export default function HowYouCanHelpSection({
             Every contribution—big or small—creates lasting change for communities fighting for their land rights
           </p>
 
-          {/* Decorative divider */}
-          <div className="flex items-center justify-center gap-2 mt-8">
-            <div className="h-px w-16 bg-gradient-to-r from-transparent to-hakiardhi-red/30"></div>
-            <div className="w-1.5 h-1.5 rounded-full bg-hakiardhi-red"></div>
-            <div className="h-px w-16 bg-gradient-to-l from-transparent to-hakiardhi-red/30"></div>
-          </div>
         </div>
 
         {/* Support Options Grid */}
@@ -154,35 +139,30 @@ export default function HowYouCanHelpSection({
               return (
                 <div
                   key={index}
-                  className={`group relative bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border ${colors.accentBorder} ${colors.hoverBorder} ${colors.hoverShadow} hover:-translate-y-2`}
+                  className="rounded-xl border border-gray-200 bg-white p-6"
                 >
-                  {/* Top accent line */}
-                  <div className={`absolute top-0 left-0 right-0 h-1 rounded-t-3xl bg-gradient-to-r ${colors.iconBg} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
 
                   {/* Icon */}
-                  <div className="mb-6">
-                    <div className={`relative w-20 h-20 rounded-2xl bg-gradient-to-br ${colors.iconBg} ${colors.hoverBg} flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 shadow-sm`}>
-                      <Icon name={option.icon as any} size="xl" className={colors.iconColor} />
-
-                      {/* Subtle glow effect on hover */}
-                      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${colors.iconBg} opacity-0 group-hover:opacity-50 blur-xl transition-opacity duration-500`}></div>
+                  <div className="mb-5">
+                    <div className={`w-12 h-12 rounded-lg ${colors.iconBg} flex items-center justify-center`}>
+                      <Icon name={option.icon as any} size="md" className={colors.iconColor} />
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl lg:text-2xl font-black text-gray-900 mb-4 leading-tight">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
                     {option.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 leading-relaxed mb-6 text-base min-h-[4.5rem]">
+                  <p className="text-gray-600 leading-relaxed mb-5">
                     {option.description}
                   </p>
 
                   {/* CTA Link */}
                   <a
                     href={option.link}
-                    className={`inline-flex items-center gap-2.5 font-bold !text-hakiardhi-red hover:!text-black transition-all duration-300 group/cta underline hover:no-underline`}
+                    className={`inline-flex items-center gap-2 font-semibold text-hakiardhi-red hover:text-hakiardhi-red-dark hover:underline`}
                   >
                     <span className="relative">
                       {option.cta}
@@ -190,7 +170,7 @@ export default function HowYouCanHelpSection({
                     <Icon
                       name="arrow-right"
                       size="sm"
-                      className="group-hover/cta:translate-x-1.5 transition-transform duration-300"
+                      className=" transition-transform duration-300"
                     />
                   </a>
                 </div>
@@ -201,34 +181,15 @@ export default function HowYouCanHelpSection({
 
         {/* Featured Donation CTA */}
         <div
-          className={`relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-hakiardhi-red via-brand-500 to-hakiardhi-red p-12 lg:p-16 xl:p-20 text-center shadow-2xl transition-all duration-1000 delay-300 ${
+          className={`bg-hakiardhi-red relative overflow-hidden rounded-xl px-6 py-12 sm:p-12 lg:p-16 text-center transition-all duration-1000 ${
             isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}
         >
-          {/* Enhanced background pattern */}
-          <div className="absolute inset-0">
-            {/* Animated gradient orbs */}
-            <div className="absolute top-0 left-1/4 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
-
-            {/* Subtle pattern overlay */}
-            <div className="absolute inset-0 opacity-5" style={{
-              backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-              backgroundSize: '32px 32px'
-            }}></div>
-          </div>
 
           <div className="relative z-10">
-            {/* Icon */}
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30 shadow-lg">
-                <Icon name="heart" size="xl" className="text-white" />
-              </div>
-            </div>
 
             {/* Heading */}
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               Every Contribution <span className="block mt-2">Matters</span>
             </h3>
 
@@ -260,19 +221,19 @@ export default function HowYouCanHelpSection({
             {/* Trust indicators */}
             <div className="flex flex-wrap justify-center items-center gap-8 pt-8 border-t border-white/20">
               <div className="flex items-center gap-2.5 text-white/90">
-                <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                <div className="flex items-center">
                   <Icon name="shield-check" size="sm" />
                 </div>
                 <span className="text-sm font-semibold">Secure Donation</span>
               </div>
               <div className="flex items-center gap-2.5 text-white/90">
-                <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                <div className="flex items-center">
                   <Icon name="check-circle" size="sm" />
                 </div>
                 <span className="text-sm font-semibold">Tax Deductible</span>
               </div>
               <div className="flex items-center gap-2.5 text-white/90">
-                <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                <div className="flex items-center">
                   <Icon name="eye" size="sm" />
                 </div>
                 <span className="text-sm font-semibold">100% Transparent</span>

@@ -34,19 +34,16 @@ export default function ImpactBanner({ stats = defaultStats, className = '' }: I
 
   const colorClasses = {
     brand: 'text-hakiardhi-red',
-    success: 'text-green-600',
-    blue: 'text-blue-600',
-    orange: 'text-orange-600',
+    success: 'text-hakiardhi-red',
+    blue: 'text-hakiardhi-red',
+    orange: 'text-hakiardhi-red',
   };
 
   return (
     <section
       ref={sectionRef}
-      className={`relative py-12 lg:py-16 bg-gradient-to-br from-zinc-50 via-white to-zinc-50 ${className}`}
+      className={`bg-gray-50 relative py-12 lg:py-16 ${className}`}
     >
-      {/* Subtle decorative elements */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-hakiardhi-red/20 to-transparent"></div>
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-hakiardhi-red/20 to-transparent"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
@@ -55,8 +52,8 @@ export default function ImpactBanner({ stats = defaultStats, className = '' }: I
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-2xl lg:text-4xl font-black text-gray-900 mb-2">
-            Our <span className="text-hakiardhi-red">Impact</span> at a Glance
+          <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-2">
+            Our Impact at a Glance
           </h2>
           <p className="text-base lg:text-lg text-gray-600">
             Measurable results in advancing land rights across Tanzania
@@ -69,11 +66,11 @@ export default function ImpactBanner({ stats = defaultStats, className = '' }: I
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-hakiardhi-red/30"
+                className="group bg-white rounded-xl p-6 text-center shadow-sm shadow-sm transition-all duration-300 border border-gray-100 hover:border-hakiardhi-red/30"
               >
                 {/* Icon */}
                 <div className="mb-4 flex justify-center">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-gray-50 to-zinc-100 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="bg-gray-50 w-14 h-14 rounded-full flex items-center justify-center transition-transform duration-300">
                     <Icon
                       name={stat.icon as any}
                       size="lg"
@@ -83,7 +80,7 @@ export default function ImpactBanner({ stats = defaultStats, className = '' }: I
                 </div>
 
                 {/* Number */}
-                <div className="text-3xl lg:text-4xl font-black text-gray-900 mb-2 group-hover:text-hakiardhi-red transition-colors">
+                <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2 group-hover:text-hakiardhi-red transition-colors">
                   {stat.number}
                 </div>
 

@@ -29,8 +29,8 @@ export default function FormField({ id, label, required, error, helpText, childr
       {children}
 
       {error && (
-        <div className="mt-2 p-3 bg-red-50 border-l-4 border-red-500 rounded-r">
-          <p className="text-sm text-red-700 flex items-start gap-2">
+        <div className="mt-2 p-3 bg-brand-50 rounded-r">
+          <p className="text-sm text-hakiardhi-red-dark flex items-start gap-2">
             <Icon name="exclamation-circle" size="sm" className="flex-shrink-0 mt-0.5" />
             <span className="font-medium">{error}</span>
           </p>

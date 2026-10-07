@@ -19,7 +19,7 @@ const variantClasses = {
   success: 'bg-success-500 text-white',
   warning: 'bg-warning-500 text-white',
   error: 'bg-error-500 text-white',
-  info: 'bg-blue-light-500 text-white',
+  info: 'bg-hakiardhi-red text-white',
 };
 
 const sizeClasses = {

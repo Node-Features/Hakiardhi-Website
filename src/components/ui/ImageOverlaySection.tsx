@@ -39,9 +39,9 @@ export default function ImageOverlaySection({
   id,
 }: ImageOverlaySectionProps) {
   const overlays = {
-    light: 'from-zinc-900/50 via-zinc-800/50 to-zinc-900/50',
-    medium: 'from-zinc-900/70 via-zinc-800/60 to-zinc-900/70',
-    dark: 'from-zinc-900/85 via-zinc-800/80 to-zinc-900/85',
+    light: 'bg-black/50',
+    medium: 'bg-black/65',
+    dark: 'bg-black/80',
   };
 
   const blurs = {
@@ -67,7 +67,7 @@ export default function ImageOverlaySection({
           priority={false}
         />
         {/* Gradient Overlay */}
-        <div className={`absolute inset-0 bg-gradient-to-br ${overlays[overlayOpacity]}`} />
+        <div className={`absolute inset-0 ${overlays[overlayOpacity]}`} />
       </div>
 
       {/* Content Layer */}

@@ -20,15 +20,15 @@ export default function StatCard({
 }: StatCardProps) {
   const colorClasses = {
     red: 'bg-brand-500 text-white',
-    blue: 'bg-blue-light-500 text-white',
-    orange: 'bg-orange-500 text-white',
+    blue: 'bg-hakiardhi-red text-white',
+    orange: 'bg-hakiardhi-red text-white',
     success: 'bg-success-500 text-white',
   };
 
   const numberColorClasses = {
     red: 'text-brand-600',
-    blue: 'text-blue-light-600',
-    orange: 'text-orange-600',
+    blue: 'text-hakiardhi-red',
+    orange: 'text-hakiardhi-red',
     success: 'text-success-600',
   };
 
@@ -36,18 +36,18 @@ export default function StatCard({
     <div className={`text-center group relative ${className}`}>
       {/* Decorative background circle */}
       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-        <div className={`w-32 h-32 rounded-full ${numberColorClasses[color]} opacity-5 blur-2xl`}></div>
+        <div className={`w-32 h-32 rounded-full ${numberColorClasses[color]} opacity-5 `}></div>
       </div>
 
       <div className={SPACING.component.default}>
         {icon && (
           <div
-            className={`relative inline-flex items-center justify-center p-5 rounded-2xl ${colorClasses[color]} transition-all group-hover:scale-110 group-hover:rotate-6 duration-500 shadow-lg group-hover:shadow-2xl`}
+            className={`relative inline-flex items-center justify-center p-5 rounded-xl ${colorClasses[color]} transition-all duration-500 shadow-sm shadow-sm`}
           >
             {icon}
           </div>
         )}
-        <div className={`relative text-6xl sm:text-7xl font-black ${numberColorClasses[color]} transition-all duration-300 group-hover:scale-110`}>
+        <div className={`relative text-6xl sm:text-7xl font-bold ${numberColorClasses[color]} transition-all duration-300 `}>
           {number}
         </div>
         <div className="text-heading-md font-bold text-gray-900 tracking-tight">{label}</div>

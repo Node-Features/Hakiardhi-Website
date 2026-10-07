@@ -104,15 +104,10 @@ export default function LearnMorePage() {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/10 backdrop-blur-md rounded-full mb-6 border border-white/20">
-              <Icon name="info" size="sm" className="text-white" />
-              <span className="text-sm font-bold text-white uppercase tracking-wider">
-                About Our Legal Services
-              </span>
-            </div>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-white/80">About Our Legal Services</p>
 
-            <h1 className="text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
-              Free Legal Aid for <span className="text-hakiardhi-red">Land Rights</span>
+            <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              Free Legal Aid for Land Rights
             </h1>
 
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
@@ -120,16 +115,16 @@ export default function LearnMorePage() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <Icon name="check-circle" size="sm" className="text-green-400" />
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+                <Icon name="check-circle" size="sm" className="text-hakiardhi-red" />
                 <span className="text-white text-sm font-semibold">100% Free</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <Icon name="shield" size="sm" className="text-green-400" />
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+                <Icon name="shield" size="sm" className="text-hakiardhi-red" />
                 <span className="text-white text-sm font-semibold">Confidential</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <Icon name="users" size="sm" className="text-green-400" />
+              <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+                <Icon name="users" size="sm" className="text-hakiardhi-red" />
                 <span className="text-white text-sm font-semibold">Expert Team</span>
               </div>
             </div>
@@ -141,14 +136,9 @@ export default function LearnMorePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-hakiardhi-red/10 rounded-full mb-6">
-              <Icon name="briefcase" size="sm" className="text-hakiardhi-red" />
-              <span className="text-sm font-bold text-hakiardhi-red uppercase tracking-wider">
-                What We Offer
-              </span>
-            </div>
-            <h2 className="text-3xl lg:text-4xl font-black text-gray-900 mb-4">
-              Our Legal <span className="text-hakiardhi-red">Services</span>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">What We Offer</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Our Legal Services
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Comprehensive legal support tailored to your land rights needs - all completely free
@@ -158,12 +148,12 @@ export default function LearnMorePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {services.map((service, idx) => {
               const colorClasses = {
-                blue: { bg: 'from-blue-50 to-blue-100', icon: 'text-blue-600', badge: 'bg-blue-600 text-white font-semibold', border: 'hover:border-blue-300' },
-                red: { bg: 'from-red-50 to-red-100', icon: 'text-hakiardhi-red', badge: 'bg-hakiardhi-red text-white font-semibold', border: 'hover:border-red-300' },
-                green: { bg: 'from-green-50 to-green-100', icon: 'text-green-600', badge: 'bg-green-600 text-white font-semibold', border: 'hover:border-green-300' },
-                orange: { bg: 'from-orange-50 to-orange-100', icon: 'text-orange-600', badge: 'bg-orange-600 text-white font-semibold', border: 'hover:border-orange-300' },
-                purple: { bg: 'from-purple-50 to-purple-100', icon: 'text-purple-600', badge: 'bg-purple-600 text-white font-semibold', border: 'hover:border-purple-300' },
-                yellow: { bg: 'from-yellow-50 to-amber-100', icon: 'text-amber-600', badge: 'bg-amber-600 text-white font-semibold', border: 'hover:border-amber-300' },
+                blue: { bg: 'bg-brand-50', icon: 'text-hakiardhi-red', badge: 'bg-hakiardhi-red text-white font-semibold', border: 'hover:border-gray-200' },
+                red: { bg: 'bg-brand-50', icon: 'text-hakiardhi-red', badge: 'bg-hakiardhi-red text-white font-semibold', border: 'hover:border-gray-200' },
+                green: { bg: 'bg-brand-50', icon: 'text-hakiardhi-red', badge: 'bg-hakiardhi-red text-white font-semibold', border: 'hover:border-gray-200' },
+                orange: { bg: 'bg-brand-50', icon: 'text-hakiardhi-red', badge: 'bg-hakiardhi-red text-white font-semibold', border: 'hover:border-gray-200' },
+                purple: { bg: 'bg-brand-50', icon: 'text-hakiardhi-red', badge: 'bg-hakiardhi-red text-white font-semibold', border: 'hover:border-gray-200' },
+                yellow: { bg: 'bg-brand-50', icon: 'text-hakiardhi-red', badge: 'bg-hakiardhi-red text-white font-semibold', border: 'hover:border-gray-200' },
               };
               const colors = colorClasses[service.color as keyof typeof colorClasses];
 
@@ -171,10 +161,10 @@ export default function LearnMorePage() {
                 <Card
                   key={idx}
                   variant="elevated"
-                  className={`group hover:shadow-xl transition-all duration-300 border border-gray-100 ${colors.border} hover:-translate-y-1`}
+                  className={`group shadow-sm transition-all duration-300 border border-gray-100 ${colors.border} `}
                 >
                   <Card.Body className="p-6">
-                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${colors.bg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`w-14 h-14 rounded-xl ${colors.bg} flex items-center justify-center mb-4 transition-transform duration-300`}>
                       <Icon name={service.icon as any} size="lg" className={colors.icon} />
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
@@ -191,12 +181,12 @@ export default function LearnMorePage() {
       </section>
 
       {/* Who Can Access Section */}
-      <section className="py-20 bg-gradient-to-br from-zinc-50 via-gray-50 to-zinc-100">
+      <section className="bg-gray-50 py-20 ">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6">
-                Who Can <span className="text-hakiardhi-red">Access</span> Our Services?
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                Who Can Access Our Services?
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Our free legal aid is available to individuals and communities who need support with land rights issues but cannot afford legal representation.
@@ -205,7 +195,7 @@ export default function LearnMorePage() {
               <div className="space-y-4">
                 {eligibility.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4 p-3 rounded-xl hover:bg-white/50 transition-colors">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-hakiardhi-red/10 to-brand-500/10 flex items-center justify-center">
+                    <div className="bg-hakiardhi-red/10 flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center">
                       <Icon name={item.icon as any} size="md" className="text-hakiardhi-red" />
                     </div>
                     <p className="text-gray-700 font-medium pt-2">{item.text}</p>
@@ -215,7 +205,7 @@ export default function LearnMorePage() {
             </div>
 
             <div className="relative">
-              <div className="relative h-[400px] rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative h-[400px] rounded-xl overflow-hidden shadow-sm">
                 <Image
                   src="/images/capacity_building_3.jpg"
                   alt="Community legal support"
@@ -223,8 +213,8 @@ export default function LearnMorePage() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl">
-                <p className="text-4xl font-black text-hakiardhi-red mb-1">30+</p>
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-6 shadow-sm">
+                <p className="text-4xl font-bold text-hakiardhi-red mb-1">30+</p>
                 <p className="text-sm text-gray-600 font-semibold">Years of Service</p>
               </div>
             </div>
@@ -236,14 +226,9 @@ export default function LearnMorePage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-hakiardhi-red/10 rounded-full mb-6">
-              <Icon name="arrow-right" size="sm" className="text-hakiardhi-red" />
-              <span className="text-sm font-bold text-hakiardhi-red uppercase tracking-wider">
-                Simple Process
-              </span>
-            </div>
-            <h2 className="text-3xl lg:text-4xl font-black text-gray-900 mb-4">
-              How It <span className="text-hakiardhi-red">Works</span>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">Simple Process</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              How It Works
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Getting legal help is simple - here's the process
@@ -259,19 +244,19 @@ export default function LearnMorePage() {
                 { step: '4', title: 'Resolution', desc: 'We work until your land rights are secured', icon: 'check-circle', color: 'purple' },
               ].map((item, idx) => {
                 const colorClasses = {
-                  blue: 'from-blue-500 to-blue-600',
-                  orange: 'from-orange-500 to-orange-600',
-                  green: 'from-green-500 to-green-600',
-                  purple: 'from-purple-500 to-purple-600',
+                  blue: 'bg-hakiardhi-red',
+                  orange: 'bg-hakiardhi-red',
+                  green: 'bg-hakiardhi-red',
+                  purple: 'bg-hakiardhi-red',
                 };
                 return (
                   <div key={idx} className="text-center group">
                     <div className="relative mb-6">
-                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${colorClasses[item.color as keyof typeof colorClasses]} flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <div className={`w-16 h-16 rounded-xl ${colorClasses[item.color as keyof typeof colorClasses]} flex items-center justify-center mx-auto shadow-sm transition-transform duration-300`}>
                         <Icon name={item.icon as any} size="lg" className="text-white" />
                       </div>
-                      <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-white shadow-md flex items-center justify-center">
-                        <span className="text-sm font-black text-gray-900">{item.step}</span>
+                      <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-white shadow-sm flex items-center justify-center">
+                        <span className="text-sm font-bold text-gray-900">{item.step}</span>
                       </div>
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
@@ -285,11 +270,11 @@ export default function LearnMorePage() {
       </section>
 
       {/* FAQs Section */}
-      <section className="py-20 bg-gradient-to-br from-zinc-50 via-gray-50 to-zinc-100">
+      <section className="bg-gray-50 py-20 ">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-black text-gray-900 mb-4">
-              Frequently Asked <span className="text-hakiardhi-red">Questions</span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
             </h2>
           </div>
 
@@ -310,10 +295,10 @@ export default function LearnMorePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-zinc-50">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-black text-black mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-black mb-4">
               Ready to Get Legal Help?
             </h2>
             <p className="text-xl text-black mb-8">

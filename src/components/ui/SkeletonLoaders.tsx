@@ -7,7 +7,7 @@
 export function HeroSkeleton() {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-gray-900">
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800 animate-pulse"></div>
+      <div className="bg-gray-800 absolute inset-0 animate-pulse"></div>
       <div className="relative z-10 container mx-auto px-6 lg:px-8 h-full flex items-center justify-center">
         <div className="max-w-4xl w-full text-center space-y-6">
           <div className="h-16 bg-gray-700 rounded-lg animate-pulse mx-auto max-w-2xl"></div>
@@ -74,7 +74,7 @@ export function ServiceCardSkeleton() {
 
 export function HeaderSkeleton() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 shadow-sm">
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-10 lg:px-16 py-4 lg:py-5">
         <div className="w-40 h-12 bg-gray-200 rounded animate-pulse"></div>
         <div className="hidden lg:flex items-center gap-4">
@@ -85,7 +85,7 @@ export function HeaderSkeleton() {
         </div>
         <div className="lg:hidden w-6 h-6 bg-gray-200 rounded animate-pulse"></div>
       </nav>
-      <div className="h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+      <div className="h-[1px] "></div>
     </header>
   );
 }

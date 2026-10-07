@@ -13,7 +13,7 @@ export default function CookiePolicyPage() {
             <div className="w-12 h-12 bg-hakiardhi-red/10 rounded-xl flex items-center justify-center">
               <Icon name="cookie" size="lg" className="text-hakiardhi-red" />
             </div>
-            <h1 className="text-4xl lg:text-5xl font-black text-gray-900">Cookie Policy</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900">Cookie Policy</h1>
           </div>
           <p className="text-lg text-gray-600">
             Last Updated: November 21, 2025
@@ -24,7 +24,7 @@ export default function CookiePolicyPage() {
         <div className="prose prose-lg max-w-none">
           {/* Introduction */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">1. What Are Cookies?</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">1. What Are Cookies?</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and provide information to website owners.
             </p>
@@ -35,7 +35,7 @@ export default function CookiePolicyPage() {
 
           {/* Types of Cookies */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">2. Types of Cookies We Use</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Types of Cookies We Use</h2>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">2.1 Essential Cookies</h3>
             <p className="text-gray-700 leading-relaxed mb-3">
@@ -103,7 +103,7 @@ export default function CookiePolicyPage() {
 
           {/* Third-Party Cookies */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">3. Third-Party Cookies</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Third-Party Cookies</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               We work with trusted third-party service providers who may set cookies on our website. These include:
             </p>
@@ -138,7 +138,7 @@ export default function CookiePolicyPage() {
 
           {/* Managing Cookies */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">4. How to Manage Cookies</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">4. How to Manage Cookies</h2>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">4.1 Cookie Consent Tool</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
@@ -180,7 +180,7 @@ export default function CookiePolicyPage() {
 
           {/* Do Not Track */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">5. Do Not Track Signals</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Do Not Track Signals</h2>
             <p className="text-gray-700 leading-relaxed">
               Some browsers include a "Do Not Track" (DNT) feature that signals to websites that you do not want to be tracked. Currently, there is no universal standard for how websites should respond to DNT signals. We do not currently respond to DNT signals, but we respect your cookie preferences set through our cookie consent tool or browser settings.
             </p>
@@ -188,7 +188,7 @@ export default function CookiePolicyPage() {
 
           {/* Other Tracking Technologies */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">6. Other Tracking Technologies</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Other Tracking Technologies</h2>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">6.1 Web Beacons and Pixels</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
@@ -203,7 +203,7 @@ export default function CookiePolicyPage() {
 
           {/* Updates */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">7. Changes to This Cookie Policy</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Changes to This Cookie Policy</h2>
             <p className="text-gray-700 leading-relaxed">
               We may update this Cookie Policy from time to time to reflect changes in technology, legislation, or our practices. We will notify you of significant changes by posting the updated policy on our website with a new "Last Updated" date. We encourage you to review this policy periodically.
             </p>
@@ -211,7 +211,7 @@ export default function CookiePolicyPage() {
 
           {/* More Information */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">8. More Information</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">8. More Information</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               For more information about how we collect, use, and protect your personal data, please read our <a href="/privacy-policy" className="text-hakiardhi-red hover:underline">Privacy Policy</a>.
             </p>
@@ -222,11 +222,11 @@ export default function CookiePolicyPage() {
 
           {/* Contact */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">9. Contact Us</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Contact Us</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               If you have questions about our use of cookies or this Cookie Policy, please contact us:
             </p>
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-hakiardhi-red">
+            <div className="bg-gray-50 p-6 rounded-xl ">
               <p className="font-bold text-gray-900 mb-2">HakiArdhi</p>
               <p className="text-gray-700">Land Rights Research & Resources Institute</p>
               <p className="text-gray-700">Email: <a href="mailto:info@hakiardhi.or.tz" className="text-hakiardhi-red hover:underline">info@hakiardhi.or.tz</a></p>

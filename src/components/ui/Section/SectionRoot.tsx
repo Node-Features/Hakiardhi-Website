@@ -22,11 +22,11 @@ export default function SectionRoot({
     white: 'bg-white',
     light: 'bg-gray-50',
     dark: 'bg-gray-900 text-white',
-    'gradient-dark': '',
-    'gradient-brand': '',
-    'zinc-light': 'bg-zinc-50',
-    'zinc-medium': 'bg-zinc-100',
-    'image-overlay': 'bg-zinc-900 text-white',
+    'gradient-dark': 'bg-gray-950 text-white',
+    'gradient-brand': 'bg-gray-950 text-white',
+    'zinc-light': 'bg-gray-50',
+    'zinc-medium': 'bg-gray-100',
+    'image-overlay': 'bg-gray-900 text-white',
     none: '',
   };
 
@@ -39,18 +39,10 @@ export default function SectionRoot({
     responsive: SPACING.section.responsive,
   };
 
-  const variantStyles =
-    variant === 'gradient-dark'
-      ? { background: 'linear-gradient(to bottom, #000000 0%, #1a1a1a 50%, #000000 100%)' }
-      : variant === 'gradient-brand'
-      ? { background: 'linear-gradient(to bottom, #0d0d0d 0%, #1a1a1a 25%, #2d0a0a 50%, #1a1a1a 75%, #0d0d0d 100%)' }
-      : undefined;
-
   return (
     <section
       id={id}
       className={`relative overflow-hidden ${spacingClasses[spacing]} ${variantClasses[variant]} ${className}`}
-      style={variantStyles}
     >
       {children}
     </section>

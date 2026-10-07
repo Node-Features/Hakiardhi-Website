@@ -14,7 +14,7 @@ interface FAQItemProps {
 
 export default function FAQItem({ question, answer }: FAQItemProps) {
   return (
-    <Card variant="elevated" className="hover:shadow-md transition-shadow">
+    <Card variant="elevated" className="shadow-sm transition-shadow">
       <Card.Body>
         <h4
           className={`${TYPOGRAPHY.heading.h4.size} ${TYPOGRAPHY.heading.h4.weight} text-gray-900 ${SPACING.margin.element.sm} flex items-start gap-2`}

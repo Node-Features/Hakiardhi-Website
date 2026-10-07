@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Button from '../ui/Button';
 import Icon from '../ui/Icon';
 import { heroImages } from '@/data/heroImages';
-import { TIMING, SPACING, CONTENT_WIDTHS } from '@/constants/design-tokens';
+import { TIMING } from '@/constants/design-tokens';
 
 export default function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -35,13 +35,16 @@ export default function HeroSection() {
 
   // Keyboard navigation
   useEffect(() => {
+    // Arrow keys change slides, but never while the user is typing,
+    // and Space is left alone so it still scrolls the page.
     const handleKeyDown = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (target && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName))) return;
       if (e.key === 'ArrowLeft') {
         goToPrevSlide();
       } else if (e.key === 'ArrowRight') {
         goToNextSlide();
-      } else if (e.key === ' ' || e.key === 'Escape') {
-        e.preventDefault();
+      } else if (e.key === 'Escape') {
         setIsPaused((prev) => !prev);
       }
     };
@@ -73,16 +76,14 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative h-screen w-full overflow-hidden"
+      className="relative h-[88svh] min-h-[520px] max-h-[860px] w-full overflow-hidden bg-gray-900"
       aria-roledescription="carousel"
       aria-label="Hero images showcasing HakiArdhi's work"
     >
-      {/* Screen reader live region */}
       <div className="sr-only" aria-live="polite" aria-atomic="true">
         Slide {currentImageIndex + 1} of {heroImages.length}
       </div>
 
-      {/* Background Images with Smooth Fade Transition - Optimized rendering */}
       {heroImages.map((image, index) =>
         visibleIndices.includes(index) && (
           <div
@@ -92,9 +93,7 @@ export default function HeroSection() {
             aria-roledescription="slide"
             aria-label={`Slide ${index + 1} of ${heroImages.length}`}
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentImageIndex && !isTransitioning
-                ? 'opacity-100'
-                : 'opacity-0'
+              index === currentImageIndex && !isTransitioning ? 'opacity-100' : 'opacity-0'
             }`}
           >
             <Image
@@ -103,100 +102,63 @@ export default function HeroSection() {
               fill
               className="object-cover"
               priority={index === 0}
-              quality={95}
+              quality={85}
               sizes="100vw"
             />
           </div>
         )
       )}
 
-      {/* Elegant Gradient Overlay - Sophisticated multi-layer */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/70"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-brand-900/30 via-transparent to-brand-900/30"></div>
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+      {/* Single neutral scrim so text stays readable on any photo */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/45 to-black/30" aria-hidden="true" />
 
-      {/* Hero Content with Elegant Typography - Bottom Aligned */}
-      <div className={`relative z-10 container mx-auto ${SPACING.container.responsive} h-full flex items-end justify-center pb-16 lg:pb-20`}>
-        <div className={`${CONTENT_WIDTHS.text.wide} w-full text-center`}>
-          {/* Main Headline - Minimalistic */}
-          <h1
-            className={`text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white leading-tight ${SPACING.margin.element.md} transition-all duration-1000 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
-            style={{
-              textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)',
-              letterSpacing: '-0.01em',
-            }}
-          >
+      <div className="relative z-10 mx-auto flex h-full max-w-7xl items-end px-4 pb-20 pt-28 sm:px-6 lg:items-center lg:px-8 lg:pb-0">
+        <div
+          className={`max-w-2xl text-white transition-all duration-700 ${
+            isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+          }`}
+        >
+          <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Securing Land Rights for All
           </h1>
-
-          {/* Subheadline - Minimized */}
-          <p
-            className={`text-base sm:text-lg lg:text-xl text-white/90 font-normal ${SPACING.margin.element.md} ${CONTENT_WIDTHS.text.body} mx-auto leading-relaxed transition-all duration-1000 delay-200 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
-            style={{
-              textShadow: '1px 1px 4px rgba(0, 0, 0, 0.6)',
-            }}
-          >
+          <p className="mt-4 text-lg leading-relaxed text-white/85 sm:text-xl">
             Empowering communities through research, training, and advocacy
           </p>
-
-          {/* CTA Buttons - Compact */}
-          <div
-            className={`flex flex-col sm:flex-row ${SPACING.gap.sm} justify-center items-center transition-all duration-1000 delay-400 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
-          >
-            {/* Primary Button - Red */}
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button
               href="/programs"
               variant="primary"
               size="lg"
+              className="w-full sm:w-auto"
               icon={<Icon name="arrow-right" size="sm" />}
             >
               Explore Our Work
             </Button>
-
-            {/* Secondary Button */}
-            <Button
-              href="/legal-aid"
-              variant="secondary"
-              size="lg"
-              icon={<Icon name="shield" size="sm" />}
-            >
+            <Button href="/legal-aid" variant="secondary" size="lg" className="w-full sm:w-auto">
               Get Legal Aid
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator - Minimal */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-        <Icon name="chevron-down" size="md" className="text-white/60 drop-shadow-lg" />
-      </div>
-
-      {/* Carousel Controls - Minimal */}
-      <div className={`absolute bottom-6 right-6 z-10 flex items-center ${SPACING.gap.xs} opacity-60 hover:opacity-100 transition-opacity`}>
-        {/* Image Indicators - Minimal Dots */}
-        <div className={`flex ${SPACING.gap.xs}`} role="tablist" aria-label="Choose slide">
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              role="tab"
-              aria-selected={index === currentImageIndex}
-              aria-controls={`hero-image-${index}`}
-              onClick={() => goToSlide(index)}
-              className={`rounded-full transition-all duration-500 ${
-                index === currentImageIndex
-                  ? 'bg-hakiardhi-red w-8 h-2'
-                  : 'bg-white/60 hover:bg-white/90 w-2 h-2'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+      <div
+        className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2"
+        role="tablist"
+        aria-label="Choose slide"
+      >
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            role="tab"
+            aria-selected={index === currentImageIndex}
+            aria-controls={`hero-image-${index}`}
+            onClick={() => goToSlide(index)}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              index === currentImageIndex ? 'w-6 bg-white' : 'w-1.5 bg-white/50 hover:bg-white/80'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
     </section>
   );

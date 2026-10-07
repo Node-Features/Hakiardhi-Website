@@ -157,12 +157,10 @@ export default function LegalAdviceSection({ className = '' }: LegalAdviceSectio
       id="legal-advice-section"
       className={`relative py-16 lg:py-24 overflow-hidden ${className}`}
       style={{
-        background: 'linear-gradient(to bottom, #000000 0%, #1a1a1a 50%, #000000 100%)',
+        background: '#0a0a0a',
       }}
     >
       {/* Background decoration */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         {/* Section Header */}
@@ -171,8 +169,8 @@ export default function LegalAdviceSection({ className = '' }: LegalAdviceSectio
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-3xl lg:text-5xl font-black text-white mb-4 lg:mb-6">
-            Legal Advice & <span className="text-brand-500">Counselling</span>
+          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
+            Legal Advice & Counselling
           </h2>
           <p className="text-base lg:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Providing accessible legal support to communities and individuals navigating land tenure
@@ -192,9 +190,9 @@ export default function LegalAdviceSection({ className = '' }: LegalAdviceSectio
               }`}
               style={{ transitionDelay: `${index * 100 + 200}ms` }}
             >
-              <div className="h-full bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-brand-500/20 hover:border-brand-500/40 transition-all duration-300 hover:scale-105 flex flex-col">
+              <div className="bg-gray-900/50 h-full rounded-xl p-6 lg:p-8 border border-brand-500/20 hover:border-brand-500/40 transition-all duration-300 flex flex-col">
                 <div className="w-14 h-14 text-brand-500 mb-4 flex-shrink-0">{service.icon}</div>
-                <h3 className="text-xl font-black text-white mb-3">{service.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 text-sm leading-relaxed flex-grow">{service.description}</p>
               </div>
             </div>
@@ -203,18 +201,18 @@ export default function LegalAdviceSection({ className = '' }: LegalAdviceSectio
 
         {/* How to Access Section */}
         <div
-          className={`mb-12 lg:mb-16 transition-all duration-1000 delay-600 ${
+          className={`mb-12 lg:mb-16 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="bg-gradient-to-br from-brand-500/20 to-brand-500/5 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-brand-500/20">
-            <h3 className="text-2xl lg:text-3xl font-black text-white mb-8 text-center">
+          <div className="bg-brand-500/20 rounded-xl p-8 lg:p-12 border border-brand-500/20">
+            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-8 text-center">
               How to Access Our Services
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-brand-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-black text-white">1</span>
+                  <span className="text-2xl font-bold text-white">1</span>
                 </div>
                 <h4 className="text-lg font-bold text-white mb-2">Contact Us</h4>
                 <p className="text-gray-300 text-sm">
@@ -223,7 +221,7 @@ export default function LegalAdviceSection({ className = '' }: LegalAdviceSectio
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-brand-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-black text-white">2</span>
+                  <span className="text-2xl font-bold text-white">2</span>
                 </div>
                 <h4 className="text-lg font-bold text-white mb-2">Case Assessment</h4>
                 <p className="text-gray-300 text-sm">
@@ -232,7 +230,7 @@ export default function LegalAdviceSection({ className = '' }: LegalAdviceSectio
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-brand-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-black text-white">3</span>
+                  <span className="text-2xl font-bold text-white">3</span>
                 </div>
                 <h4 className="text-lg font-bold text-white mb-2">Receive Support</h4>
                 <p className="text-gray-300 text-sm">
@@ -245,18 +243,18 @@ export default function LegalAdviceSection({ className = '' }: LegalAdviceSectio
 
         {/* FAQs */}
         <div
-          className={`transition-all duration-1000 delay-800 ${
+          className={`transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h3 className="text-2xl lg:text-3xl font-black text-white mb-8 text-center">
+          <h3 className="text-2xl lg:text-3xl font-bold text-white mb-8 text-center">
             Frequently Asked <span className="text-brand-500">Questions</span>
           </h3>
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-xl border border-brand-500/20 overflow-hidden"
+                className="bg-gray-900/50 rounded-xl border border-brand-500/20 overflow-hidden"
               >
                 <button
                   onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
@@ -291,7 +289,7 @@ export default function LegalAdviceSection({ className = '' }: LegalAdviceSectio
 
         {/* Contact CTA */}
         <div
-          className={`mt-12 lg:mt-16 text-center transition-all duration-1000 delay-1000 ${
+          className={`mt-12 lg:mt-16 text-center transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
@@ -301,7 +299,7 @@ export default function LegalAdviceSection({ className = '' }: LegalAdviceSectio
             <Button
               variant="primary"
               size="lg"
-              className="w-full sm:w-auto bg-green-600 hover:bg-green-700"
+              className="w-full sm:w-auto bg-hakiardhi-red hover:bg-hakiardhi-red"
               href="https://wa.me/+255784646752"
             >
               WhatsApp Chat

@@ -79,14 +79,14 @@ export default function NewsletterSubscriptionModal({ isOpen, onClose }: Newslet
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-fade-in"
+        className="absolute inset-0 bg-black/60 animate-fade-in"
         onClick={onClose}
       />
 
       {/* Modal */}
-      <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-hidden animate-slide-in">
+      <div className="relative bg-white rounded-xl shadow-sm w-full max-w-lg max-h-[90vh] overflow-hidden animate-slide-in">
         {/* Header */}
-        <div className="bg-gradient-to-r from-hakiardhi-red to-brand-500 px-6 py-5">
+        <div className="bg-hakiardhi-red px-6 py-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
@@ -97,7 +97,7 @@ export default function NewsletterSubscriptionModal({ isOpen, onClose }: Newslet
                 )}
               </div>
               <div>
-                <h2 className="text-xl font-black text-white">
+                <h2 className="text-xl font-bold text-white">
                   {isSubmitted ? 'Subscription Confirmed!' : 'Subscribe to Our Newsletter'}
                 </h2>
                 <p className="text-sm text-white/80">
@@ -118,8 +118,8 @@ export default function NewsletterSubscriptionModal({ isOpen, onClose }: Newslet
         <div className="overflow-y-auto max-h-[calc(90vh-100px)] p-6">
           {isSubmitted ? (
             <div className="text-center py-8">
-              <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
-                <Icon name="check-circle" size="xl" className="text-green-600" />
+              <div className="w-20 h-20 rounded-full bg-brand-50 flex items-center justify-center mx-auto mb-4">
+                <Icon name="check-circle" size="xl" className="text-hakiardhi-red" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 Thank You for Subscribing!
@@ -202,12 +202,12 @@ export default function NewsletterSubscriptionModal({ isOpen, onClose }: Newslet
               </div>
 
               {/* Info Note */}
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg">
+              <div className="bg-brand-50 p-4 rounded-lg">
                 <div className="flex gap-3">
-                  <Icon name="info" size="sm" className="text-blue-500 flex-shrink-0 mt-0.5" />
-                  <div className="text-sm text-blue-900">
+                  <Icon name="info" size="sm" className="text-hakiardhi-red flex-shrink-0 mt-0.5" />
+                  <div className="text-sm text-gray-900">
                     <p className="font-semibold mb-1">We respect your privacy</p>
-                    <p className="text-blue-700">
+                    <p className="text-hakiardhi-red">
                       We'll only send you relevant updates based on your interests. You can unsubscribe anytime.
                     </p>
                   </div>

@@ -81,7 +81,7 @@ export default async function NewsEventDetailPage({ params }: NewsEventDetailPag
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
               {newsEvent.title}
             </h1>
 
@@ -148,15 +148,15 @@ export default async function NewsEventDetailPage({ params }: NewsEventDetailPag
           <div className="lg:col-span-2 space-y-12">
             {/* Summary Section */}
             <section>
-              <h2 className="text-3xl font-black text-gray-900 mb-6">Overview</h2>
-              <p className="text-lg text-gray-700 leading-relaxed font-medium bg-gray-50 p-6 rounded-2xl border-l-4 border-hakiardhi-red">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
+              <p className="text-lg text-gray-700 leading-relaxed font-medium bg-gray-50 p-6 rounded-xl ">
                 {newsEvent.excerpt}
               </p>
             </section>
 
             {/* Full Content Section */}
             <section>
-              <h2 className="text-3xl font-black text-gray-900 mb-6">Full Story</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Full Story</h2>
               <div className="prose prose-lg max-w-none">
                 {newsEvent.fullDescription.split('\n\n').map((paragraph, index) => (
                   <p key={index} className="text-gray-700 leading-relaxed mb-4">
@@ -169,18 +169,18 @@ export default async function NewsEventDetailPage({ params }: NewsEventDetailPag
             {/* Photo Gallery Section */}
             {newsEvent.gallery && newsEvent.gallery.length > 0 && (
               <section>
-                <h2 className="text-3xl font-black text-gray-900 mb-6">Photo Gallery</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Photo Gallery</h2>
                 <div className="grid grid-cols-2 gap-4">
                   {newsEvent.gallery.map((image, index) => (
                     <div
                       key={index}
-                      className="relative h-64 rounded-2xl overflow-hidden group cursor-pointer"
+                      className="relative h-64 rounded-xl overflow-hidden group cursor-pointer"
                     >
                       <Image
                         src={image}
                         alt={`${newsEvent.title} - Image ${index + 1}`}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="object-cover transition-transform duration-500 "
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                     </div>
@@ -192,7 +192,7 @@ export default async function NewsEventDetailPage({ params }: NewsEventDetailPag
             {/* Related Links Section */}
             {newsEvent.relatedLinks && newsEvent.relatedLinks.length > 0 && (
               <section>
-                <h2 className="text-3xl font-black text-gray-900 mb-6">Related Resources</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Related Resources</h2>
                 <div className="space-y-3">
                   {newsEvent.relatedLinks.map((link, index) => (
                     <a
@@ -226,8 +226,8 @@ export default async function NewsEventDetailPage({ params }: NewsEventDetailPag
           {/* Right Column - Sidebar */}
           <div className="space-y-8">
             {/* Quick Info Card */}
-            <div className="bg-gray-50 rounded-2xl p-6">
-              <h3 className="text-xl font-black text-gray-900 mb-4">Quick Info</h3>
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Quick Info</h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <svg
@@ -278,8 +278,8 @@ export default async function NewsEventDetailPage({ params }: NewsEventDetailPag
             </div>
 
             {/* Call to Action */}
-            <div className="bg-gradient-to-br from-hakiardhi-red to-hakiardhi-red-dark rounded-2xl p-6 text-white">
-              <h3 className="text-xl font-black mb-3">Stay Informed</h3>
+            <div className="bg-hakiardhi-red rounded-xl p-6 text-white">
+              <h3 className="text-xl font-bold mb-3">Stay Informed</h3>
               <p className="mb-6 text-sm leading-relaxed opacity-90">
                 Subscribe to our newsletter for the latest updates on land rights advocacy in Tanzania.
               </p>
@@ -304,7 +304,7 @@ export default async function NewsEventDetailPage({ params }: NewsEventDetailPag
         <section className="bg-gray-50 py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                 Related {newsEvent.type === 'News' ? 'News' : newsEvent.type === 'Event' ? 'Events' : 'Updates'}
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -317,14 +317,14 @@ export default async function NewsEventDetailPage({ params }: NewsEventDetailPag
                 <Link
                   key={relatedItem.id}
                   href={`/news-events/${relatedItem.slug}`}
-                  className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+                  className="group bg-white rounded-xl overflow-hidden shadow-sm shadow-sm transition-all duration-300"
                 >
                   <div className="relative h-48">
                     <Image
                       src={relatedItem.image}
                       alt={relatedItem.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="object-cover transition-transform duration-500 "
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute top-4 left-4">
@@ -347,7 +347,7 @@ export default async function NewsEventDetailPage({ params }: NewsEventDetailPag
                         {relatedItem.category}
                       </span>
                     </div>
-                    <h3 className="text-xl font-black text-gray-900 mb-2 group-hover:text-hakiardhi-red transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-hakiardhi-red transition-colors">
                       {relatedItem.title}
                     </h3>
                     <p className="text-gray-600 mb-4 line-clamp-2">{relatedItem.excerpt}</p>

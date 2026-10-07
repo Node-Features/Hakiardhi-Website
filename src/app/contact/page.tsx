@@ -106,7 +106,7 @@ export default function ContactPage() {
               >
                 <Card variant="elevated" hoverEffect="lift" className="h-full">
                   <Card.Body className="p-6 text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-hakiardhi-red to-red-600 rounded-full flex items-center justify-center">
+                    <div className="bg-hakiardhi-red w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
                       <Icon name={method.icon as any} size="xl" className="text-white" />
                     </div>
                     <h3 className={`${TYPOGRAPHY.heading.h4.size} ${TYPOGRAPHY.heading.h4.weight} text-gray-900 mb-2`}>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                         href={method.action.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 min-h-[44px] bg-hakiardhi-red text-white rounded-lg text-sm font-semibold hover:bg-black transition-all duration-300 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hakiardhi-red focus-visible:ring-offset-2"
+                        className="inline-flex items-center gap-2 px-6 py-3 min-h-[44px] bg-hakiardhi-red text-white rounded-lg text-sm font-semibold hover:bg-black transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hakiardhi-red focus-visible:ring-offset-2"
                       >
                         {method.action.label}
                         <Icon name="arrow-right" size="sm" />
@@ -141,14 +141,11 @@ export default function ContactPage() {
 
       {/* Contact Form & Map Section */}
       <section className="hakiardhi-section bg-gray-50 relative overflow-hidden">
-        {/* Decorative gradient orbs */}
-        <div className="absolute top-0 left-1/4 w-80 h-80 bg-gradient-to-br from-orange-500/10 to-brand-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-brand-500/10 to-success-500/10 rounded-full blur-3xl"></div>
 
         <div className="hakiardhi-container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Form */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white rounded-xl p-8 shadow-sm">
               <h2 className={`${TYPOGRAPHY.heading.h2.size} ${TYPOGRAPHY.heading.h2.weight} text-gray-900 mb-3`}>
                 Send Us a Message
               </h2>
@@ -160,14 +157,14 @@ export default function ContactPage() {
 
             {/* Map & Info */}
             <div>
-              <div className="bg-white rounded-2xl p-8 shadow-lg mb-6">
+              <div className="bg-white rounded-xl p-8 shadow-sm mb-6">
                 <h2 className={`${TYPOGRAPHY.heading.h2.size} ${TYPOGRAPHY.heading.h2.weight} text-gray-900 mb-6`}>
                   Find Us
                 </h2>
 
                 <div className="relative h-[400px] rounded-xl overflow-hidden mb-6">
                   {/* Placeholder for Google Maps */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                  <div className="bg-gray-200 absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
                       <Icon name="map-pin" size="xl" className="text-hakiardhi-red mx-auto mb-4" />
                       <p className="text-gray-700 font-semibold mb-2">HakiArdhi Office</p>
@@ -249,7 +246,7 @@ export default function ContactPage() {
                     animationFillMode: 'forwards',
                   }}
                 >
-                  <Card variant="elevated" className="hover:shadow-lg transition-shadow duration-300">
+                  <Card variant="elevated" className="shadow-sm transition-shadow duration-300">
                     <Card.Body className="p-6">
                       <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-start gap-3">
                         <Icon name="alert-circle" size="sm" className="text-hakiardhi-red flex-shrink-0 mt-1" />
@@ -267,12 +264,12 @@ export default function ContactPage() {
 
       {/* Emergency Contact Banner */}
       <section className="relative py-16 lg:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-hakiardhi-red to-red-700"></div>
+        <div className="bg-hakiardhi-red absolute inset-0 "></div>
         <div className="absolute inset-0 bg-[url('/images/hero_1.JPG')] opacity-10 bg-cover bg-center"></div>
 
         <div className="hakiardhi-container relative z-10">
           <div className="max-w-3xl mx-auto text-center text-white">
-            <div className="w-20 h-20 mx-auto mb-6 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+            <div className="w-20 h-20 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center">
               <Icon name="phone" size="xl" className="text-white" />
             </div>
             <h2 className={`${TYPOGRAPHY.heading.h2.size} ${TYPOGRAPHY.heading.h2.weight} text-white mb-4`}>
@@ -283,7 +280,7 @@ export default function ContactPage() {
             </p>
             <a
               href="tel:0800711555"
-              className="inline-flex items-center gap-3 px-8 py-4 min-h-[56px] bg-white !text-hakiardhi-red rounded-full text-xl md:text-2xl font-bold hover:bg-black hover:!text-white transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-hakiardhi-red"
+              className="inline-flex items-center gap-3 px-8 py-4 min-h-[56px] bg-white !text-hakiardhi-red rounded-full text-xl md:text-2xl font-bold hover:bg-black hover:!text-white transition-all duration-300 shadow-sm shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-hakiardhi-red"
             >
               <Icon name="phone" size="lg" className="!text-hakiardhi-red" />
               0 800 711 555

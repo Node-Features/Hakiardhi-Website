@@ -195,8 +195,6 @@ export default function GalleryPage() {
       {/* Gallery Section */}
       <section className="hakiardhi-section bg-gray-50 relative overflow-hidden">
         {/* Elegant decorative gradient orbs */}
-        <div className="absolute top-0 left-1/4 w-80 h-80 bg-gradient-to-br from-orange-500/10 to-brand-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-brand-500/10 to-success-500/10 rounded-full blur-3xl"></div>
 
         <div className="hakiardhi-container relative z-10">
           {/* Section Header */}
@@ -216,8 +214,8 @@ export default function GalleryPage() {
                   onClick={() => handleFilterChange(() => setSelectedCategory(category))}
                   className={`group px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
                     selectedCategory === category
-                      ? 'bg-hakiardhi-red text-white shadow-lg shadow-hakiardhi-red/30 scale-105'
-                      : 'bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-300 hover:border-hakiardhi-red hover:scale-105'
+                      ? 'bg-hakiardhi-red text-white shadow-sm'
+                      : 'bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-300 hover:border-hakiardhi-red '
                   }`}
                 >
                   <span className="flex items-center gap-2">
@@ -236,13 +234,13 @@ export default function GalleryPage() {
           </div>
 
           {/* Collapsible Filter Panel */}
-          <div className="bg-gradient-to-b from-gray-50 to-white border-b border-gray-200 rounded-2xl mb-10">
+          <div className="bg-gray-50 border-b border-gray-200 rounded-xl mb-10">
             <div className="py-6 px-4">
               {/* Filter Toggle Button */}
               <div className="flex items-center justify-between mb-4">
                 <button
                   onClick={() => setShowFilters(!showFilters)}
-                  className="group flex items-center gap-2 px-6 py-3 bg-white rounded-xl border-2 border-gray-200 hover:border-hakiardhi-red transition-all duration-300 shadow-sm hover:shadow-md"
+                  className="group flex items-center gap-2 px-6 py-3 bg-white rounded-xl border-2 border-gray-200 hover:border-hakiardhi-red transition-all duration-300 shadow-sm shadow-sm"
                 >
                   <Icon name="funnel" size="sm" className="text-hakiardhi-red" />
                   <span className="font-semibold text-gray-900">
@@ -277,7 +275,7 @@ export default function GalleryPage() {
                   showFilters ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="bg-white rounded-2xl border-2 border-gray-200 p-6 shadow-lg">
+                <div className="bg-white rounded-xl border-2 border-gray-200 p-6 shadow-sm">
                   <div className="max-w-md">
                     <div className="space-y-2">
                       <label className="flex items-center gap-2 text-sm font-bold text-gray-700">
@@ -313,7 +311,7 @@ export default function GalleryPage() {
 
           {/* Gallery Grid */}
           {filteredItems.length > 0 ? (
-            <div className="bg-gradient-to-br from-zinc-50 via-gray-50 to-zinc-100/50 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-inner border border-zinc-200/50">
+            <div className="bg-gray-50 rounded-xl p-8 lg:p-12 shadow-sm border border-gray-200/50">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {visibleItems.map((item, index) => (
                   <div
@@ -326,7 +324,7 @@ export default function GalleryPage() {
                   >
                     <div
                       onClick={() => setLightboxImage(item)}
-                      className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer hover:-translate-y-2"
+                      className="group relative bg-white rounded-xl overflow-hidden shadow-sm shadow-sm transition-all duration-300 cursor-pointer "
                     >
                       {/* Image */}
                       <div className="relative h-64 overflow-hidden">
@@ -334,7 +332,7 @@ export default function GalleryPage() {
                           src={item.image}
                           alt={item.title}
                           fill
-                          className="object-cover group-hover:scale-110 transition-transform duration-500"
+                          className="object-cover transition-transform duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -385,14 +383,13 @@ export default function GalleryPage() {
               {hasMore && (
                 <div className="mt-12 text-center">
                   <div className="inline-block relative">
-                    <div className="absolute inset-0 bg-hakiardhi-red/20 blur-xl rounded-full scale-150"></div>
                     <button
                       onClick={() => setItemsToShow(prev => prev + 12)}
-                      className="relative group px-8 py-4 bg-hakiardhi-red text-white font-bold rounded-full shadow-lg hover:bg-black hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95"
+                      className="relative group px-8 py-4 bg-hakiardhi-red text-white font-bold rounded-full shadow-sm hover:bg-black shadow-sm transition-all duration-300 "
                     >
                       <span className="flex items-center gap-3">
                         Load More Photos
-                        <svg className="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                         </svg>
                       </span>
@@ -403,7 +400,7 @@ export default function GalleryPage() {
                   </p>
                   <div className="mt-3 max-w-md mx-auto h-2 bg-gray-200 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-hakiardhi-red to-red-600 transition-all duration-500"
+                      className="bg-hakiardhi-red h-full transition-all duration-500"
                       style={{ width: `${(visibleItems.length / filteredItems.length) * 100}%` }}
                     ></div>
                   </div>
@@ -411,7 +408,7 @@ export default function GalleryPage() {
               )}
             </div>
           ) : (
-            <div className="text-center py-20 bg-white rounded-2xl shadow-lg">
+            <div className="text-center py-20 bg-white rounded-xl shadow-sm">
               <div className="w-20 h-20 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
                 <Icon name="photograph" size="xl" className="text-gray-400" />
               </div>
@@ -456,7 +453,7 @@ export default function GalleryPage() {
                 className="object-contain"
               />
             </div>
-            <div className="bg-white rounded-2xl p-6">
+            <div className="bg-white rounded-xl p-6">
               <div className="flex items-start justify-between mb-4">
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">{lightboxImage.title}</h2>

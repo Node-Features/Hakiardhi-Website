@@ -106,11 +106,10 @@ export default function ResearchesSection({ className = '' }: ResearchesSectionP
       id="researches-section"
       className={`relative py-16 lg:py-24 overflow-hidden ${className}`}
       style={{
-        background: 'linear-gradient(to bottom, #000000 0%, #1a1a1a 50%, #000000 100%)',
+        background: '#0a0a0a',
       }}
     >
       {/* Background decoration */}
-      <div className="absolute top-1/3 left-0 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         {/* Section Header */}
@@ -119,8 +118,8 @@ export default function ResearchesSection({ className = '' }: ResearchesSectionP
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-3xl lg:text-5xl font-black text-white mb-4 lg:mb-6">
-            Our <span className="text-brand-500">Research</span>
+          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
+            Our Research
           </h2>
           <p className="text-base lg:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed mb-6 lg:mb-8">
             Evidence-based research driving policy change and supporting communities in their
@@ -166,7 +165,7 @@ export default function ResearchesSection({ className = '' }: ResearchesSectionP
               }`}
               style={{ transitionDelay: `${index * 200 + 400}ms` }}
             >
-              <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-brand-500/20 hover:border-brand-500/40 transition-all duration-300">
+              <div className="bg-gray-900/50 rounded-xl p-6 lg:p-8 border border-brand-500/20 hover:border-brand-500/40 transition-all duration-300">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 lg:gap-8">
                   {/* Content */}
                   <div className="flex-1">
@@ -177,7 +176,7 @@ export default function ResearchesSection({ className = '' }: ResearchesSectionP
                       </span>
                     </div>
 
-                    <h3 className="text-2xl font-black text-white mb-3 hover:text-brand-500 transition-colors">
+                    <h3 className="text-2xl font-bold text-white mb-3 hover:text-brand-500 transition-colors">
                       {research.title}
                     </h3>
 

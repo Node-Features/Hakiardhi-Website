@@ -157,7 +157,7 @@ export const TYPOGRAPHY = {
       size: 'text-5xl sm:text-6xl lg:text-7xl',
       lineHeight: 'leading-[1.1]',
       spacing: 'mb-6 lg:mb-8',
-      weight: 'font-black',
+      weight: 'font-bold',
     },
     md: {
       size: 'text-4xl sm:text-5xl lg:text-6xl',

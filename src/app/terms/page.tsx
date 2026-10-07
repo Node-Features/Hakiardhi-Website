@@ -13,7 +13,7 @@ export default function TermsOfUsePage() {
             <div className="w-12 h-12 bg-hakiardhi-red/10 rounded-xl flex items-center justify-center">
               <Icon name="file-text" size="lg" className="text-hakiardhi-red" />
             </div>
-            <h1 className="text-4xl lg:text-5xl font-black text-gray-900">Terms of Use</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900">Terms of Use</h1>
           </div>
           <p className="text-lg text-gray-600">
             Last Updated: November 21, 2025
@@ -24,7 +24,7 @@ export default function TermsOfUsePage() {
         <div className="prose prose-lg max-w-none">
           {/* Introduction */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">1. Acceptance of Terms</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               Welcome to HakiArdhi (Land Rights Research & Resources Institute). By accessing or using our website, services, and resources, you agree to be bound by these Terms of Use and all applicable laws and regulations.
             </p>
@@ -35,7 +35,7 @@ export default function TermsOfUsePage() {
 
           {/* Use of Services */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">2. Use of Services</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Use of Services</h2>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">2.1 Permitted Use</h3>
             <p className="text-gray-700 leading-relaxed mb-3">
@@ -66,7 +66,7 @@ export default function TermsOfUsePage() {
 
           {/* Intellectual Property */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">3. Intellectual Property Rights</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Intellectual Property Rights</h2>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">3.1 Our Content</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
@@ -91,7 +91,7 @@ export default function TermsOfUsePage() {
 
           {/* User Content */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">4. User-Generated Content</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">4. User-Generated Content</h2>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">4.1 Your Submissions</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
@@ -112,7 +112,7 @@ export default function TermsOfUsePage() {
 
           {/* Legal Aid Services */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">5. Legal Aid and Professional Services</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Legal Aid and Professional Services</h2>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">5.1 Not Legal Advice</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
@@ -132,7 +132,7 @@ export default function TermsOfUsePage() {
 
           {/* Disclaimers */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">6. Disclaimers</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Disclaimers</h2>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">6.1 "As Is" Basis</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
@@ -152,7 +152,7 @@ export default function TermsOfUsePage() {
 
           {/* Limitation of Liability */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">7. Limitation of Liability</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Limitation of Liability</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               To the fullest extent permitted by law, HakiArdhi, its directors, employees, partners, and affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from or related to your use of our services, including but not limited to:
             </p>
@@ -170,7 +170,7 @@ export default function TermsOfUsePage() {
 
           {/* Indemnification */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">8. Indemnification</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Indemnification</h2>
             <p className="text-gray-700 leading-relaxed">
               You agree to indemnify, defend, and hold harmless HakiArdhi and its directors, employees, partners, and affiliates from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from your use of our services, violation of these terms, or infringement of any rights of another party.
             </p>
@@ -178,7 +178,7 @@ export default function TermsOfUsePage() {
 
           {/* Donations */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">9. Donations and Payments</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Donations and Payments</h2>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">9.1 Voluntary Contributions</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
@@ -198,7 +198,7 @@ export default function TermsOfUsePage() {
 
           {/* Privacy */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">10. Privacy</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Privacy</h2>
             <p className="text-gray-700 leading-relaxed">
               Your use of our services is also governed by our <a href="/privacy-policy" className="text-hakiardhi-red hover:underline">Privacy Policy</a>, which explains how we collect, use, and protect your personal information. Please review our Privacy Policy to understand our practices.
             </p>
@@ -206,7 +206,7 @@ export default function TermsOfUsePage() {
 
           {/* Termination */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">11. Termination</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Termination</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               We reserve the right to suspend or terminate your access to our services at any time, without notice, for conduct that we believe violates these Terms of Use, is harmful to other users, or is otherwise inappropriate.
             </p>
@@ -217,7 +217,7 @@ export default function TermsOfUsePage() {
 
           {/* Governing Law */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">12. Governing Law and Dispute Resolution</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">12. Governing Law and Dispute Resolution</h2>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">12.1 Applicable Law</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
@@ -232,7 +232,7 @@ export default function TermsOfUsePage() {
 
           {/* General Provisions */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">13. General Provisions</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">13. General Provisions</h2>
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">13.1 Severability</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
@@ -257,11 +257,11 @@ export default function TermsOfUsePage() {
 
           {/* Contact */}
           <section className="mb-10">
-            <h2 className="text-2xl font-black text-gray-900 mb-4">14. Contact Us</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">14. Contact Us</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
               If you have questions about these Terms of Use, please contact us:
             </p>
-            <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-hakiardhi-red">
+            <div className="bg-gray-50 p-6 rounded-xl ">
               <p className="font-bold text-gray-900 mb-2">HakiArdhi</p>
               <p className="text-gray-700">Land Rights Research & Resources Institute</p>
               <p className="text-gray-700">Email: <a href="mailto:info@hakiardhi.or.tz" className="text-hakiardhi-red hover:underline">info@hakiardhi.or.tz</a></p>

@@ -60,11 +60,9 @@ export default function TestimonialsSection({
   return (
     <section
       ref={sectionRef}
-      className={`relative py-16 lg:py-24 bg-gradient-to-br from-zinc-50 via-white to-zinc-50 overflow-hidden ${className}`}
+      className={`bg-gray-50 relative py-16 lg:py-24 overflow-hidden ${className}`}
     >
       {/* Background decoration */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-hakiardhi-red/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
@@ -73,15 +71,10 @@ export default function TestimonialsSection({
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-hakiardhi-red/10 rounded-full mb-6">
-            <Icon name="heart" size="sm" className="text-hakiardhi-red" />
-            <span className="text-sm font-bold text-hakiardhi-red uppercase tracking-wide">
-              Success Stories
-            </span>
-          </div>
+          <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">Success Stories</p>
 
-          <h2 className="text-3xl lg:text-5xl font-black text-gray-900 mb-4">
-            Voices from the <span className="text-hakiardhi-red">Communities</span> We Serve
+          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
+            Voices from the Communities We Serve
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Real stories from people whose lives have been transformed through our programs
@@ -94,7 +87,7 @@ export default function TestimonialsSection({
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100"
+                className="group bg-white rounded-xl overflow-hidden shadow-sm shadow-sm transition-all duration-500 border border-gray-100"
               >
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden">
@@ -102,7 +95,7 @@ export default function TestimonialsSection({
                     src={testimonial.image}
                     alt={testimonial.name}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover transition-transform duration-500"
                   />
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
@@ -118,7 +111,7 @@ export default function TestimonialsSection({
 
                   {/* Quote icon */}
                   <div className="absolute bottom-4 right-4">
-                    <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
                       <Icon name="quote" size="md" className="text-white" />
                     </div>
                   </div>
@@ -133,7 +126,7 @@ export default function TestimonialsSection({
 
                   {/* Author */}
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-hakiardhi-red/20 to-brand-500/20 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-hakiardhi-red/20 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
                       <Icon name="user" size="md" className="text-hakiardhi-red" />
                     </div>
                     <div>
@@ -153,7 +146,7 @@ export default function TestimonialsSection({
 
         {/* CTA */}
         <div
-          className={`text-center mt-12 transition-all duration-1000 delay-300 ${
+          className={`text-center mt-12 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >

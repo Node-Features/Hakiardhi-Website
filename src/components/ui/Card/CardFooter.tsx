@@ -10,7 +10,7 @@ export default function CardFooter({ children, className = '', showDivider = tru
   return (
     <>
       {showDivider && (
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent mx-6 group-hover:via-brand-300 transition-colors duration-500"></div>
+        <div className="h-px mx-6 transition-colors duration-500"></div>
       )}
       <div className={`px-6 pb-6 pt-5 ${className}`}>
         {children}

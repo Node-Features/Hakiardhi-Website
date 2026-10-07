@@ -33,7 +33,7 @@ export default function CardMedia({
           src={image}
           alt={alt}
           fill
-          className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
+          className="object-cover transition-all duration-700 "
         />
         {overlay && (
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

@@ -432,19 +432,19 @@ a {
    ============================================ */
 
 @utility btn-primary {
-  @apply rounded-xl bg-brand-500 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-black hover:text-white focus:shadow-focus-ring;
+  @apply rounded-lg bg-brand-500 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-600 focus:shadow-focus-ring;
 }
 
 @utility btn-secondary {
-  @apply rounded-xl bg-brand-500 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-black hover:text-white focus:shadow-focus-ring;
+  @apply rounded-lg bg-brand-500 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-600 focus:shadow-focus-ring;
 }
 
 @utility card-hakiardhi {
-  @apply rounded-2xl bg-white p-6 shadow-theme-sm dark:bg-gray-900;
+  @apply rounded-xl border border-gray-200 bg-white p-6 dark:bg-gray-900;
 }
 
 @utility card-loader {
-  @apply h-30 animate-pulse rounded-2xl bg-gradient-to-r from-gray-100 via-white to-gray-100 bg-[length:400%_100%];
+  @apply h-30 animate-pulse rounded-xl bg-gray-100;
 }
 
 @utility loader-orbital {
@@ -475,7 +475,7 @@ a {
 }
 
 @utility hakiardhi-topnav {
-  @apply sticky top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur-md dark:border-gray-800 dark:bg-gray-900/80;
+  @apply sticky top-0 z-50 border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900;
 }
 
 @utility hakiardhi-section {

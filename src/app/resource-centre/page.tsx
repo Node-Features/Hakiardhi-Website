@@ -71,11 +71,11 @@ const ResourceThumbnail = ({ resource }: { resource: any }) => {
           src={thumbnail}
           alt={resource.title}
           fill
-          className="object-cover group-hover:scale-110 transition-transform duration-500"
+          className="object-cover transition-transform duration-500"
         />
       )}
       {showIcon && (
-        <div className="absolute inset-0 bg-gradient-to-br from-hakiardhi-red/90 to-red-700/90 flex items-center justify-center">
+        <div className="bg-hakiardhi-red/90 absolute inset-0 flex items-center justify-center">
           <Icon name={getResourceIcon(resource.type) as any} size="xl" className="text-white opacity-80" />
         </div>
       )}
@@ -254,8 +254,6 @@ export default function ResourcesPage() {
       {/* Resources Section */}
       <section className="hakiardhi-section bg-gray-50 relative overflow-hidden">
         {/* Elegant decorative gradient orbs */}
-        <div className="absolute top-0 left-1/4 w-80 h-80 bg-gradient-to-br from-orange-500/10 to-brand-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-brand-500/10 to-success-500/10 rounded-full blur-3xl"></div>
 
         <div className="hakiardhi-container relative z-10">
           {/* Section Header */}
@@ -275,8 +273,8 @@ export default function ResourcesPage() {
                   onClick={() => handleFilterChange(() => setSelectedType(type))}
                   className={`group px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
                     selectedType === type
-                      ? 'bg-hakiardhi-red text-white shadow-lg shadow-hakiardhi-red/30 scale-105'
-                      : 'bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-300 hover:border-hakiardhi-red hover:scale-105'
+                      ? 'bg-hakiardhi-red text-white shadow-sm'
+                      : 'bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-300 hover:border-hakiardhi-red '
                   }`}
                 >
                   <span className="flex items-center gap-2">
@@ -295,13 +293,13 @@ export default function ResourcesPage() {
           </div>
 
           {/* Collapsible Filter Panel */}
-          <div className="bg-gradient-to-b from-gray-50 to-white border-b border-gray-200 rounded-2xl mb-10">
+          <div className="bg-gray-50 border-b border-gray-200 rounded-xl mb-10">
             <div className="py-6 px-4">
               {/* Filter Toggle Button */}
               <div className="flex items-center justify-between mb-4">
                 <button
                   onClick={() => setShowFilters(!showFilters)}
-                  className="group flex items-center gap-2 px-6 py-3 bg-white rounded-xl border-2 border-gray-200 hover:border-hakiardhi-red transition-all duration-300 shadow-sm hover:shadow-md"
+                  className="group flex items-center gap-2 px-6 py-3 bg-white rounded-xl border-2 border-gray-200 hover:border-hakiardhi-red transition-all duration-300 shadow-sm shadow-sm"
                 >
                   <Icon name="funnel" size="sm" className="text-hakiardhi-red" />
                   <span className="font-semibold text-gray-900">
@@ -336,7 +334,7 @@ export default function ResourcesPage() {
                   showFilters ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="bg-white rounded-2xl border-2 border-gray-200 p-6 shadow-lg">
+                <div className="bg-white rounded-xl border-2 border-gray-200 p-6 shadow-sm">
                   {/* Category Filter */}
                   <div className="mb-6 pb-6 border-b border-gray-200">
                     <label className="flex items-center gap-2 text-sm font-bold text-gray-700 mb-3">
@@ -350,8 +348,8 @@ export default function ResourcesPage() {
                           onClick={() => handleFilterChange(() => setSelectedCategory(category))}
                           className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-300 ${
                             selectedCategory === category
-                              ? 'bg-hakiardhi-red text-white shadow-md'
-                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:scale-105'
+                              ? 'bg-hakiardhi-red text-white shadow-sm'
+                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200 '
                           }`}
                         >
                           {category}
@@ -400,7 +398,7 @@ export default function ResourcesPage() {
 
           {/* Resources Grid */}
           {filteredResources.length > 0 ? (
-            <div className="bg-gradient-to-br from-zinc-50 via-gray-50 to-zinc-100/50 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-inner border border-zinc-200/50">
+            <div className="bg-gray-50 rounded-xl p-8 lg:p-12 shadow-sm border border-gray-200/50">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
                 {visibleResources.map((resource, index) => (
                   <div
@@ -501,14 +499,13 @@ export default function ResourcesPage() {
               {hasMore && (
                 <div className="mt-12 text-center">
                   <div className="inline-block relative">
-                    <div className="absolute inset-0 bg-hakiardhi-red/20 blur-xl rounded-full scale-150"></div>
                     <button
                       onClick={() => setItemsToShow(prev => prev + 9)}
-                      className="relative group px-8 py-4 bg-hakiardhi-red text-white font-bold rounded-full shadow-lg hover:bg-black hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95"
+                      className="relative group px-8 py-4 bg-hakiardhi-red text-white font-bold rounded-full shadow-sm hover:bg-black shadow-sm transition-all duration-300 "
                     >
                       <span className="flex items-center gap-3">
                         Load More Resources
-                        <svg className="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                         </svg>
                       </span>
@@ -519,7 +516,7 @@ export default function ResourcesPage() {
                   </p>
                   <div className="mt-3 max-w-md mx-auto h-2 bg-gray-200 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-hakiardhi-red to-red-600 transition-all duration-500"
+                      className="bg-hakiardhi-red h-full transition-all duration-500"
                       style={{ width: `${(visibleResources.length / filteredResources.length) * 100}%` }}
                     ></div>
                   </div>
@@ -527,7 +524,7 @@ export default function ResourcesPage() {
               )}
             </div>
           ) : (
-            <div className="text-center py-20 bg-white rounded-2xl shadow-lg">
+            <div className="text-center py-20 bg-white rounded-xl shadow-sm">
               <div className="w-20 h-20 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
                 <Icon name="document" size="xl" className="text-gray-400" />
               </div>
@@ -544,7 +541,7 @@ export default function ResourcesPage() {
           )}
 
           {/* Newsletter Signup CTA */}
-          <div className="mt-12 text-center p-8 bg-gradient-to-r from-hakiardhi-red/5 to-red-50 rounded-2xl border-l-4 border-hakiardhi-red max-w-3xl mx-auto">
+          <div className="bg-hakiardhi-red/5 mt-12 text-center p-8 rounded-xl max-w-3xl mx-auto">
             <h3 className={`${TYPOGRAPHY.heading.h3.size} ${TYPOGRAPHY.heading.h3.weight} text-gray-900 mb-3`}>
               Need Help Finding Resources?
             </h3>

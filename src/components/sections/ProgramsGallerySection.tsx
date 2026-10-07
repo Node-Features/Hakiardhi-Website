@@ -43,8 +43,6 @@ export default function ProgramsGallerySection({ className = '' }: ProgramsGalle
       className={`relative ${RESPONSIVE.section} overflow-hidden bg-gray-50 ${className}`}
     >
       {/* Elegant decorative gradient orbs */}
-      <div className="absolute top-0 left-1/4 w-80 h-80 bg-gradient-to-br from-orange-500/10 to-brand-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-brand-500/10 to-success-500/10 rounded-full blur-3xl"></div>
 
       <div className={`container mx-auto ${RESPONSIVE.container} relative z-10`}>
         {/* Section Header */}
@@ -55,15 +53,10 @@ export default function ProgramsGallerySection({ className = '' }: ProgramsGalle
         >
           <div className={SPACING.component.relaxed}>
             {/* Tag */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-hakiardhi-red/10 rounded-full mb-6">
-              <Icon name="briefcase" size="sm" className="text-hakiardhi-red" />
-              <span className="text-sm font-bold text-hakiardhi-red uppercase tracking-wide">
-                Our Programs
-              </span>
-            </div>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">Our Programs</p>
 
-            <h2 className="text-3xl lg:text-5xl font-black text-gray-900 mb-4">
-              Transforming <span className="text-hakiardhi-red">Lives</span> Through Action
+            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4">
+              Transforming Lives Through Action
             </h2>
             <p className={`text-base lg:text-lg text-gray-600 ${CONTENT_WIDTHS.text.wide} mx-auto leading-relaxed`}>
               Explore our diverse programs working towards equitable land tenure for communities across Tanzania
@@ -73,7 +66,7 @@ export default function ProgramsGallerySection({ className = '' }: ProgramsGalle
 
         {/* Category Filter - With Counts */}
         <div
-          className={`flex flex-wrap justify-center gap-3 mb-8 transition-all duration-1000 delay-200 ${
+          className={`flex flex-wrap justify-center gap-3 mb-8 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
@@ -85,8 +78,8 @@ export default function ProgramsGallerySection({ className = '' }: ProgramsGalle
                 onClick={() => setSelectedCategory(category)}
                 className={`group px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-hakiardhi-red text-white shadow-lg shadow-hakiardhi-red/30 scale-105'
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-300 hover:border-hakiardhi-red hover:scale-105'
+                    ? 'bg-hakiardhi-red text-white shadow-sm'
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-300 hover:border-hakiardhi-red '
                 }`}
               >
                 <span className="flex items-center gap-2">
@@ -106,7 +99,7 @@ export default function ProgramsGallerySection({ className = '' }: ProgramsGalle
 
         {/* Programs Grid - With Gradient Background Container */}
         {displayPrograms.length > 0 ? (
-          <div className="bg-gradient-to-br from-zinc-50 via-gray-50 to-zinc-100/50 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-inner border border-zinc-200/50">
+          <div className="bg-gray-50 rounded-xl p-8 lg:p-12 shadow-sm border border-gray-200/50">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
               {displayPrograms.map((program, index) => (
                 <div
@@ -125,7 +118,7 @@ export default function ProgramsGallerySection({ className = '' }: ProgramsGalle
                           src={program.image}
                           alt={program.title}
                           fill
-                          className="object-cover group-hover:scale-110 transition-transform duration-500"
+                          className="object-cover transition-transform duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </Card.Media>
@@ -198,7 +191,7 @@ export default function ProgramsGallerySection({ className = '' }: ProgramsGalle
             </div>
           </div>
         ) : (
-          <div className="text-center py-20 bg-white rounded-2xl shadow-lg">
+          <div className="text-center py-20 bg-white rounded-xl shadow-sm">
             <div className="w-20 h-20 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
               <Icon name="calendar" size="xl" className="text-gray-400" />
             </div>

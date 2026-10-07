@@ -60,17 +60,15 @@ export default function ProgramsSection({
     <section
       className={`relative py-16 lg:py-24 overflow-hidden ${className}`}
       style={{
-        background: 'linear-gradient(to bottom, #000000 0%, #1a1a1a 50%, #000000 100%)',
+        background: '#0a0a0a',
       }}
     >
       {/* Background decoration */}
-      <div className="absolute top-1/3 left-0 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-10 lg:mb-12">
-          <h2 className="text-3xl lg:text-5xl font-black text-white mb-4 lg:mb-6">
+          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
             {title.split(' ').map((word, index) =>
               word === 'Programs' ? (
                 <span key={index} className="text-brand-500">Programs</span>

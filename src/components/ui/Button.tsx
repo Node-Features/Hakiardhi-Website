@@ -17,6 +17,14 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
+/**
+ * One button style for the whole site.
+ * - primary:   solid brand red (the main action on a screen)
+ * - secondary: outline that takes the surrounding text colour, so it works
+ *              on white sections and on dark image overlays alike
+ * - dark:      solid black
+ * - tertiary / link: plain red text link with an arrow-friendly layout
+ */
 export default function Button({
   href,
   onClick,
@@ -30,83 +38,59 @@ export default function Button({
   fullWidth = false,
   type = 'button',
 }: ButtonProps) {
-  // Size variants with proper horizontal padding
-  const sizeClasses = {
-    sm: 'text-sm px-8 py-2.5 min-h-[44px]',
-    md: 'text-base px-10 py-3 min-h-[48px]',
-    lg: 'text-base px-12 py-4 min-h-[52px]',
-  };
+  const isTextLink = variant === 'tertiary' || variant === 'link';
+
+  const sizeClasses = isTextLink
+    ? { sm: 'text-sm', md: 'text-base', lg: 'text-base' }
+    : {
+        sm: 'h-10 px-4 text-sm',
+        md: 'h-11 px-5 text-base',
+        lg: 'h-12 px-6 text-base',
+      };
 
   const variantClasses = {
-    primary: 'bg-hakiardhi-red text-white border-2 border-hakiardhi-red relative overflow-hidden active:scale-[0.97] active:translate-y-0 shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:!bg-black hover:!border-black hover:!text-white hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.25)]',
-    secondary: 'bg-hakiardhi-red text-white border-2 border-hakiardhi-red active:scale-[0.97] active:translate-y-0 shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:!bg-black hover:!border-black hover:!text-white hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.25)]',
-    tertiary: 'bg-hakiardhi-red text-white border-2 border-hakiardhi-red active:scale-[0.97] active:translate-y-0 shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:!bg-black hover:!border-black hover:!text-white hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.25)]',
-    link: 'bg-hakiardhi-red text-white border-2 border-hakiardhi-red rounded-full active:scale-[0.97] active:translate-y-0 shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:!bg-black hover:!border-black hover:!text-white hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,0,0,0.25)]',
-    dark: 'bg-black text-white border-2 border-black active:scale-[0.97] active:translate-y-0 shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:!bg-hakiardhi-red hover:!border-hakiardhi-red hover:!text-white hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(214,40,40,0.25)]',
+    primary: 'bg-hakiardhi-red text-white border border-hakiardhi-red hover:bg-hakiardhi-red-dark hover:border-hakiardhi-red-dark',
+    secondary: 'bg-transparent [color:inherit] border border-current hover:bg-current/10',
+    dark: 'bg-black text-white border border-black hover:bg-gray-800 hover:border-gray-800',
+    tertiary: 'text-hakiardhi-red hover:text-hakiardhi-red-dark underline-offset-4 hover:underline',
+    link: 'text-hakiardhi-red hover:text-hakiardhi-red-dark underline-offset-4 hover:underline',
   };
 
-  const baseClasses = [
-    'group inline-flex items-center justify-center gap-2',
-    'font-semibold transition-all duration-300 ease-out',
-    variant !== 'link' ? 'rounded-full' : '',
-    disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer',
+  const classes = [
+    'inline-flex items-center justify-center gap-2 font-semibold whitespace-nowrap',
+    'transition-colors duration-200',
+    isTextLink ? '' : 'rounded-lg',
+    disabled ? 'opacity-50 cursor-not-allowed pointer-events-none' : 'cursor-pointer',
     fullWidth ? 'w-full' : '',
     'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hakiardhi-red focus-visible:ring-offset-2',
     sizeClasses[size],
     variantClasses[variant],
     className,
-  ].filter(Boolean).join(' ');
+  ]
+    .filter(Boolean)
+    .join(' ');
 
-  const iconClasses = [
-    'flex-shrink-0 transition-all duration-300 ease-out',
-    iconPosition === 'right' ? 'group-hover:translate-x-1 group-active:translate-x-0' : 'group-hover:-translate-x-1 group-active:translate-x-0',
-    iconPosition === 'left' ? 'order-first mr-3' : 'order-last ml-3',
-  ].filter(Boolean).join(' ');
-
-  const IconElement = icon ? (
-    <span className={iconClasses}>
-      {icon}
-    </span>
-  ) : null;
+  const iconEl = icon ? <span className="flex-shrink-0">{icon}</span> : null;
 
   const content = (
-    <span className="relative flex items-center justify-center gap-2 z-10 w-full">
-      {iconPosition === 'left' && IconElement}
-      <span className="flex items-center justify-center">{children}</span>
-      {iconPosition === 'right' && IconElement}
-    </span>
+    <>
+      {iconPosition === 'left' && iconEl}
+      <span>{children}</span>
+      {iconPosition === 'right' && iconEl}
+    </>
   );
-
-  const commonStyles = {
-    fontFamily: "'Metropolis', sans-serif",
-    fontWeight: 600,
-  };
-
-  const gradientClasses = 'absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full hover:translate-x-0 transition-transform duration-700 rounded-full pointer-events-none';
 
   if (href && !disabled) {
     return (
-      <Link href={href} className={baseClasses} style={commonStyles}>
+      <Link href={href} className={classes} onClick={onClick}>
         {content}
-        {variant === 'primary' && (
-          <span className={gradientClasses}></span>
-        )}
       </Link>
     );
   }
 
   return (
-    <button
-      onClick={onClick}
-      disabled={disabled}
-      type={type}
-      className={baseClasses}
-      style={commonStyles}
-    >
+    <button onClick={onClick} disabled={disabled} type={type} className={classes}>
       {content}
-      {variant === 'primary' && (
-        <span className={gradientClasses}></span>
-      )}
     </button>
   );
 }

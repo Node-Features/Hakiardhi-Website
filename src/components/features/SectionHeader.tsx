@@ -21,11 +21,11 @@ export default function SectionHeader({
     <div className={`max-w-3xl mb-16 ${alignClasses[align]} ${className}`}>
       {/* Decorative accent */}
       <div className={`inline-block mb-4 ${align === 'center' ? 'mx-auto' : align === 'right' ? 'ml-auto' : ''}`}>
-        <div className="h-1 w-16 bg-gradient-to-r from-brand-500 to-brand-300 rounded-full"></div>
+        <div className="bg-brand-500 h-1 w-16 rounded-full"></div>
       </div>
 
-      <h2 className="text-display-sm font-black text-gray-900 mb-5 leading-tight tracking-tight">
-        <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+      <h2 className="text-display-sm font-bold text-gray-900 mb-5 leading-tight tracking-tight">
+        <span className="text-gray-900 ">
           {title}
         </span>
       </h2>

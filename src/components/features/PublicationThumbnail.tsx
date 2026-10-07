@@ -40,7 +40,7 @@ export default function PublicationThumbnail({
   if (hasError || !showPlaceholder) {
     return (
       <div className={`relative bg-gray-800 ${className}`}>
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center">
+        <div className="bg-brand-500/20 absolute inset-0 flex items-center justify-center">
           <svg
             className="w-20 h-20 text-brand-500/30"
             fill="none"

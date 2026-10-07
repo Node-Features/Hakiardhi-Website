@@ -44,8 +44,6 @@ export default function AboutPage() {
       {/* Our Approach - LIGHT THEME WITH GRADIENT ORBS */}
       <section className="relative overflow-hidden bg-gray-50 py-12 sm:py-16 lg:py-24 xl:py-32">
         {/* Elegant decorative gradient orbs */}
-        <div className="absolute top-0 left-1/4 w-80 h-80 bg-gradient-to-br from-orange-500/10 to-brand-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-br from-brand-500/10 to-success-500/10 rounded-full blur-3xl"></div>
 
         <Section.Content className="relative z-10">
           <h2 className={`${TYPOGRAPHY.heading.h2.size} ${TYPOGRAPHY.heading.h2.weight} text-hakiardhi-red ${SPACING.margin.element.lg} text-center`}>
@@ -86,7 +84,7 @@ export default function AboutPage() {
               </div>
 
               {/* Community Image */}
-              <div className="relative h-96 lg:h-full min-h-[500px] rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative h-96 lg:h-full min-h-[500px] rounded-xl overflow-hidden shadow-sm">
                 <Image
                   src="/images/capacity_building_3.jpg"
                   alt="Community engagement"
@@ -215,13 +213,11 @@ export default function AboutPage() {
       {/* Legal Aid Hotline - LIGHT THEME WITH GRADIENT ORBS */}
       <section className="relative overflow-hidden bg-gray-50 py-12 sm:py-16 lg:py-24">
         {/* Elegant decorative gradient orbs */}
-        <div className="absolute top-0 right-1/4 w-80 h-80 bg-gradient-to-br from-hakiardhi-red/15 to-orange-500/15 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-br from-brand-500/15 to-hakiardhi-red/15 rounded-full blur-3xl"></div>
 
         <Section.Content className="relative z-10">
           <Card variant="elevated" className="max-w-4xl mx-auto">
             <Card.Body className={`${SPACING.padding.xl} text-center`}>
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-hakiardhi-red to-red-600 rounded-full flex items-center justify-center">
+              <div className="bg-hakiardhi-red w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center">
                 <Icon name="phone" size="xl" className="text-white" />
               </div>
               <h3 className={`${TYPOGRAPHY.heading.h2.size} ${TYPOGRAPHY.heading.h2.weight} text-hakiardhi-red ${SPACING.margin.element.md}`}>

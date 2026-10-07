@@ -151,11 +151,10 @@ export default function SchoolHakiArdhiSection({ className = '' }: SchoolHakiArd
       id="school-hakiardhi-section"
       className={`relative py-16 lg:py-24 overflow-hidden ${className}`}
       style={{
-        background: 'linear-gradient(to bottom, #000000 0%, #0a0a0a 100%)',
+        background: '#0a0a0a',
       }}
     >
       {/* Background decoration */}
-      <div className="absolute top-1/3 left-0 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         {/* Section Header */}
@@ -164,8 +163,8 @@ export default function SchoolHakiArdhiSection({ className = '' }: SchoolHakiArd
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-3xl lg:text-5xl font-black text-white mb-4 lg:mb-6">
-            School <span className="text-brand-500">HakiArdhi</span>
+          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
+            School HakiArdhi
           </h2>
           <p className="text-base lg:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Empowering communities through education. Building capacity on land rights, tenure laws,
@@ -185,7 +184,7 @@ export default function SchoolHakiArdhiSection({ className = '' }: SchoolHakiArd
               }`}
               style={{ transitionDelay: `${index * 200 + 200}ms` }}
             >
-              <div className="h-full bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-brand-500/20 hover:border-brand-500/40 transition-all duration-300 flex flex-col">
+              <div className="bg-gray-900/50 h-full rounded-xl p-6 lg:p-8 border border-brand-500/20 hover:border-brand-500/40 transition-all duration-300 flex flex-col">
                 {/* Icon and Duration */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 text-brand-500">{program.icon}</div>
@@ -194,7 +193,7 @@ export default function SchoolHakiArdhiSection({ className = '' }: SchoolHakiArd
                   </span>
                 </div>
 
-                <h3 className="text-xl font-black text-white mb-3">{program.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-3">{program.title}</h3>
                 <p className="text-gray-300 text-sm mb-4 leading-relaxed flex-grow">{program.description}</p>
 
                 {/* Target Audience */}
@@ -237,25 +236,25 @@ export default function SchoolHakiArdhiSection({ className = '' }: SchoolHakiArd
 
         {/* Impact Stats */}
         <div
-          className={`mb-12 lg:mb-16 transition-all duration-1000 delay-600 ${
+          className={`mb-12 lg:mb-16 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="bg-gradient-to-br from-brand-500/20 to-brand-500/5 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-brand-500/20">
-            <h3 className="text-2xl lg:text-3xl font-black text-white mb-8 text-center">
+          <div className="bg-brand-500/20 rounded-xl p-8 lg:p-12 border border-brand-500/20">
+            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-8 text-center">
               Our Impact
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-4xl lg:text-5xl font-black text-brand-500 mb-2">5,000+</div>
+                <div className="text-4xl lg:text-5xl font-bold text-brand-500 mb-2">5,000+</div>
                 <p className="text-gray-300">Community Members Trained</p>
               </div>
               <div>
-                <div className="text-4xl lg:text-5xl font-black text-brand-500 mb-2">150+</div>
+                <div className="text-4xl lg:text-5xl font-bold text-brand-500 mb-2">150+</div>
                 <p className="text-gray-300">Training Sessions Conducted</p>
               </div>
               <div>
-                <div className="text-4xl lg:text-5xl font-black text-brand-500 mb-2">20+</div>
+                <div className="text-4xl lg:text-5xl font-bold text-brand-500 mb-2">20+</div>
                 <p className="text-gray-300">Regions Reached</p>
               </div>
             </div>
@@ -264,18 +263,18 @@ export default function SchoolHakiArdhiSection({ className = '' }: SchoolHakiArd
 
         {/* Testimonials */}
         <div
-          className={`transition-all duration-1000 delay-800 ${
+          className={`transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h3 className="text-2xl lg:text-3xl font-black text-white mb-8 text-center">
+          <h3 className="text-2xl lg:text-3xl font-bold text-white mb-8 text-center">
             Success <span className="text-brand-500">Stories</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-brand-500/20 flex flex-col"
+                className="bg-gray-900/50 rounded-xl p-6 border border-brand-500/20 flex flex-col"
               >
                 <svg
                   className="w-8 h-8 text-brand-500 mb-4 flex-shrink-0"
@@ -299,7 +298,7 @@ export default function SchoolHakiArdhiSection({ className = '' }: SchoolHakiArd
 
         {/* Enrollment CTA */}
         <div
-          className={`mt-12 lg:mt-16 text-center transition-all duration-1000 delay-1000 ${
+          className={`mt-12 lg:mt-16 text-center transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >

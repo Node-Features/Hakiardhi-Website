@@ -83,7 +83,7 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
               {program.title}
             </h1>
 
@@ -165,14 +165,14 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
           <div className="lg:col-span-2 space-y-12">
             {/* Overview Section */}
             <section>
-              <h2 className="text-3xl font-black text-gray-900 mb-6">Program Overview</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Program Overview</h2>
               <p className="text-lg text-gray-700 leading-relaxed">{program.fullDescription}</p>
             </section>
 
             {/* Objectives Section */}
             {program.objectives && program.objectives.length > 0 && (
               <section>
-                <h2 className="text-3xl font-black text-gray-900 mb-6">Objectives</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Objectives</h2>
                 <div className="space-y-4">
                   {program.objectives.map((objective, index) => (
                     <div key={index} className="flex gap-4">
@@ -189,14 +189,14 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
             {/* Impact Metrics Section */}
             {program.impact && program.impact.length > 0 && (
               <section>
-                <h2 className="text-3xl font-black text-gray-900 mb-6">Impact & Reach</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Impact & Reach</h2>
                 <div className="grid grid-cols-2 gap-4 sm:gap-6">
                   {program.impact.map((metric, index) => (
                     <div
                       key={index}
-                      className="bg-gradient-to-br from-hakiardhi-red to-hakiardhi-red-dark p-6 rounded-2xl text-white"
+                      className="bg-hakiardhi-red p-6 rounded-xl text-white"
                     >
-                      <div className="text-3xl sm:text-4xl font-black mb-2">{metric.value}</div>
+                      <div className="text-3xl sm:text-4xl font-bold mb-2">{metric.value}</div>
                       <div className="text-sm sm:text-base font-medium opacity-90">{metric.label}</div>
                     </div>
                   ))}
@@ -207,7 +207,7 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
             {/* Outcomes Section */}
             {program.outcomes && program.outcomes.length > 0 && (
               <section>
-                <h2 className="text-3xl font-black text-gray-900 mb-6">Key Outcomes</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Outcomes</h2>
                 <div className="space-y-3">
                   {program.outcomes.map((outcome, index) => (
                     <div key={index} className="flex gap-3">
@@ -232,18 +232,18 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
             {/* Photo Gallery Section */}
             {program.gallery && program.gallery.length > 0 && (
               <section>
-                <h2 className="text-3xl font-black text-gray-900 mb-6">Photo Gallery</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Photo Gallery</h2>
                 <div className="grid grid-cols-2 gap-4">
                   {program.gallery.map((image, index) => (
                     <div
                       key={index}
-                      className="relative h-64 rounded-2xl overflow-hidden group cursor-pointer"
+                      className="relative h-64 rounded-xl overflow-hidden group cursor-pointer"
                     >
                       <Image
                         src={image}
                         alt={`${program.title} - Image ${index + 1}`}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="object-cover transition-transform duration-500 "
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                     </div>
@@ -257,8 +257,8 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
           <div className="space-y-8">
             {/* Partners Section */}
             {program.partners && program.partners.length > 0 && (
-              <div className="bg-gray-50 rounded-2xl p-6">
-                <h3 className="text-xl font-black text-gray-900 mb-4">Partners</h3>
+              <div className="bg-gray-50 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Partners</h3>
                 <ul className="space-y-3">
                   {program.partners.map((partner, index) => (
                     <li key={index} className="flex items-start gap-2">
@@ -277,8 +277,8 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
             )}
 
             {/* Call to Action */}
-            <div className="bg-gradient-to-br from-hakiardhi-red to-hakiardhi-red-dark rounded-2xl p-6 text-white">
-              <h3 className="text-xl font-black mb-3">Get Involved</h3>
+            <div className="bg-hakiardhi-red rounded-xl p-6 text-white">
+              <h3 className="text-xl font-bold mb-3">Get Involved</h3>
               <p className="mb-6 text-sm leading-relaxed opacity-90">
                 Support our land rights programs and make a lasting impact in communities across Tanzania.
               </p>
@@ -303,7 +303,7 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
         <section className="bg-gray-50 py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                 Related Programs
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -316,14 +316,14 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
                 <Link
                   key={relatedProgram.id}
                   href={`/programs/${relatedProgram.slug}`}
-                  className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+                  className="group bg-white rounded-xl overflow-hidden shadow-sm shadow-sm transition-all duration-300"
                 >
                   <div className="relative h-48">
                     <Image
                       src={relatedProgram.image}
                       alt={relatedProgram.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="object-cover transition-transform duration-500 "
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute top-4 left-4">
@@ -331,7 +331,7 @@ export default async function ProgramDetailPage({ params }: ProgramDetailPagePro
                     </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-black text-gray-900 mb-2 group-hover:text-hakiardhi-red transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-hakiardhi-red transition-colors">
                       {relatedProgram.title}
                     </h3>
                     <p className="text-gray-600 mb-4 line-clamp-2">{relatedProgram.description}</p>

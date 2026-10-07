@@ -80,14 +80,14 @@ export default function LegalHelpModal({ isOpen, onClose }: LegalHelpModalProps)
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-fade-in"
+        className="absolute inset-0 bg-black/60 animate-fade-in"
         onClick={onClose}
       />
 
       {/* Modal */}
-      <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden animate-slide-in">
+      <div className="relative bg-white rounded-xl shadow-sm w-full max-w-2xl max-h-[90vh] overflow-hidden animate-slide-in">
         {/* Header */}
-        <div className="bg-gradient-to-r from-hakiardhi-red to-brand-500 px-6 py-5">
+        <div className="bg-hakiardhi-red px-6 py-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
@@ -138,8 +138,8 @@ export default function LegalHelpModal({ isOpen, onClose }: LegalHelpModalProps)
           {isSubmitted ? (
             /* Success State */
             <div className="text-center py-8">
-              <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
-                <Icon name="check-circle" size="xl" className="text-green-600" />
+              <div className="w-20 h-20 rounded-full bg-brand-50 flex items-center justify-center mx-auto mb-6">
+                <Icon name="check-circle" size="xl" className="text-hakiardhi-red" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Request Submitted!</h3>
               <p className="text-gray-600 mb-6 max-w-md mx-auto">
@@ -178,8 +178,8 @@ export default function LegalHelpModal({ isOpen, onClose }: LegalHelpModalProps)
                         onClick={() => setSelectedCaseType(caseType.id)}
                         className={`p-4 rounded-xl border-2 transition-all duration-300 text-left ${
                           selectedCaseType === caseType.id
-                            ? 'border-hakiardhi-red bg-hakiardhi-red/10 shadow-md'
-                            : 'border-gray-200 bg-white hover:border-hakiardhi-red/50 hover:shadow-sm'
+                            ? 'border-hakiardhi-red bg-hakiardhi-red/10 shadow-sm'
+                            : 'border-gray-200 bg-white hover:border-hakiardhi-red/50 '
                         }`}
                       >
                         <Icon
@@ -391,7 +391,7 @@ export default function LegalHelpModal({ isOpen, onClose }: LegalHelpModalProps)
                 href="https://wa.me/+255784646752"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-green-600 text-white font-bold text-sm px-4 py-2 rounded-full hover:bg-green-700 transition-colors shadow-sm flex-1"
+                className="inline-flex items-center justify-center gap-2 bg-hakiardhi-red text-white font-bold text-sm px-4 py-2 rounded-full hover:bg-hakiardhi-red transition-colors shadow-sm flex-1"
               >
                 <Icon name="phone" size="sm" />
                 WhatsApp Chat

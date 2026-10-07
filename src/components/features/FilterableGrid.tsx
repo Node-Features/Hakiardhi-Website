@@ -47,8 +47,8 @@ export default function FilterableGrid<T extends Record<string, any>>({
             onClick={() => setSelectedCategory(category)}
             className={`px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 ${
               selectedCategory === category
-                ? 'bg-brand-500 text-white shadow-lg shadow-brand-500/50 scale-105'
-                : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:scale-105'
+                ? 'bg-brand-500 text-white shadow-sm'
+                : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 '
             }`}
           >
             {category}

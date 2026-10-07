@@ -18,16 +18,17 @@ export default function CardRoot({
   clickable = false,
 }: CardRootProps) {
   const variantClasses = {
-    elevated: 'bg-white shadow-theme-sm hover:shadow-theme-xl border border-gray-100',
-    outlined: 'bg-white border-2 border-gray-200 hover:border-brand-500',
+    elevated: 'bg-white border border-gray-200',
+    outlined: 'bg-white border border-gray-200',
     filled: 'bg-gray-50 border border-gray-200',
-    glass: 'bg-white/5 backdrop-blur-md border border-gray-200/20',
+    glass: 'bg-white/5 border border-white/15',
   };
 
+  // Hover only signals that a card is clickable; no lifting, scaling or glows.
   const hoverEffectClasses = {
-    lift: 'hover:-translate-y-3',
-    glow: 'hover:shadow-[0_8px_24px_rgba(214,40,40,0.25)]',
-    scale: 'hover:scale-105',
+    lift: clickable || onClick ? 'hover:border-gray-300' : '',
+    glow: clickable || onClick ? 'hover:border-gray-300' : '',
+    scale: clickable || onClick ? 'hover:border-gray-300' : '',
     none: '',
   };
 
@@ -37,7 +38,7 @@ export default function CardRoot({
     <div
       onClick={onClick}
       className={`
-        group rounded-2xl overflow-hidden transition-all duration-500
+        group rounded-xl overflow-hidden transition-colors duration-200
         ${variantClasses[variant]}
         ${hoverEffectClasses[hoverEffect]}
         ${cursorClass}

@@ -161,25 +161,16 @@ function WorkWithUsPageContent() {
       <Header />
 
       {/* Hero Section */}
-      <Section variant="white" spacing="xs" className="pt-44 lg:pt-48 pb-16 bg-gradient-to-br from-zinc-50 via-gray-50 to-zinc-100 relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-hakiardhi-red/20 to-transparent"></div>
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-gradient-to-br from-hakiardhi-red/5 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-gradient-to-br from-blue-500/5 to-transparent rounded-full blur-3xl"></div>
+      <Section variant="white" spacing="xs" className="bg-gray-50 pt-44 lg:pt-48 pb-16 relative overflow-hidden">
 
         <Section.Content className="relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             {/* Tag Badge */}
-            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-gradient-to-r from-hakiardhi-red/10 to-brand-500/10 rounded-full mb-8 shadow-sm border border-hakiardhi-red/20">
-              <Icon name="users" size="sm" className="text-hakiardhi-red" />
-              <span className="text-sm font-bold text-hakiardhi-red uppercase tracking-wider">
-                Join Our Mission
-              </span>
-            </div>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">Join Our Mission</p>
 
             {/* Main Heading */}
             <h1 className={`${TYPOGRAPHY.heading.h1.size} ${TYPOGRAPHY.heading.h1.weight} text-gray-900 mb-6 leading-tight`}>
-              Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-hakiardhi-red to-brand-500">With Us</span>
+              Work With Us
             </h1>
 
             {/* Description */}
@@ -188,12 +179,6 @@ function WorkWithUsPageContent() {
               for communities across Tanzania. Explore opportunities to contribute your skills and make a difference.
             </p>
 
-            {/* Decorative divider */}
-            <div className="flex items-center justify-center gap-2 mt-8">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-hakiardhi-red/30"></div>
-              <div className="w-1.5 h-1.5 rounded-full bg-hakiardhi-red"></div>
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-hakiardhi-red/30"></div>
-            </div>
           </div>
         </Section.Content>
       </Section>
@@ -207,8 +192,8 @@ function WorkWithUsPageContent() {
               onClick={() => setActiveTab('volunteer')}
               className={`px-6 py-4 rounded-full font-semibold text-base transition-all duration-300 ${
                 activeTab === 'volunteer'
-                  ? 'bg-hakiardhi-red text-white shadow-lg scale-105'
-                  : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red hover:scale-105'
+                  ? 'bg-hakiardhi-red text-white shadow-sm'
+                  : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red '
               }`}
             >
               <div className="flex items-center gap-2">
@@ -220,8 +205,8 @@ function WorkWithUsPageContent() {
               onClick={() => setActiveTab('partner')}
               className={`px-6 py-4 rounded-full font-semibold text-base transition-all duration-300 ${
                 activeTab === 'partner'
-                  ? 'bg-hakiardhi-red text-white shadow-lg scale-105'
-                  : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red hover:scale-105'
+                  ? 'bg-hakiardhi-red text-white shadow-sm'
+                  : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red '
               }`}
             >
               <div className="flex items-center gap-2">
@@ -233,8 +218,8 @@ function WorkWithUsPageContent() {
               onClick={() => setActiveTab('careers')}
               className={`px-6 py-4 rounded-full font-semibold text-base transition-all duration-300 ${
                 activeTab === 'careers'
-                  ? 'bg-hakiardhi-red text-white shadow-lg scale-105'
-                  : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red hover:scale-105'
+                  ? 'bg-hakiardhi-red text-white shadow-sm'
+                  : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red '
               }`}
             >
               <div className="flex items-center gap-2">
@@ -246,8 +231,8 @@ function WorkWithUsPageContent() {
               onClick={() => setActiveTab('internships')}
               className={`px-6 py-4 rounded-full font-semibold text-base transition-all duration-300 ${
                 activeTab === 'internships'
-                  ? 'bg-hakiardhi-red text-white shadow-lg scale-105'
-                  : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red hover:scale-105'
+                  ? 'bg-hakiardhi-red text-white shadow-sm'
+                  : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red '
               }`}
             >
               <div className="flex items-center gap-2">
@@ -261,7 +246,7 @@ function WorkWithUsPageContent() {
           {activeTab === 'volunteer' && (
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10">
-                <h2 className="text-3xl font-black text-gray-900 mb-3">
+                <h2 className="text-3xl font-bold text-gray-900 mb-3">
                   Volunteer Opportunities
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
@@ -271,11 +256,11 @@ function WorkWithUsPageContent() {
 
               <div className="space-y-6">
                 {volunteerOpportunities.map((opportunity) => (
-                  <Card key={opportunity.id} variant="elevated" className="hover:shadow-xl transition-shadow duration-300">
+                  <Card key={opportunity.id} variant="elevated" className="shadow-sm transition-shadow duration-300">
                     <Card.Body className="p-6">
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0">
-                          <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-hakiardhi-red/10 to-red-100 flex items-center justify-center">
+                          <div className="bg-hakiardhi-red/10 w-14 h-14 rounded-xl flex items-center justify-center">
                             <Icon name={opportunity.icon as any} size="lg" className="text-hakiardhi-red" />
                           </div>
                         </div>
@@ -302,7 +287,7 @@ function WorkWithUsPageContent() {
                             <ul className="space-y-1">
                               {opportunity.requirements.map((req, idx) => (
                                 <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                                  <Icon name="check-circle" size="sm" className="text-green-600 mt-0.5 flex-shrink-0" />
+                                  <Icon name="check-circle" size="sm" className="text-hakiardhi-red mt-0.5 flex-shrink-0" />
                                   <span>{req}</span>
                                 </li>
                               ))}
@@ -325,7 +310,7 @@ function WorkWithUsPageContent() {
           {activeTab === 'partner' && (
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-10">
-                <h2 className="text-3xl font-black text-gray-900 mb-3">
+                <h2 className="text-3xl font-bold text-gray-900 mb-3">
                   Partnership Opportunities
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
@@ -336,17 +321,17 @@ function WorkWithUsPageContent() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {partnershipOpportunities.map((opportunity) => {
                   const colorClasses = {
-                    blue: { bg: 'from-blue-50 to-blue-100', icon: 'text-blue-600', border: 'border-blue-200' },
-                    green: { bg: 'from-green-50 to-green-100', icon: 'text-green-600', border: 'border-green-200' },
-                    orange: { bg: 'from-orange-50 to-orange-100', icon: 'text-orange-600', border: 'border-orange-200' },
-                    red: { bg: 'from-red-50 to-red-100', icon: 'text-red-600', border: 'border-red-200' },
+                    blue: { bg: 'bg-brand-50', icon: 'text-hakiardhi-red', border: 'border-gray-200' },
+                    green: { bg: 'bg-brand-50', icon: 'text-hakiardhi-red', border: 'border-gray-200' },
+                    orange: { bg: 'bg-brand-50', icon: 'text-hakiardhi-red', border: 'border-gray-200' },
+                    red: { bg: 'bg-brand-50', icon: 'text-hakiardhi-red', border: 'border-gray-200' },
                   };
                   const colors = colorClasses[opportunity.color as keyof typeof colorClasses];
 
                   return (
-                    <Card key={opportunity.id} variant="elevated" className="hover:shadow-xl transition-all duration-300 group">
+                    <Card key={opportunity.id} variant="elevated" className="shadow-sm transition-all duration-300 group">
                       <Card.Body className="p-6">
-                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${colors.bg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                        <div className={`w-16 h-16 rounded-xl ${colors.bg} flex items-center justify-center mb-4 transition-transform duration-300`}>
                           <Icon name={opportunity.icon as any} size="xl" className={colors.icon} />
                         </div>
                         <Badge variant="primary" size="sm" className="mb-3">{opportunity.type}</Badge>
@@ -357,7 +342,7 @@ function WorkWithUsPageContent() {
                           <div className="grid grid-cols-2 gap-2">
                             {opportunity.benefits.map((benefit, idx) => (
                               <div key={idx} className="flex items-start gap-1.5">
-                                <Icon name="check-circle" size="sm" className="text-green-600 mt-0.5 flex-shrink-0" />
+                                <Icon name="check-circle" size="sm" className="text-hakiardhi-red mt-0.5 flex-shrink-0" />
                                 <span className="text-xs text-gray-600">{benefit}</span>
                               </div>
                             ))}
@@ -374,7 +359,7 @@ function WorkWithUsPageContent() {
               </div>
 
               {/* Partnership CTA */}
-              <div className="mt-12 bg-gradient-to-r from-hakiardhi-red/5 to-brand-500/5 rounded-2xl p-8 border-l-4 border-hakiardhi-red">
+              <div className="bg-hakiardhi-red/5 mt-12 rounded-xl p-8 ">
                 <div className="flex items-start gap-4">
                   <Icon name="info" size="lg" className="text-hakiardhi-red mt-1" />
                   <div>
@@ -398,7 +383,7 @@ function WorkWithUsPageContent() {
           {activeTab === 'careers' && (
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10">
-                <h2 className="text-3xl font-black text-gray-900 mb-3">
+                <h2 className="text-3xl font-bold text-gray-900 mb-3">
                   Current Vacancies
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
@@ -408,7 +393,7 @@ function WorkWithUsPageContent() {
 
               <div className="space-y-6">
                 {careerOpportunities.map((opportunity) => (
-                  <Card key={opportunity.id} variant="elevated" className="hover:shadow-xl transition-shadow duration-300">
+                  <Card key={opportunity.id} variant="elevated" className="shadow-sm transition-shadow duration-300">
                     <Card.Body className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div>
@@ -439,7 +424,7 @@ function WorkWithUsPageContent() {
                         <ul className="space-y-1">
                           {opportunity.requirements.map((req, idx) => (
                             <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
-                              <Icon name="check-circle" size="sm" className="text-green-600 mt-0.5 flex-shrink-0" />
+                              <Icon name="check-circle" size="sm" className="text-hakiardhi-red mt-0.5 flex-shrink-0" />
                               <span>{req}</span>
                             </li>
                           ))}
@@ -462,7 +447,7 @@ function WorkWithUsPageContent() {
 
               {/* No Openings State */}
               {careerOpportunities.length === 0 && (
-                <div className="text-center py-12 bg-white rounded-2xl shadow-sm border border-gray-200">
+                <div className="text-center py-12 bg-white rounded-xl shadow-sm border border-gray-200">
                   <Icon name="briefcase" size="xl" className="text-gray-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-gray-900 mb-2">No Current Openings</h3>
                   <p className="text-gray-600 mb-6">
@@ -480,7 +465,7 @@ function WorkWithUsPageContent() {
           {activeTab === 'internships' && (
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-10">
-                <h2 className="text-3xl font-black text-gray-900 mb-3">
+                <h2 className="text-3xl font-bold text-gray-900 mb-3">
                   Internship Programs
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
@@ -490,9 +475,9 @@ function WorkWithUsPageContent() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 {internshipOpportunities.map((opportunity) => (
-                  <Card key={opportunity.id} variant="elevated" className="hover:shadow-xl transition-all duration-300 h-full">
+                  <Card key={opportunity.id} variant="elevated" className="shadow-sm transition-all duration-300 h-full">
                     <Card.Body className="p-6 flex flex-col">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-hakiardhi-red/10 to-red-100 flex items-center justify-center mb-4">
+                      <div className="bg-hakiardhi-red/10 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                         <Icon name="user" size="md" className="text-hakiardhi-red" />
                       </div>
                       <h3 className="text-lg font-bold text-gray-900 mb-2">{opportunity.title}</h3>
@@ -507,7 +492,7 @@ function WorkWithUsPageContent() {
                           <span>{opportunity.duration}</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-600">
-                          <Icon name="check-circle" size="sm" className="text-green-600" />
+                          <Icon name="check-circle" size="sm" className="text-hakiardhi-red" />
                           <span>Stipend {opportunity.stipend}</span>
                         </div>
                       </div>
@@ -520,26 +505,26 @@ function WorkWithUsPageContent() {
               </div>
 
               {/* Internship Info */}
-              <div className="bg-blue-50 rounded-2xl p-6 border-l-4 border-blue-500">
+              <div className="bg-brand-50 rounded-xl p-6 ">
                 <div className="flex items-start gap-3">
-                  <Icon name="info" size="md" className="text-blue-600 mt-0.5" />
+                  <Icon name="info" size="md" className="text-hakiardhi-red mt-0.5" />
                   <div>
                     <h4 className="font-bold text-gray-900 mb-2">Internship Program Benefits</h4>
                     <ul className="space-y-1 text-sm text-gray-700">
                       <li className="flex items-start gap-2">
-                        <Icon name="check-circle" size="sm" className="text-blue-600 mt-0.5 flex-shrink-0" />
+                        <Icon name="check-circle" size="sm" className="text-hakiardhi-red mt-0.5 flex-shrink-0" />
                         <span>Hands-on experience in land rights advocacy and public interest work</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <Icon name="check-circle" size="sm" className="text-blue-600 mt-0.5 flex-shrink-0" />
+                        <Icon name="check-circle" size="sm" className="text-hakiardhi-red mt-0.5 flex-shrink-0" />
                         <span>Mentorship from experienced professionals in the field</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <Icon name="check-circle" size="sm" className="text-blue-600 mt-0.5 flex-shrink-0" />
+                        <Icon name="check-circle" size="sm" className="text-hakiardhi-red mt-0.5 flex-shrink-0" />
                         <span>Certificate of completion and reference letter upon successful completion</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <Icon name="check-circle" size="sm" className="text-blue-600 mt-0.5 flex-shrink-0" />
+                        <Icon name="check-circle" size="sm" className="text-hakiardhi-red mt-0.5 flex-shrink-0" />
                         <span>Opportunity to contribute to real projects with measurable impact</span>
                       </li>
                     </ul>
@@ -552,11 +537,11 @@ function WorkWithUsPageContent() {
       </section>
 
       {/* Why Work With Us Section */}
-      <section className="py-16 bg-gradient-to-br from-zinc-50 via-gray-50 to-zinc-100">
+      <section className="bg-gray-50 py-16 ">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-black text-gray-900 mb-4">
-              Why Work With <span className="text-hakiardhi-red">HakiArdhi</span>?
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Why Work With HakiArdhi?
             </h2>
             <p className="text-gray-600">
               Join a passionate team dedicated to creating lasting change for land rights in Tanzania
@@ -564,30 +549,30 @@ function WorkWithUsPageContent() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="bg-white rounded-2xl p-6 text-center shadow-sm">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-hakiardhi-red/10 to-red-100 flex items-center justify-center mx-auto mb-4">
+            <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+              <div className="bg-hakiardhi-red/10 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="heart" size="lg" className="text-hakiardhi-red" />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Meaningful Impact</h3>
               <p className="text-sm text-gray-600">Work directly with communities creating real change</p>
             </div>
-            <div className="bg-white rounded-2xl p-6 text-center shadow-sm">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center mx-auto mb-4">
-                <Icon name="users" size="lg" className="text-blue-600" />
+            <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+              <div className="bg-brand-50 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="users" size="lg" className="text-hakiardhi-red" />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Collaborative Culture</h3>
               <p className="text-sm text-gray-600">Work with passionate, skilled professionals</p>
             </div>
-            <div className="bg-white rounded-2xl p-6 text-center shadow-sm">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center mx-auto mb-4">
-                <Icon name="book" size="lg" className="text-green-600" />
+            <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+              <div className="bg-brand-50 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="book" size="lg" className="text-hakiardhi-red" />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Learning Opportunities</h3>
               <p className="text-sm text-gray-600">Continuous professional development and growth</p>
             </div>
-            <div className="bg-white rounded-2xl p-6 text-center shadow-sm">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-orange-50 to-orange-100 flex items-center justify-center mx-auto mb-4">
-                <Icon name="globe" size="lg" className="text-orange-600" />
+            <div className="bg-white rounded-xl p-6 text-center shadow-sm">
+              <div className="bg-brand-50 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Icon name="globe" size="lg" className="text-hakiardhi-red" />
               </div>
               <h3 className="font-bold text-gray-900 mb-2">National Reach</h3>
               <p className="text-sm text-gray-600">Work across Tanzania's diverse regions</p>

@@ -73,25 +73,16 @@ function DonatePageContent() {
       <Header />
 
       {/* Hero Section */}
-      <Section variant="white" spacing="xs" className="pt-44 lg:pt-48 pb-16 bg-gradient-to-br from-zinc-50 via-gray-50 to-zinc-100 relative overflow-hidden">
-        {/* Subtle decorative elements */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-hakiardhi-red/20 to-transparent"></div>
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-gradient-to-br from-hakiardhi-red/5 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-gradient-to-br from-brand-500/5 to-transparent rounded-full blur-3xl"></div>
+      <Section variant="white" spacing="xs" className="bg-gray-50 pt-44 lg:pt-48 pb-16 relative overflow-hidden">
 
         <Section.Content className="relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             {/* Tag Badge */}
-            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-gradient-to-r from-hakiardhi-red/10 to-brand-500/10 rounded-full mb-8 shadow-sm border border-hakiardhi-red/20">
-              <Icon name="heart" size="sm" className="text-hakiardhi-red" />
-              <span className="text-sm font-bold text-hakiardhi-red uppercase tracking-wider">
-                Make a Difference
-              </span>
-            </div>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">Make a Difference</p>
 
             {/* Main Heading */}
             <h1 className={`${TYPOGRAPHY.heading.h1.size} ${TYPOGRAPHY.heading.h1.weight} text-gray-900 mb-6 leading-tight`}>
-              Support <span className="text-transparent bg-clip-text bg-gradient-to-r from-hakiardhi-red to-brand-500">Land Rights</span> in Tanzania
+              Support Land Rights in Tanzania
             </h1>
 
             {/* Description */}
@@ -102,35 +93,29 @@ function DonatePageContent() {
 
             {/* Impact Stats - Quick Visual */}
             <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mt-10">
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-gray-200/50">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-hakiardhi-red/10 to-red-100 mx-auto mb-3">
+              <div className="bg-white/80 rounded-xl p-6 shadow-sm border border-gray-200/50">
+                <div className="bg-hakiardhi-red/10 flex items-center justify-center w-12 h-12 rounded-full mx-auto mb-3">
                   <Icon name="shield-check" size="md" className="text-hakiardhi-red" />
                 </div>
-                <p className="text-2xl font-black text-gray-900 mb-1">30+</p>
+                <p className="text-2xl font-bold text-gray-900 mb-1">30+</p>
                 <p className="text-xs font-semibold text-gray-600">Years Experience</p>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-gray-200/50">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-green-50 to-green-100 mx-auto mb-3">
-                  <Icon name="users" size="md" className="text-green-600" />
+              <div className="bg-white/80 rounded-xl p-6 shadow-sm border border-gray-200/50">
+                <div className="bg-brand-50 flex items-center justify-center w-12 h-12 rounded-full mx-auto mb-3">
+                  <Icon name="users" size="md" className="text-hakiardhi-red" />
                 </div>
-                <p className="text-2xl font-black text-gray-900 mb-1">5M+</p>
+                <p className="text-2xl font-bold text-gray-900 mb-1">5M+</p>
                 <p className="text-xs font-semibold text-gray-600">Lives Touched</p>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-gray-200/50">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-50 to-blue-100 mx-auto mb-3">
-                  <Icon name="check-circle" size="md" className="text-blue-600" />
+              <div className="bg-white/80 rounded-xl p-6 shadow-sm border border-gray-200/50">
+                <div className="bg-brand-50 flex items-center justify-center w-12 h-12 rounded-full mx-auto mb-3">
+                  <Icon name="check-circle" size="md" className="text-hakiardhi-red" />
                 </div>
-                <p className="text-2xl font-black text-gray-900 mb-1">100%</p>
+                <p className="text-2xl font-bold text-gray-900 mb-1">100%</p>
                 <p className="text-xs font-semibold text-gray-600">Transparent</p>
               </div>
             </div>
 
-            {/* Decorative divider */}
-            <div className="flex items-center justify-center gap-2 mt-10">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-hakiardhi-red/30"></div>
-              <div className="w-1.5 h-1.5 rounded-full bg-hakiardhi-red"></div>
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-hakiardhi-red/30"></div>
-            </div>
           </div>
         </Section.Content>
       </Section>
@@ -154,7 +139,7 @@ function DonatePageContent() {
                           onClick={() => setDonationType('one-time')}
                           className={`px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 ${
                             donationType === 'one-time'
-                              ? 'bg-hakiardhi-red text-white shadow-lg scale-105'
+                              ? 'bg-hakiardhi-red text-white shadow-sm'
                               : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red'
                           }`}
                         >
@@ -167,7 +152,7 @@ function DonatePageContent() {
                           onClick={() => setDonationType('monthly')}
                           className={`px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 ${
                             donationType === 'monthly'
-                              ? 'bg-hakiardhi-red text-white shadow-lg scale-105'
+                              ? 'bg-hakiardhi-red text-white shadow-sm'
                               : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red'
                           }`}
                         >
@@ -189,7 +174,7 @@ function DonatePageContent() {
                           onClick={() => handleDonorLocationChange('tanzania')}
                           className={`px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 ${
                             donorLocation === 'tanzania'
-                              ? 'bg-hakiardhi-red text-white shadow-lg scale-105'
+                              ? 'bg-hakiardhi-red text-white shadow-sm'
                               : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red'
                           }`}
                         >
@@ -202,7 +187,7 @@ function DonatePageContent() {
                           onClick={() => handleDonorLocationChange('international')}
                           className={`px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 ${
                             donorLocation === 'international'
-                              ? 'bg-hakiardhi-red text-white shadow-lg scale-105'
+                              ? 'bg-hakiardhi-red text-white shadow-sm'
                               : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-hakiardhi-red'
                           }`}
                         >
@@ -226,7 +211,7 @@ function DonatePageContent() {
                             onClick={() => handleAmountSelect(amount)}
                             className={`px-4 py-4 rounded-xl font-bold text-lg transition-all duration-300 ${
                               selectedAmount === amount
-                                ? 'bg-hakiardhi-red text-white shadow-lg scale-105'
+                                ? 'bg-hakiardhi-red text-white shadow-sm'
                                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border-2 border-gray-200 hover:border-hakiardhi-red'
                             }`}
                           >
@@ -268,7 +253,7 @@ function DonatePageContent() {
                             onClick={() => setPaymentMethod('mobile-money')}
                             className={`px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-300 ${
                               paymentMethod === 'mobile-money'
-                                ? 'bg-hakiardhi-red text-white shadow-lg'
+                                ? 'bg-hakiardhi-red text-white shadow-sm'
                                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border-2 border-gray-200'
                             }`}
                           >
@@ -282,7 +267,7 @@ function DonatePageContent() {
                           onClick={() => setPaymentMethod('card')}
                           className={`px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-300 ${
                             paymentMethod === 'card'
-                              ? 'bg-hakiardhi-red text-white shadow-lg'
+                              ? 'bg-hakiardhi-red text-white shadow-sm'
                               : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border-2 border-gray-200'
                           }`}
                         >
@@ -296,7 +281,7 @@ function DonatePageContent() {
                             onClick={() => setPaymentMethod('paypal')}
                             className={`px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-300 ${
                               paymentMethod === 'paypal'
-                                ? 'bg-hakiardhi-red text-white shadow-lg'
+                                ? 'bg-hakiardhi-red text-white shadow-sm'
                                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border-2 border-gray-200'
                             }`}
                           >
@@ -341,10 +326,10 @@ function DonatePageContent() {
                                 className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-hakiardhi-red focus:ring-4 focus:ring-hakiardhi-red/10 transition-all text-gray-900"
                               />
                             </div>
-                            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                            <div className="bg-brand-50 p-4 rounded">
                               <div className="flex items-start gap-3">
-                                <Icon name="info" size="sm" className="text-blue-600 mt-0.5" />
-                                <p className="text-sm text-blue-800">
+                                <Icon name="info" size="sm" className="text-hakiardhi-red mt-0.5" />
+                                <p className="text-sm text-gray-900">
                                   <strong>USSD Push:</strong> You will receive a prompt on your phone to authorize the payment.
                                   Please ensure your phone is on and has network coverage.
                                 </p>
@@ -389,7 +374,7 @@ function DonatePageContent() {
                               </div>
                             </div>
                             <div className="flex items-center gap-2 text-sm text-gray-600">
-                              <Icon name="shield-check" size="sm" className="text-green-600" />
+                              <Icon name="shield-check" size="sm" className="text-hakiardhi-red" />
                               <span>Your payment information is secure and encrypted</span>
                             </div>
                           </div>
@@ -399,13 +384,13 @@ function DonatePageContent() {
                         {paymentMethod === 'paypal' && donorLocation === 'international' && (
                           <div className="text-center py-6">
                             <div className="mb-4">
-                              <Icon name="check-circle" size="xl" className="text-blue-600 mx-auto" />
+                              <Icon name="check-circle" size="xl" className="text-hakiardhi-red mx-auto" />
                             </div>
                             <p className="text-gray-700 mb-4">
                               You will be redirected to PayPal to complete your donation securely.
                             </p>
                             <div className="inline-flex items-center gap-2 text-sm text-gray-600">
-                              <Icon name="shield-check" size="sm" className="text-green-600" />
+                              <Icon name="shield-check" size="sm" className="text-hakiardhi-red" />
                               <span>Secure PayPal checkout</span>
                             </div>
                           </div>
@@ -511,22 +496,22 @@ function DonatePageContent() {
                       Your Impact
                     </h3>
                     <div className="space-y-4">
-                      <div className="flex items-start gap-3 p-3 bg-green-50 rounded-lg">
-                        <Icon name="check-circle" size="sm" className="text-green-600 mt-0.5 flex-shrink-0" />
+                      <div className="flex items-start gap-3 p-3 bg-brand-50 rounded-lg">
+                        <Icon name="check-circle" size="sm" className="text-hakiardhi-red mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="text-sm font-semibold text-gray-900">Legal Aid</p>
                           <p className="text-xs text-gray-600">Free legal support for families in land disputes</p>
                         </div>
                       </div>
-                      <div className="flex items-start gap-3 p-3 bg-blue-50 rounded-lg">
-                        <Icon name="check-circle" size="sm" className="text-blue-600 mt-0.5 flex-shrink-0" />
+                      <div className="flex items-start gap-3 p-3 bg-brand-50 rounded-lg">
+                        <Icon name="check-circle" size="sm" className="text-hakiardhi-red mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="text-sm font-semibold text-gray-900">Training Programs</p>
                           <p className="text-xs text-gray-600">Community education on land rights</p>
                         </div>
                       </div>
-                      <div className="flex items-start gap-3 p-3 bg-orange-50 rounded-lg">
-                        <Icon name="check-circle" size="sm" className="text-orange-600 mt-0.5 flex-shrink-0" />
+                      <div className="flex items-start gap-3 p-3 bg-brand-50 rounded-lg">
+                        <Icon name="check-circle" size="sm" className="text-hakiardhi-red mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="text-sm font-semibold text-gray-900">Advocacy</p>
                           <p className="text-xs text-gray-600">Policy reform for land governance</p>

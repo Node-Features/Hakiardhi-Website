@@ -29,7 +29,7 @@ export default function OurStorySection({ className = '' }: OurStorySectionProps
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
             }`}
           >
-            <div className="relative h-[400px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative h-[400px] lg:h-[600px] rounded-xl overflow-hidden shadow-sm">
               <Image
                 src="/images/capacity_building_3.jpg"
                 alt="HakiArdhi community empowerment"
@@ -37,45 +37,37 @@ export default function OurStorySection({ className = '' }: OurStorySectionProps
                 className="object-cover"
               />
               {/* Overlay badge */}
-              <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
+              <div className="absolute bottom-6 left-6 bg-white/95 rounded-xl p-4 shadow-sm">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-hakiardhi-red to-brand-500 flex items-center justify-center">
+                  <div className="bg-hakiardhi-red w-12 h-12 rounded-full flex items-center justify-center">
                     <Icon name="users" size="lg" className="text-white" />
                   </div>
                   <div>
-                    <div className="text-2xl font-black text-hakiardhi-red">30+</div>
+                    <div className="text-2xl font-bold text-hakiardhi-red">30+</div>
                     <div className="text-sm text-gray-600 font-semibold">Years of Service</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Decorative element */}
-            <div className="absolute -top-4 -right-4 w-32 h-32 bg-hakiardhi-red/10 rounded-full blur-3xl -z-10"></div>
-            <div className="absolute -bottom-4 -left-4 w-40 h-40 bg-brand-500/10 rounded-full blur-3xl -z-10"></div>
           </div>
 
           {/* Content Side */}
           <div
-            className={`transition-all duration-1000 delay-200 ${
+            className={`transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
             }`}
           >
             {/* Tag */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-hakiardhi-red/10 rounded-full mb-6">
-              <div className="w-2 h-2 rounded-full bg-hakiardhi-red"></div>
-              <span className="text-sm font-bold text-hakiardhi-red uppercase tracking-wide">
-                Our Story
-              </span>
-            </div>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-hakiardhi-red">Our Story</p>
 
             {/* Headline */}
-            <h2 className="text-3xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight">
-              Securing <span className="text-hakiardhi-red">Land Rights</span> for Tanzania's Communities
+            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              Securing Land Rights for Tanzania's Communities
             </h2>
 
             {/* Problem */}
-            <div className="mb-6 p-5 bg-gray-50 rounded-2xl border-l-4 border-hakiardhi-red">
+            <div className="mb-6 p-5 bg-gray-50 rounded-xl ">
               <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
                 <Icon name="alert-circle" size="md" className="text-hakiardhi-red" />
                 The Challenge
@@ -86,9 +78,9 @@ export default function OurStorySection({ className = '' }: OurStorySectionProps
             </div>
 
             {/* Solution */}
-            <div className="mb-6 p-5 bg-gradient-to-br from-hakiardhi-red/5 to-brand-500/5 rounded-2xl border-l-4 border-green-600">
+            <div className="bg-hakiardhi-red/5 mb-6 p-5 rounded-xl ">
               <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
-                <Icon name="check-circle" size="md" className="text-green-600" />
+                <Icon name="check-circle" size="md" className="text-hakiardhi-red" />
                 Our Solution
               </h3>
               <p className="text-gray-700 leading-relaxed">
@@ -105,7 +97,7 @@ export default function OurStorySection({ className = '' }: OurStorySectionProps
                 'Research and documentation of land rights'
               ].map((point, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-hakiardhi-red to-brand-500 flex items-center justify-center mt-0.5">
+                  <div className="bg-hakiardhi-red flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5">
                     <Icon name="check" size="sm" className="text-white" />
                   </div>
                   <p className="text-gray-700 font-medium">{point}</p>

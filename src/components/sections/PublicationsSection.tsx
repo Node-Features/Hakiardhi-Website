@@ -127,11 +127,10 @@ export default function PublicationsSection({ className = '' }: PublicationsSect
       id="publications-section"
       className={`relative py-16 lg:py-24 overflow-hidden ${className}`}
       style={{
-        background: 'linear-gradient(to bottom, #000000 0%, #0a0a0a 100%)',
+        background: '#0a0a0a',
       }}
     >
       {/* Background decoration */}
-      <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         {/* Section Header */}
@@ -140,8 +139,8 @@ export default function PublicationsSection({ className = '' }: PublicationsSect
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-3xl lg:text-5xl font-black text-white mb-4 lg:mb-6">
-            Our <span className="text-brand-500">Publications</span>
+          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
+            Our Publications
           </h2>
           <p className="text-base lg:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Access our comprehensive library of reports, policy briefs, toolkits, and resources
@@ -151,7 +150,7 @@ export default function PublicationsSection({ className = '' }: PublicationsSect
 
         {/* Type Filter */}
         <div
-          className={`flex flex-wrap justify-center gap-3 mb-10 transition-all duration-1000 delay-200 ${
+          className={`flex flex-wrap justify-center gap-3 mb-10 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
@@ -161,8 +160,8 @@ export default function PublicationsSection({ className = '' }: PublicationsSect
               onClick={() => setSelectedType(type)}
               className={`px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 ${
                 selectedType === type
-                  ? 'bg-brand-500 text-white shadow-lg shadow-brand-500/50 scale-105'
-                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:scale-105'
+                  ? 'bg-brand-500 text-white shadow-sm'
+                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 '
               }`}
             >
               {type}
@@ -182,10 +181,10 @@ export default function PublicationsSection({ className = '' }: PublicationsSect
               }`}
               style={{ transitionDelay: `${(index % 3) * 100 + 400}ms` }}
             >
-              <div className="h-full bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-brand-500/20 hover:border-brand-500/40 transition-all duration-300 hover:scale-105 flex flex-col">
+              <div className="bg-gray-900/50 h-full rounded-xl overflow-hidden border border-brand-500/20 hover:border-brand-500/40 transition-all duration-300 flex flex-col">
                 {/* Cover Image */}
                 <div className="relative h-48 overflow-hidden bg-gray-800">
-                  <div className="absolute inset-0 bg-gradient-to-br from-brand-500/20 to-brand-500/5 flex items-center justify-center">
+                  <div className="bg-brand-500/20 absolute inset-0 flex items-center justify-center">
                     <svg
                       className="w-20 h-20 text-brand-500/30"
                       fill="none"
@@ -229,7 +228,7 @@ export default function PublicationsSection({ className = '' }: PublicationsSect
                     </p>
                   </div>
 
-                  <h3 className="text-lg font-black text-white mb-3 group-hover:text-brand-500 transition-colors line-clamp-2">
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-brand-500 transition-colors line-clamp-2">
                     {publication.title}
                   </h3>
 
@@ -279,12 +278,12 @@ export default function PublicationsSection({ className = '' }: PublicationsSect
 
         {/* Newsletter Signup CTA */}
         <div
-          className={`mt-12 lg:mt-16 transition-all duration-1000 delay-600 ${
+          className={`mt-12 lg:mt-16 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="bg-gradient-to-br from-brand-500/20 to-brand-500/5 backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-brand-500/20 text-center max-w-3xl mx-auto">
-            <h3 className="text-2xl lg:text-3xl font-black text-white mb-3 lg:mb-4">
+          <div className="bg-brand-500/20 rounded-xl p-8 lg:p-12 border border-brand-500/20 text-center max-w-3xl mx-auto">
+            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-3 lg:mb-4">
               Stay Updated
             </h3>
             <p className="text-gray-300 mb-8">

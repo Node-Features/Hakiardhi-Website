@@ -34,31 +34,25 @@ export default function AboutIntroSection({ className = '' }: AboutIntroSectionP
         >
           {/* Decorative top element */}
           <div className="flex justify-center mb-6">
-            <div className="flex items-center gap-2">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-hakiardhi-red"></div>
-              <div className="w-2 h-2 rounded-full bg-hakiardhi-red"></div>
-              <div className="h-px w-12 bg-gradient-to-l from-transparent to-hakiardhi-red"></div>
-            </div>
           </div>
 
-          <h2 className={`${TYPOGRAPHY.heading.h2.size} ${TYPOGRAPHY.heading.h2.weight} text-transparent bg-clip-text bg-gradient-to-r from-hakiardhi-red to-brand-500 ${SPACING.margin.element.md}`}>
+          <h2 className={`${TYPOGRAPHY.heading.h2.size} ${TYPOGRAPHY.heading.h2.weight} ${SPACING.margin.element.md} text-hakiardhi-red`}>
             About HakiArdhi
           </h2>
 
           {/* Decorative underline */}
           <div className="flex justify-center mb-8">
-            <div className="h-1.5 w-24 bg-gradient-to-r from-hakiardhi-red via-brand-500 to-hakiardhi-red rounded-full"></div>
+            <div className="bg-hakiardhi-red h-1.5 w-24 rounded-full"></div>
           </div>
 
           <div className="relative">
             {/* Background glow */}
-            <div className="absolute -inset-4 bg-gradient-to-br from-hakiardhi-red/5 to-brand-500/5 rounded-3xl blur-sm"></div>
 
-            <Card variant="elevated" className="relative bg-white/80 backdrop-blur-sm border border-gray-100">
+            <Card variant="elevated" className="relative bg-white/80 border border-gray-100">
               <Card.Body className="p-8 lg:p-12">
                 <p className={`${TYPOGRAPHY.body.lg.size} ${TYPOGRAPHY.body.lg.lineHeight} text-gray-800 ${SPACING.margin.element.lg}`}>
                   The Land Rights Research & Resources Institute (LARRRI/HAKIARDHI) was founded in{' '}
-                  <span className="inline-flex items-center justify-center px-3 py-1 text-hakiardhi-red font-black text-xl bg-gradient-to-br from-hakiardhi-red/10 to-brand-500/10 rounded-lg border-2 border-hakiardhi-red/20">
+                  <span className="bg-hakiardhi-red/10 inline-flex items-center justify-center px-3 py-1 text-hakiardhi-red font-bold text-xl rounded-lg border-2 border-hakiardhi-red/20">
                     1994
                   </span>{' '}
                   and registered as a non-governmental organization. The Institute was established in recognition of the need

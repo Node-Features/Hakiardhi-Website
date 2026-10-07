@@ -17,7 +17,7 @@ interface AlertProps {
 const variantConfig = {
   success: {
     bg: 'bg-green-50',
-    border: 'border-green-500',
+    border: 'border-green-200',
     titleColor: 'text-green-900',
     messageColor: 'text-green-700',
     iconColor: 'text-green-600',
@@ -25,7 +25,7 @@ const variantConfig = {
   },
   error: {
     bg: 'bg-red-50',
-    border: 'border-red-500',
+    border: 'border-red-200',
     titleColor: 'text-red-900',
     messageColor: 'text-red-700',
     iconColor: 'text-red-600',
@@ -33,7 +33,7 @@ const variantConfig = {
   },
   warning: {
     bg: 'bg-yellow-50',
-    border: 'border-yellow-500',
+    border: 'border-yellow-200',
     titleColor: 'text-yellow-900',
     messageColor: 'text-yellow-700',
     iconColor: 'text-yellow-600',
@@ -41,7 +41,7 @@ const variantConfig = {
   },
   info: {
     bg: 'bg-blue-50',
-    border: 'border-blue-500',
+    border: 'border-blue-200',
     titleColor: 'text-blue-900',
     messageColor: 'text-blue-700',
     iconColor: 'text-blue-600',
@@ -53,7 +53,7 @@ export default function Alert({ variant, title, message, icon = true }: AlertPro
   const config = variantConfig[variant];
 
   return (
-    <div className={`${SPACING.padding.md} ${config.bg} border-l-4 ${config.border} rounded-lg`}>
+    <div className={`${SPACING.padding.md} border ${config.bg} ${config.border} rounded-lg`}>
       <div className="flex items-start gap-3">
         {icon && (
           <Icon name={config.iconName} size="md" className={`${config.iconColor} flex-shrink-0 mt-0.5`} />

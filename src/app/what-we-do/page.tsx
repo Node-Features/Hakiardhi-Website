@@ -36,7 +36,7 @@ export default function WhatWeDoPage() {
               className={index % 2 === 1 ? 'flex-row-reverse' : ''}
             >
               {/* Image */}
-              <div className="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative h-96 lg:h-[500px] rounded-xl overflow-hidden shadow-sm">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -71,7 +71,7 @@ export default function WhatWeDoPage() {
                 </ul>
 
                 {/* Impact */}
-                <div className={`bg-hakiardhi-red/10 ${SPACING.padding.md} rounded-xl border-l-4 border-hakiardhi-red`}>
+                <div className={`bg-hakiardhi-red/10 ${SPACING.padding.md} rounded-xl `}>
                   <div className={`${TYPOGRAPHY.heading.h3.size} ${TYPOGRAPHY.heading.h3.weight} text-hakiardhi-red ${SPACING.margin.element.xs}`}>
                     {service.impact.stat}
                   </div>

@@ -21,15 +21,13 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
       className={`relative py-16 lg:py-20 overflow-hidden ${className}`}
     >
       {/* Animated Background - WhatsApp Green Theme */}
-      <div className="absolute inset-0 bg-gradient-to-br from-green-500 via-emerald-600 to-green-600"></div>
+      <div className="bg-hakiardhi-red absolute inset-0 "></div>
 
       {/* Animated Orbs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
 
       {/* Pattern Overlay */}
       <div className="absolute inset-0 opacity-5" style={{
-        backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+        backgroundImage: 'none',
         backgroundSize: '32px 32px'
       }}></div>
 
@@ -44,9 +42,9 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
             {/* Left - Content */}
             <div>
               {/* Badge */}
-              <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/20 backdrop-blur-md rounded-full mb-6 border border-white/30">
+              <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/20 rounded-full mb-6 border border-white/30">
                 <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
                 </span>
                 <span className="text-sm font-bold text-white uppercase tracking-wider">
@@ -55,7 +53,7 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
               </div>
 
               {/* Heading */}
-              <h2 className="text-3xl lg:text-5xl font-black text-white mb-6 leading-tight">
+              <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                 Get Instant Legal Help via <span className="block mt-2">WhatsApp!</span>
               </h2>
 
@@ -68,25 +66,25 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
               {/* Features List */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
                     <Icon name="check-circle" size="sm" className="text-white" />
                   </div>
                   <span className="text-white font-semibold text-sm">24/7 Availability</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
                     <Icon name="check-circle" size="sm" className="text-white" />
                   </div>
                   <span className="text-white font-semibold text-sm">Instant Response</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
                     <Icon name="check-circle" size="sm" className="text-white" />
                   </div>
                   <span className="text-white font-semibold text-sm">Swahili & English</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
                     <Icon name="check-circle" size="sm" className="text-white" />
                   </div>
                   <span className="text-white font-semibold text-sm">100% Free</span>
@@ -128,23 +126,23 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
               {/* Phone Mockup */}
               <div className="relative max-w-sm mx-auto">
                 {/* Floating Badge */}
-                <div className="absolute -top-6 -left-6 bg-white rounded-full px-4 py-2 shadow-2xl border-2 border-white/20 z-20 animate-bounce">
-                  <p className="text-sm font-bold text-green-600">✨ AI-Powered</p>
+                <div className="absolute -top-6 -left-6 bg-white rounded-full px-4 py-2 shadow-sm border-2 border-white/20 z-20 ">
+                  <p className="text-sm font-bold text-hakiardhi-red">AI-Powered</p>
                 </div>
 
                 {/* Phone Frame */}
-                <div className="bg-white rounded-[3rem] shadow-2xl p-4 relative transform hover:scale-105 transition-transform duration-300">
+                <div className="bg-white rounded-xl shadow-sm p-4 relative transform transition-transform duration-300">
                   {/* Screen */}
-                  <div className="bg-gradient-to-b from-green-50 to-white rounded-[2.5rem] overflow-hidden border-8 border-gray-900">
+                  <div className="bg-brand-50 rounded-xl overflow-hidden border-8 border-gray-900">
                     {/* WhatsApp Header */}
-                    <div className="bg-green-600 px-4 py-3">
+                    <div className="bg-hakiardhi-red px-4 py-3">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-                          <Icon name="phone" size="sm" className="text-green-600" />
+                          <Icon name="phone" size="sm" className="text-hakiardhi-red" />
                         </div>
                         <div>
                           <p className="text-white font-bold text-sm">HakiArdhi Legal Bot</p>
-                          <p className="text-green-100 text-xs">Online</p>
+                          <p className="text-gray-300 text-xs">Online</p>
                         </div>
                       </div>
                     </div>
@@ -155,7 +153,7 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
                     }}>
                       {/* Bot Message */}
                       <div className="flex gap-2">
-                        <div className="bg-white rounded-2xl rounded-tl-none px-4 py-2.5 shadow-sm max-w-[75%]">
+                        <div className="bg-white rounded-xl rounded-tl-none px-4 py-2.5 shadow-sm max-w-[75%]">
                           <p className="text-xs text-gray-800">
                             👋 Habari! I'm here to help with land rights issues. How can I assist you?
                           </p>
@@ -164,7 +162,7 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
 
                       {/* User Message */}
                       <div className="flex gap-2 justify-end">
-                        <div className="bg-green-500 rounded-2xl rounded-tr-none px-4 py-2.5 shadow-sm max-w-[75%]">
+                        <div className="bg-hakiardhi-red rounded-xl rounded-tr-none px-4 py-2.5 shadow-sm max-w-[75%]">
                           <p className="text-xs text-white">
                             I need help with a land dispute
                           </p>
@@ -173,19 +171,19 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
 
                       {/* Bot Response with Options */}
                       <div className="flex gap-2">
-                        <div className="bg-white rounded-2xl rounded-tl-none px-4 py-2.5 shadow-sm max-w-[85%]">
+                        <div className="bg-white rounded-xl rounded-tl-none px-4 py-2.5 shadow-sm max-w-[85%]">
                           <p className="text-xs text-gray-800 mb-2">
                             I can help! Choose an option:
                           </p>
                           <div className="space-y-1.5">
-                            <button className="w-full px-3 py-1.5 bg-green-50 rounded-lg text-xs font-medium text-green-700 hover:bg-green-100 transition-colors text-left">
-                              📋 Report Incident
+                            <button className="w-full px-3 py-1.5 bg-brand-50 rounded-lg text-xs font-medium text-hakiardhi-red hover:bg-brand-50 transition-colors text-left">
+                              Report Incident
                             </button>
-                            <button className="w-full px-3 py-1.5 bg-green-50 rounded-lg text-xs font-medium text-green-700 hover:bg-green-100 transition-colors text-left">
-                              💬 Get Legal Advice
+                            <button className="w-full px-3 py-1.5 bg-brand-50 rounded-lg text-xs font-medium text-hakiardhi-red hover:bg-brand-50 transition-colors text-left">
+                              Get Legal Advice
                             </button>
-                            <button className="w-full px-3 py-1.5 bg-green-50 rounded-lg text-xs font-medium text-green-700 hover:bg-green-100 transition-colors text-left">
-                              👨‍⚖️ Talk to Lawyer
+                            <button className="w-full px-3 py-1.5 bg-brand-50 rounded-lg text-xs font-medium text-hakiardhi-red hover:bg-brand-50 transition-colors text-left">
+                              Talk to Lawyer
                             </button>
                           </div>
                         </div>
@@ -193,11 +191,11 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
 
                       {/* Typing Indicator */}
                       <div className="flex gap-2">
-                        <div className="bg-white rounded-2xl rounded-tl-none px-4 py-2.5 shadow-sm">
+                        <div className="bg-white rounded-xl rounded-tl-none px-4 py-2.5 shadow-sm">
                           <div className="flex gap-1">
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                            <div className="w-2 h-2 bg-gray-400 rounded-full "></div>
+                            <div className="w-2 h-2 bg-gray-400 rounded-full " style={{ animationDelay: '0.1s' }}></div>
+                            <div className="w-2 h-2 bg-gray-400 rounded-full " style={{ animationDelay: '0.2s' }}></div>
                           </div>
                         </div>
                       </div>
@@ -206,8 +204,8 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
                 </div>
 
                 {/* Floating Stats */}
-                <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl px-6 py-4 shadow-2xl border-2 border-white/20 z-20">
-                  <p className="text-3xl font-black text-green-600 mb-1">&lt;2min</p>
+                <div className="absolute -bottom-6 -right-6 bg-white rounded-xl px-6 py-4 shadow-sm border-2 border-white/20 z-20">
+                  <p className="text-3xl font-bold text-hakiardhi-red mb-1">&lt;2min</p>
                   <p className="text-xs text-gray-600 font-semibold">Response Time</p>
                 </div>
               </div>
@@ -217,7 +215,6 @@ export default function AIChatbotBanner({ className = '' }: AIChatbotBannerProps
       </div>
 
       {/* Bottom Accent */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
     </section>
   );
 }

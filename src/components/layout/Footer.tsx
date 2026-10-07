@@ -60,37 +60,37 @@ export default function Footer() {
               <li>
                 <Link href="/about" className="group inline-flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-200 text-sm py-1">
                   <Icon name="arrow-right" size="xs" className="opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all duration-200 text-hakiardhi-red" />
-                  <span className="group-hover:translate-x-1 transition-transform duration-200">About Us</span>
+                  <span className="transition-transform duration-200">About Us</span>
                 </Link>
               </li>
               <li>
                 <Link href="/what-we-do" className="group inline-flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-200 text-sm py-1">
                   <Icon name="arrow-right" size="xs" className="opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all duration-200 text-hakiardhi-red" />
-                  <span className="group-hover:translate-x-1 transition-transform duration-200">What We Do</span>
+                  <span className="transition-transform duration-200">What We Do</span>
                 </Link>
               </li>
               <li>
                 <Link href="/programs" className="group inline-flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-200 text-sm py-1">
                   <Icon name="arrow-right" size="xs" className="opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all duration-200 text-hakiardhi-red" />
-                  <span className="group-hover:translate-x-1 transition-transform duration-200">Our Programs</span>
+                  <span className="transition-transform duration-200">Our Programs</span>
                 </Link>
               </li>
               <li>
                 <Link href="/portfolio" className="group inline-flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-200 text-sm py-1">
                   <Icon name="arrow-right" size="xs" className="opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all duration-200 text-hakiardhi-red" />
-                  <span className="group-hover:translate-x-1 transition-transform duration-200">Portfolio</span>
+                  <span className="transition-transform duration-200">Portfolio</span>
                 </Link>
               </li>
               <li>
                 <Link href="/research" className="group inline-flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-200 text-sm py-1">
                   <Icon name="arrow-right" size="xs" className="opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all duration-200 text-hakiardhi-red" />
-                  <span className="group-hover:translate-x-1 transition-transform duration-200">Research</span>
+                  <span className="transition-transform duration-200">Research</span>
                 </Link>
               </li>
               <li>
                 <Link href="/news-events" className="group inline-flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-200 text-sm py-1">
                   <Icon name="arrow-right" size="xs" className="opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all duration-200 text-hakiardhi-red" />
-                  <span className="group-hover:translate-x-1 transition-transform duration-200">News & Events</span>
+                  <span className="transition-transform duration-200">News & Events</span>
                 </Link>
               </li>
             </ul>
@@ -106,37 +106,37 @@ export default function Footer() {
               <li>
                 <Link href="/legal-aid" className="group inline-flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-200 text-sm py-1">
                   <Icon name="arrow-right" size="xs" className="opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all duration-200 text-hakiardhi-red" />
-                  <span className="group-hover:translate-x-1 transition-transform duration-200">Legal Aid</span>
+                  <span className="transition-transform duration-200">Legal Aid</span>
                 </Link>
               </li>
               <li>
                 <Link href="/resource-centre" className="group inline-flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-200 text-sm py-1">
                   <Icon name="arrow-right" size="xs" className="opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all duration-200 text-hakiardhi-red" />
-                  <span className="group-hover:translate-x-1 transition-transform duration-200">Resource Centre</span>
+                  <span className="transition-transform duration-200">Resource Centre</span>
                 </Link>
               </li>
               <li>
                 <Link href="/lrm-network" className="group inline-flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-200 text-sm py-1">
                   <Icon name="arrow-right" size="xs" className="opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all duration-200 text-hakiardhi-red" />
-                  <span className="group-hover:translate-x-1 transition-transform duration-200">LRM Network</span>
+                  <span className="transition-transform duration-200">LRM Network</span>
                 </Link>
               </li>
               <li>
                 <Link href="/gallery" className="group inline-flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-200 text-sm py-1">
                   <Icon name="arrow-right" size="xs" className="opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all duration-200 text-hakiardhi-red" />
-                  <span className="group-hover:translate-x-1 transition-transform duration-200">Gallery</span>
+                  <span className="transition-transform duration-200">Gallery</span>
                 </Link>
               </li>
               <li>
                 <Link href="/work-with-us" className="group inline-flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-200 text-sm py-1">
                   <Icon name="arrow-right" size="xs" className="opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all duration-200 text-hakiardhi-red" />
-                  <span className="group-hover:translate-x-1 transition-transform duration-200">Work With Us</span>
+                  <span className="transition-transform duration-200">Work With Us</span>
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="group inline-flex items-center gap-2 text-gray-400 hover:text-white transition-all duration-200 text-sm py-1">
                   <Icon name="arrow-right" size="xs" className="opacity-0 group-hover:opacity-100 -ml-2 group-hover:ml-0 transition-all duration-200 text-hakiardhi-red" />
-                  <span className="group-hover:translate-x-1 transition-transform duration-200">Contact Us</span>
+                  <span className="transition-transform duration-200">Contact Us</span>
                 </Link>
               </li>
             </ul>
@@ -170,10 +170,9 @@ export default function Footer() {
                 {/* Unified input-button container */}
                 <div className="relative group">
                   {/* Outer glow effect */}
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-hakiardhi-red via-red-600 to-brand-500 rounded-full opacity-0 group-hover:opacity-50 group-focus-within:opacity-75 blur-sm transition-opacity duration-500"></div>
 
                   {/* Main container */}
-                  <div className="relative flex items-center bg-gradient-to-r from-gray-800 to-gray-900 rounded-full border border-gray-700 group-hover:border-hakiardhi-red/50 group-focus-within:border-hakiardhi-red transition-all duration-300 shadow-lg group-hover:shadow-xl group-focus-within:shadow-hakiardhi-red/20">
+                  <div className="bg-gray-800 relative flex items-center rounded-full border border-gray-700 group-hover:border-hakiardhi-red/50 group-focus-within:border-hakiardhi-red transition-all duration-300 shadow-sm shadow-sm group-focus-within:shadow-hakiardhi-red/20">
                     {/* Email icon */}
                     <div className="pl-4 pr-2">
                       <Icon name="mail" size="sm" className="text-gray-400 group-focus-within:text-hakiardhi-red transition-colors duration-300" />
@@ -195,11 +194,11 @@ export default function Footer() {
                     {/* Submit button - rounded only on right */}
                     <button
                       type="submit"
-                      className="group/button relative flex items-center gap-2 bg-gradient-to-r from-hakiardhi-red to-red-600 hover:from-red-600 hover:to-hakiardhi-red text-white px-6 py-3 rounded-r-full text-sm font-bold transition-all duration-300 transform hover:scale-x-105 active:scale-95 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-hakiardhi-red focus:ring-offset-2 focus:ring-offset-black"
+                      className="bg-hakiardhi-red group/button relative flex items-center gap-2 text-white px-6 py-3 rounded-r-full text-sm font-bold transition-all duration-300 transform shadow-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-hakiardhi-red focus:ring-offset-2 focus:ring-offset-black"
                       aria-label="Subscribe to newsletter"
                     >
                       <span>Subscribe</span>
-                      <Icon name="arrow-right" size="sm" className="transform group-hover/button:translate-x-1 transition-transform duration-300" />
+                      <Icon name="arrow-right" size="sm" className="transform transition-transform duration-300" />
                     </button>
                   </div>
                 </div>

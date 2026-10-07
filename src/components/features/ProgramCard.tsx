@@ -28,7 +28,7 @@ export default function ProgramCard({
 }: ProgramCardProps) {
   return (
     <div
-      className={`group bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-2xl border border-brand-500/20 hover:border-brand-500/40 transition-all duration-300 overflow-hidden ${className}`}
+      className={`bg-gray-900/50 group rounded-xl border border-brand-500/20 hover:border-brand-500/40 transition-all duration-300 overflow-hidden ${className}`}
     >
       {/* Image Section */}
       <div className="relative h-48 overflow-hidden">
@@ -36,7 +36,7 @@ export default function ProgramCard({
           src={image}
           alt={title}
           fill
-          className="object-cover transition-all duration-700 group-hover:scale-110"
+          className="object-cover transition-all duration-700 "
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
       </div>
@@ -52,7 +52,7 @@ export default function ProgramCard({
           </div>
         )}
 
-        <h3 className="text-2xl font-black text-white mb-3 group-hover:text-brand-500 transition-colors">
+        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-brand-500 transition-colors">
           {title}
         </h3>
         <p className="text-gray-300 mb-4 leading-relaxed">

@@ -64,9 +64,9 @@ export default function LanguageSwitcher({
 
     return (
       <div
-        className={`inline-flex rounded-full overflow-hidden shadow-lg ${
+        className={`inline-flex rounded-full overflow-hidden shadow-sm ${
           theme === 'dark'
-            ? 'bg-white/10 backdrop-blur-sm'
+            ? 'bg-white/10 '
             : 'bg-gray-100'
         } ${className}`}
         role="group"
@@ -76,7 +76,7 @@ export default function LanguageSwitcher({
           onClick={() => changeLanguage('en')}
           className={`${buttonClasses} ${baseClasses} font-bold tracking-wide transition-all duration-300 ${
             currentLang === 'en'
-              ? 'bg-gradient-to-r from-hakiardhi-red to-red-600 text-white shadow-md'
+              ? '   bg-hakiardhi-red text-white shadow-sm'
               : theme === 'dark'
                 ? 'text-white/70 hover:text-white hover:bg-white/10'
                 : 'text-gray-500 hover:text-gray-700 hover:bg-gray-200'
@@ -90,7 +90,7 @@ export default function LanguageSwitcher({
           onClick={() => changeLanguage('sw')}
           className={`${buttonClasses} ${baseClasses} font-bold tracking-wide transition-all duration-300 ${
             currentLang === 'sw'
-              ? 'bg-gradient-to-r from-hakiardhi-red to-red-600 text-white shadow-md'
+              ? '   bg-hakiardhi-red text-white shadow-sm'
               : theme === 'dark'
                 ? 'text-white/70 hover:text-white hover:bg-white/10'
                 : 'text-gray-500 hover:text-gray-700 hover:bg-gray-200'
@@ -114,7 +114,7 @@ export default function LanguageSwitcher({
         onClick={() => setIsOpen(!isOpen)}
         className={`group inline-flex items-center gap-2 ${buttonPadding} ${baseClasses} font-semibold rounded-full transition-all duration-300 ${
           theme === 'dark'
-            ? `bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 ${isOpen ? 'bg-white/20 ring-2 ring-hakiardhi-red/50' : ''}`
+            ? `bg-white/10  text-white hover:bg-white/20 ${isOpen ? 'bg-white/20 ring-2 ring-hakiardhi-red/50' : ''}`
             : `bg-gray-100 text-gray-700 hover:bg-gray-200 ${isOpen ? 'bg-gray-200 ring-2 ring-hakiardhi-red/30' : ''}`
         }`}
         aria-expanded={isOpen}
@@ -123,7 +123,7 @@ export default function LanguageSwitcher({
       >
         {/* Globe icon with animation */}
         <svg
-          className={`${size === 'sm' ? 'w-4 h-4' : 'w-5 h-5'} transition-transform duration-300 group-hover:rotate-12 ${
+          className={`${size === 'sm' ? 'w-4 h-4' : 'w-5 h-5'} transition-transform duration-300 ${
             theme === 'dark' ? 'text-white' : 'text-hakiardhi-red'
           }`}
           fill="none"
@@ -154,9 +154,9 @@ export default function LanguageSwitcher({
       {/* Dropdown menu with enhanced styling */}
       {isOpen && (
         <div
-          className={`absolute right-0 mt-2 w-44 rounded-xl shadow-2xl z-50 overflow-hidden transform origin-top-right animate-in fade-in slide-in-from-top-2 duration-200 ${
+          className={`absolute right-0 mt-2 w-44 rounded-xl shadow-sm z-50 overflow-hidden transform origin-top-right animate-in fade-in slide-in-from-top-2 duration-200 ${
             theme === 'dark'
-              ? 'bg-gray-900/95 backdrop-blur-xl border border-white/10'
+              ? 'bg-gray-900/95  border border-white/10'
               : 'bg-white border border-gray-200'
           }`}
           role="listbox"
