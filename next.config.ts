@@ -6,8 +6,9 @@ const nextConfig: NextConfig = {
     root: path.resolve(__dirname),
   },
   images: {
-    formats: ['image/avif', 'image/webp'],
-    remotePatterns: [],
+    // Photos in /public are pre-sized for the web, so they are served as-is.
+    // This avoids Vercel's image-optimization quota (it returns 402 when used up).
+    unoptimized: true,
   },
 };
 
