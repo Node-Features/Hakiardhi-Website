@@ -118,7 +118,7 @@ BEGIN
   SELECT
     lp.id as lawyer_id,
     lp.user_id,
-    u.name,
+    (u.first_name || ' ' || u.last_name),
     lp.current_active_cases as current_cases,
     lp.max_active_cases as max_cases,
     (lp.max_active_cases - lp.current_active_cases) as capacity_remaining,
@@ -308,7 +308,7 @@ CREATE OR REPLACE VIEW lawyer_workload_dashboard AS
 SELECT
   lp.id as lawyer_profile_id,
   lp.user_id,
-  u.name as lawyer_name,
+  (u.first_name || ' ' || u.last_name) as lawyer_name,
   u.email,
   lp.bar_number,
   lp.specializations,

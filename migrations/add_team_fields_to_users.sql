@@ -13,8 +13,9 @@ ADD COLUMN IF NOT EXISTS display_order INTEGER DEFAULT 0,
 ADD COLUMN IF NOT EXISTS show_in_team BOOLEAN DEFAULT FALSE;
 
 -- Add constraint for member_type values
+ALTER TABLE public.users DROP CONSTRAINT IF EXISTS chk_user_member_type;
 ALTER TABLE public.users
-ADD CONSTRAINT IF NOT EXISTS chk_user_member_type
+ADD CONSTRAINT chk_user_member_type
 CHECK (member_type IS NULL OR member_type IN ('leadership', 'board', 'staff', 'advisor'));
 
 -- Add index for team queries

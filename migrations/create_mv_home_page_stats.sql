@@ -80,17 +80,13 @@ SELECT
   ) AS active_lrms,
 
   -- Active Women Grassroot Councils (WGC) members
-  (
-    SELECT COUNT(*)
-    FROM public.wgc_members
-    WHERE is_active = true
-  ) AS active_wgc_members,
+  0::bigint AS active_wgc_members, -- wgc_members table does not exist yet
 
   -- Total LRM + WGC Network
   (
     SELECT
       (SELECT COUNT(*) FROM public.lrm_members WHERE is_active = true) +
-      (SELECT COUNT(*) FROM public.wgc_members WHERE is_active = true)
+      0
   ) AS total_network_members,
 
   -- ========================================

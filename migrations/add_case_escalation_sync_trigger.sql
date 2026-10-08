@@ -88,7 +88,7 @@ CREATE TRIGGER trigger_sync_escalation_from_case
 
 -- Add comments for documentation
 COMMENT ON FUNCTION sync_escalation_status_from_case() IS
-  'Automatically syncs escalation status from linked case status changes. ' ||
+  'Automatically syncs escalation status from linked case status changes. '
   'Maintains single source of truth where legal case drives resolution.';
 
 COMMENT ON TRIGGER trigger_sync_escalation_from_case ON cases IS

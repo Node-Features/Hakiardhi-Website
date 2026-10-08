@@ -58,7 +58,7 @@ SELECT
     (SELECT COUNT(*)
      FROM cases c
      WHERE c.assigned_to = u.id
-       AND c.status IN ('Open', 'Active', 'Under Review', 'Investigation', 'In Progress')
+       AND c.status::text IN ('Open', 'Active', 'Under Review', 'Investigation', 'In Progress')
     ), 0
   ) as verified_active_cases,
 
@@ -66,7 +66,7 @@ SELECT
     (SELECT COUNT(*)
      FROM cases c
      WHERE c.assigned_to = u.id
-       AND c.status IN ('Closed', 'Resolved', 'Completed')
+       AND c.status::text IN ('Closed', 'Resolved', 'Completed')
     ), 0
   ) as verified_closed_cases,
 
@@ -76,7 +76,7 @@ SELECT
   ) as total_cases_handled,
 
   COALESCE(lp.cases_closed,
-    (SELECT COUNT(*) FROM cases c WHERE c.assigned_to = u.id AND c.status IN ('Closed', 'Resolved', 'Completed'))
+    (SELECT COUNT(*) FROM cases c WHERE c.assigned_to = u.id AND c.status::text IN ('Closed', 'Resolved', 'Completed'))
   ) as cases_closed,
 
   COALESCE(lp.cases_won, 0) as cases_won,
@@ -122,7 +122,7 @@ SELECT
   (SELECT MAX(c.updated_at)
    FROM cases c
    WHERE c.assigned_to = u.id
-     AND c.status IN ('Closed', 'Resolved')
+     AND c.status::text IN ('Closed', 'Resolved')
   ) as last_case_closed_at,
 
   -- Workload Score (lower is better for assignment)
@@ -181,8 +181,8 @@ CREATE INDEX idx_mv_lawyer_workload_utilization
   ON mv_lawyer_workload_summary(utilization_percentage ASC);
 
 COMMENT ON MATERIALIZED VIEW mv_lawyer_workload_summary IS
-  'Pre-calculated workload metrics for all users with case handling permissions. ' ||
-  'Includes lawyers, admins, legal staff - anyone with case_handle, case_assign, or case_close permissions. ' ||
+  'Pre-calculated workload metrics for all users with case handling permissions. '
+  'Includes lawyers, admins, legal staff - anyone with case_handle, case_assign, or case_close permissions. '
   'Refreshed periodically for fast case assignment lookups.';
 
 -- ============================================================================
@@ -251,8 +251,8 @@ CREATE INDEX idx_mv_available_lawyers_specialization
   ON mv_available_lawyers_ranked USING gin(specializations);
 
 COMMENT ON MATERIALIZED VIEW mv_available_lawyers_ranked IS
-  'Pre-ranked list of available case handlers (lawyers, admins, legal staff) sorted by workload and experience. ' ||
-  'Filtered to only users with case handling permissions. ' ||
+  'Pre-ranked list of available case handlers (lawyers, admins, legal staff) sorted by workload and experience. '
+  'Filtered to only users with case handling permissions. '
   'Used for fast auto-assignment without complex queries.';
 
 -- ============================================================================
@@ -330,7 +330,7 @@ CREATE INDEX idx_mv_lawyer_performance_utilization
   ON mv_lawyer_performance_dashboard(utilization_percentage ASC);
 
 COMMENT ON MATERIALIZED VIEW mv_lawyer_performance_dashboard IS
-  'Comprehensive performance metrics for all case handlers (lawyers, admins, legal staff) for management dashboard and reporting. ' ||
+  'Comprehensive performance metrics for all case handlers (lawyers, admins, legal staff) for management dashboard and reporting. '
   'Includes only users with case handling permissions.';
 
 -- ============================================================================
@@ -371,7 +371,7 @@ END;
 $$ LANGUAGE plpgsql STABLE;
 
 COMMENT ON FUNCTION get_next_available_lawyer IS
-  'Fast lookup for next available case handler (lawyer, admin, legal staff) using pre-ranked materialized view. ' ||
+  'Fast lookup for next available case handler (lawyer, admin, legal staff) using pre-ranked materialized view. '
   'Only returns users with case handling permissions. Returns immediately without complex joins.';
 
 -- ============================================================================
@@ -392,7 +392,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 COMMENT ON FUNCTION refresh_lawyer_workload_views IS
-  'Refreshes all lawyer workload materialized views. ' ||
+  'Refreshes all lawyer workload materialized views. '
   'Call this periodically (e.g., every 5-15 minutes) or after bulk case updates.';
 
 -- Create a scheduled refresh function (to be called by cron job or pg_cron)
