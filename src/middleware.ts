@@ -22,7 +22,8 @@ const allowedOrigins = [
 
 // Helper: Add CORS headers to response
 function addCorsHeaders(response: NextResponse, origin: string | null) {
-  if (origin && allowedOrigins.includes(origin)) {
+  // PROTOTYPE: allow any origin
+  if (origin) {
     response.headers.set('Access-Control-Allow-Origin', origin);
   }
   response.headers.set('Access-Control-Allow-Credentials', 'true');
