@@ -1,10 +1,9 @@
 "use client";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useSidebar } from "../../context/SidebarContext";
-import { usePermissions } from "@/hooks/usePermissions";
 import {
   ChevronDownIcon,
   GridIcon,
@@ -78,6 +77,7 @@ const navItems: NavItem[] = [
       { name: "Roles & Permissions", path: "/settings/roles", permission: "role_view" },
       { name: "Categories", path: "/settings/categories", permission: "settings_manage" },
       { name: "Locations", path: "/settings/locations", permission: "settings_manage" },
+      { name: "Constants", path: "/settings/constants", permission: "settings_manage" },
     ],
   },
 ];
@@ -85,9 +85,10 @@ const navItems: NavItem[] = [
 const AppSidebar: React.FC = () => {
   const { isExpanded, isMobileOpen, isHovered, setIsHovered } = useSidebar();
   const pathname = usePathname();
-  const { can } = usePermissions();
 
-  const [openGroup, setOpenGroup] = useState<string | null>(null);
+  const [openGroups, setOpenGroups] = useState<Set<string>>(
+    () => new Set(navItems.filter((n) => n.subItems).map((n) => n.name))
+  );
 
   const showText = isExpanded || isHovered || isMobileOpen;
 
@@ -110,39 +111,25 @@ const AppSidebar: React.FC = () => {
     [matches]
   );
 
-  // Permission filtering without mutating the module-level nav definition.
-  const visibleItems = useMemo(() => {
-    const out: NavItem[] = [];
-    for (const item of navItems) {
-      if (item.divider) {
-        out.push(item);
-        continue;
-      }
-      if (item.subItems) {
-        const subs = item.subItems.filter((s) => !s.permission || can(s.permission));
-        if (subs.length > 0) out.push({ ...item, subItems: subs });
-        continue;
-      }
-      if (item.permission && !can(item.permission)) continue;
-      out.push(item);
-    }
-    // Drop dividers that end up first, last or doubled
-    return out.filter((item, i, arr) => {
-      if (!item.divider) return true;
-      const prev = arr[i - 1];
-      const next = arr[i + 1];
-      return !!prev && !prev.divider && !!next && !next.divider;
-    });
-  }, [can]);
+  // Permissions are disabled for now: every page is listed for every signed-in user.
+  // (The `permission` fields above are kept so filtering can be turned back on later.)
+  const visibleItems = navItems;
 
-  // Open the group that contains the current page
+  // Make sure the group containing the current page is open
   useEffect(() => {
     const active = visibleItems.find((n) => n.subItems?.some((s) => matches(s.path)));
-    if (active) setOpenGroup(active.name);
+    if (active) {
+      setOpenGroups((cur) => (cur.has(active.name) ? cur : new Set(cur).add(active.name)));
+    }
   }, [pathname, visibleItems, matches]);
 
   const toggleGroup = (name: string) =>
-    setOpenGroup((cur) => (cur === name ? null : name));
+    setOpenGroups((cur) => {
+      const next = new Set(cur);
+      if (next.has(name)) next.delete(name);
+      else next.add(name);
+      return next;
+    });
 
   return (
     <aside
@@ -188,7 +175,7 @@ const AppSidebar: React.FC = () => {
             }
 
             if (nav.subItems) {
-              const isOpen = openGroup === nav.name && showText;
+              const isOpen = openGroups.has(nav.name) && showText;
               const hasActiveChild = nav.subItems.some((s) => matches(s.path));
               const activeSub = activeSubPath(nav.subItems);
               return (
