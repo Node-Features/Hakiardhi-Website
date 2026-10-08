@@ -11,6 +11,10 @@ root="$(cd "$here/../.." && pwd)"
   echo 'BEGIN;'
   echo "\\echo === 0000_base_schema.sql"
   echo "\\i $here/0000_base_schema.sql"
+  for f in "$here"/portal/0*.sql; do
+    echo "\\echo === portal/$(basename "$f")"
+    echo "\\i $f"
+  done
   while read -r f; do
     [ -z "$f" ] && continue
     echo "\\echo === $f"
