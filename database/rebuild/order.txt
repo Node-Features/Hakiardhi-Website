@@ -15,3 +15,4 @@ create_mv_home_page_stats.sql
 create_mv_news_events_list.sql
 create_user_session_data_view.sql
 ../database/migrations/add_job_improvements.sql
+create_admin_dashboard_rpcs.sql
