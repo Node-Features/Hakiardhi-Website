@@ -77,9 +77,13 @@ BEGIN
     SELECT a.*
     FROM activities a
     WHERE (project_uuid IS NULL OR a.project_id = project_uuid)
-      AND (region_uuid IS NULL OR EXISTS (
-            SELECT 1 FROM activity_locations al
-            WHERE al.activity_id = a.id AND al.region_id = region_uuid))
+      -- Region match: the activity's own location, or (if it has none) its project's location.
+      AND (region_uuid IS NULL
+           OR EXISTS (SELECT 1 FROM activity_locations al
+                      WHERE al.activity_id = a.id AND al.region_id = region_uuid)
+           OR (NOT EXISTS (SELECT 1 FROM activity_locations al WHERE al.activity_id = a.id)
+               AND EXISTS (SELECT 1 FROM project_locations pl
+                           WHERE pl.project_id = a.project_id AND pl.region_id = region_uuid)))
       AND (v_from IS NULL OR a.start_date >= v_from::date)
       AND (v_to   IS NULL OR a.start_date <  v_to::date)
   ),
