@@ -141,8 +141,9 @@ CREATE INDEX IF NOT EXISTS idx_faqs_order ON public.faqs(display_order);
 CREATE INDEX IF NOT EXISTS idx_faqs_tags ON public.faqs USING GIN(tags);
 
 -- Constraints for FAQs
+ALTER TABLE public.faqs DROP CONSTRAINT IF EXISTS chk_faq_category;
 ALTER TABLE public.faqs
-ADD CONSTRAINT IF NOT EXISTS chk_faq_category CHECK (category IN ('General', 'Legal Aid', 'LRM Network', 'Donations', 'Programs', 'Research', 'Contact'));
+ADD CONSTRAINT chk_faq_category CHECK (category IN ('General', 'Legal Aid', 'LRM Network', 'Donations', 'Programs', 'Research', 'Contact'));
 
 -- Comments for FAQs
 COMMENT ON COLUMN public.faqs.category IS 'FAQ category for filtering';

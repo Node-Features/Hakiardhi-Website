@@ -6,7 +6,7 @@ DO $$ BEGIN CREATE TYPE public.activity_types AS ENUM ('Pending', 'Ongoing', 'Co
 DO $$ BEGIN CREATE TYPE public.case_statuses AS ENUM ('Open', 'Ongoing', 'Referred', 'Completed', 'Cancelled', 'Resolved', 'Won', 'Closed', 'In Progress', 'Blocked', 'Under Review', 'Rejected', 'Pending'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN CREATE TYPE public.incident_status AS ENUM ('Verification Pending', 'Verified', 'Under Investigation', 'Resolved', 'Closed', 'Rejected'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN CREATE TYPE public.job_status AS ENUM ('pending', 'processing', 'completed', 'failed'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
-DO $$ BEGIN CREATE TYPE public.project_statuses AS ENUM ('Pending', 'Active', 'Completed', 'On Hold'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
+DO $$ BEGIN CREATE TYPE public.project_statuses AS ENUM ('Pending', 'Active', 'Ongoing', 'Completed', 'On Hold'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN CREATE TYPE public.user_statuses AS ENUM ('Active', 'Inactive'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 
 CREATE TABLE IF NOT EXISTS public.activities (
