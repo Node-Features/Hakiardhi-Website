@@ -10,7 +10,6 @@ create_incident_escalations.sql
 create_escalation_notes.sql
 add_case_escalation_sync_trigger.sql
 add_lawyer_capacity_tracking.sql
-create_lawyer_workload_materialized_views.sql
 reconcile_legal_aid_cases.sql
 create_mv_home_page_stats.sql
 create_mv_news_events_list.sql

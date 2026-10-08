@@ -324,7 +324,7 @@ SELECT
     SELECT COUNT(*)
     FROM cases c
     WHERE c.assigned_lawyer_id = lp.user_id
-      AND c.status IN ('Open', 'Active', 'Under Review')
+      AND c.status::text IN ('Open', 'Active', 'Under Review')
   ) as verified_active_cases
 FROM lawyer_profiles lp
 JOIN users u ON lp.user_id = u.id
