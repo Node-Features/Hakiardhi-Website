@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { hasPermission, hasAnyPermission, hasAllPermissions } from '@/lib/auth/permissions';
 import { RBAC_ENABLED } from '@/config/rbac';
+
+const OPEN_ACCESS = true; // prototype: allow everyone to open every page
 import LoadingSpinner from '@/components/ui/loading/LoadingSpinner';
 
 interface ProtectedRouteProps {
@@ -73,7 +75,7 @@ interface ProtectedRouteProps {
  *   <AdminPage />
  * </ProtectedRoute>
  */
-export function ProtectedRoute({
+function ProtectedRouteInner({
   permission,
   requireAll = false,
   redirectTo = '/',
@@ -187,4 +189,10 @@ export function ProtectedRoute({
 
   // User has access, render children
   return <>{children}</>;
+}
+
+export function ProtectedRoute(props: ProtectedRouteProps) {
+  // PROTOTYPE: open access, no sign-in or permission checks.
+  if (OPEN_ACCESS) return <>{props.children}</>;
+  return <ProtectedRouteInner {...props} />;
 }

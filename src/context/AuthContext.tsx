@@ -82,10 +82,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
           }
         } else {
           // No user in storage, redirect to login if not already there
-          if (typeof window !== 'undefined' && !window.location.pathname.includes('/signin')) {
-            console.log("🔓 No user session found, redirecting to login...");
-            router.push('/signin');
-          }
+          // PROTOTYPE: open access, no redirect to sign-in
         }
       } catch (error) {
         console.error("❌ Error loading user session:", error);
@@ -97,9 +94,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
           setUser(null);
 
           // Redirect to signin on error if not already there
-          if (typeof window !== 'undefined' && !window.location.pathname.includes('/signin')) {
-            router.push('/signin');
-          }
+          // PROTOTYPE: open access, no redirect to sign-in
         }
       } finally {
         setLoading(false);
